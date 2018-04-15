@@ -10,6 +10,7 @@ import com.util.HibernateUtil;
 import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 /**
  * Classe que possui os métodos de acesso ao banco de dados.
@@ -46,5 +47,11 @@ public class ClienteModel {
         
         return cli.list();
     }
-      
+            public List<ClienteBean> buscarnome(String nome) {
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        Criteria crit = session.createCriteria(ClienteBean.class).add(Restrictions.eq("nome",nome));
+        return crit.list();
+    }      
 } // Fim da classe
