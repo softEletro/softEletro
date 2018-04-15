@@ -23,7 +23,7 @@ public class ProdutoBean {
     String marca;
     String descricao;
     String imagem;
-    float preco;
+    Double preco;
     int quantidade;
 
     public Long getId() {
@@ -74,11 +74,11 @@ public class ProdutoBean {
         this.imagem = imagem;
     }
 
-    public float getPreco() {
+    public Double getPreco() {
         return preco;
     }
 
-    public void setPreco(float preco) {
+    public void setPreco(Double preco) {
         this.preco = preco;
     }
 
