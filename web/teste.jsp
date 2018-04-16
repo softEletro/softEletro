@@ -5,7 +5,6 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="com.bean.ClienteBean"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,10 +12,33 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <jsp:useBean id="lista" scope="request" class="java.util.List" />
-        <% for (int i=0;i<lista.size();i++) {
-            ClienteBean cli = (ClienteBean)lista.get(i); %>
-            Nome: <%= cli.getNome() %>
-        <% } %>
+        <form action="SalvarProduto">
+            <label>Produto</label>
+            <select name="produto" id="produto" class="form-control">
+                <option value="0" selected="selected"></option>
+                <option value="1">Celular </option>
+                <option value="2">Computador </option>
+            </select>
+            <br>
+            <label>Nome</label>
+            <input type="text" class="form-control" id="nome" name="nome" value="">
+            <br>
+            <label>Marca</label>
+            <input type="text" class="form-control" id="marca" name="marca" value="">
+            <br>
+            <label>Preço</label>
+            <input type="text" class="form-control" id="preco" name="preco" value="">
+            <br>
+            <label>Quantidade</label>
+            <input type="text" class="form-control" id="quantidade" name="quantidade" value="">
+            <br>
+            <label>Descrição</label>
+            <textarea rows="5" type="text" class="form-control" id="descricao" name="descricao" value=""></textarea>
+            <br>
+            <label>Imagem</label>
+            <input type="text" class="form-control" id="imagem" name="imagem" value="">
+            <br>
+            <input class="btn btn-default" type="submit" name="btnSalvar" value="Salvar">
+        </form>
     </body>
 </html>
