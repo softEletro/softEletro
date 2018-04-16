@@ -38,7 +38,7 @@ public class ClienteModel {
         session.close();
     }    
 
-         public List<ClienteBean> listarClientes() {
+    public List<ClienteBean> listarClientes() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         
         session.beginTransaction();
@@ -47,11 +47,13 @@ public class ClienteModel {
         
         return cli.list();
     }
-            public List<ClienteBean> buscarnome(String nome) {
-
+    
+    public List<ClienteBean> buscarnome(String nome) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
+        
         Criteria crit = session.createCriteria(ClienteBean.class).add(Restrictions.eq("nome",nome));
+        
         return crit.list();
     }      
 } // Fim da classe

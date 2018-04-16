@@ -27,7 +27,7 @@ public class SalvarCliente extends HttpServlet {
         ClienteBean cli = new ClienteBean();
         cli.setNome(req.getParameter("nome"));
         cli.setSobrenome(req.getParameter("sobrenome"));
-        cli.setCpf(req.getParameter("Cpf"));
+        cli.setCpf(req.getParameter("cpf"));
         cli.setTelefone(req.getParameter("telefone"));
         cli.setCep(req.getParameter("cep"));
         cli.setEndereco(req.getParameter("endereco"));

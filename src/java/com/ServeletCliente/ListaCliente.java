@@ -31,7 +31,7 @@ public class ListaCliente extends HttpServlet {
         
         req.setAttribute("lista", lista);
         
-        RequestDispatcher rd = req.getRequestDispatcher("/listaCliente.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/BuscarCliente.jsp");
         rd.forward(req,resp);
     }
 

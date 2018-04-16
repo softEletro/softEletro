@@ -36,12 +36,14 @@ public class BuscarCliente extends HttpServlet {
         
         ClienteBean cli = new ClienteBean();
         ClienteModel dao = new ClienteModel();
-        String nome =req.getParameter("nome");
+        
+        String nome = req.getParameter("nome");
+        
         List lista = dao.buscarnome(nome);
         
         req.setAttribute("lista", lista);
         
-        RequestDispatcher rd = req.getRequestDispatcher("/busca.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/BuscarCliente.jsp");
         rd.forward(req,resp);
     }
 }
