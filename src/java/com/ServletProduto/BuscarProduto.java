@@ -32,7 +32,6 @@ public class BuscarProduto extends HttpServlet {
         List lista = dao.buscarCodigo(codigo);
         
         req.setAttribute("lista", lista);
-        String teste;
         
         RequestDispatcher rd = req.getRequestDispatcher("/busca.jsp");
         rd.forward(req,resp);
