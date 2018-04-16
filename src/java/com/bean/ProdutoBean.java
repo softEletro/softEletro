@@ -15,8 +15,8 @@ import javax.persistence.Id;
  */
 @Entity
 public class ProdutoBean {
-    @Id
     @GeneratedValue
+    @Id
     Long id;
     String nome;
     String produto;

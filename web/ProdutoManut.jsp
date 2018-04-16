@@ -89,8 +89,11 @@
 									
 										<ul class="list-links">
 											<li>
+											<li><a href="#">Alterar Cliente</a></li>
+											<li><a href="#">Ativar Cliente</a></li>
 											<li><a href="#">Buscar Cliente</a></li>
 											<li><a href="#">Cadastrar Cliente</a></li>
+											<li><a href="#">Inativar Cliente</a></li>
 											</li>
 										</ul>
 										<hr class="hidden-md hidden-lg">
