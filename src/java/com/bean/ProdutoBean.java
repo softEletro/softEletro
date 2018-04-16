@@ -6,6 +6,7 @@
 package com.bean;
 
 import javax.persistence.Entity;
+import java.util.Objects;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
