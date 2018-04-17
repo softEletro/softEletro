@@ -94,7 +94,7 @@
                             <li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Produto <i class="fa fa-caret-down"></i></a>
                                 <div class="custom-menu">
                                     <ul class="list-links">
-                                        <li><a href="ListaProdutos">Listagem de Produtos</a></li>
+                                        <li><a href="ListaProduto">Listagem de Produtos</a></li>
                                         <li><a href="ProdutoManut.jsp">Cadastrar Produto</a></li>
                                     </ul>
                                 </div>
