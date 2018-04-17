@@ -85,8 +85,8 @@
                                 <div class="custom-menu">
                                     <ul class="list-links">
                                         <li>
-                                        <li><a href="#">Buscar Cliente</a></li>
-                                        <li><a href="#">Cadastrar Cliente</a></li>
+                                        <li><a href="ListaCliente">Listagem de Clientes</a></li>
+                                        <li><a href="ClienteManut.jsp">Cadastrar Cliente</a></li>
                                     </ul>
                                     <hr class="hidden-md hidden-lg">
                                 </div>
@@ -94,8 +94,8 @@
                             <li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Produto <i class="fa fa-caret-down"></i></a>
                                 <div class="custom-menu">
                                     <ul class="list-links">
-                                        <li><a href="#">Buscar Produto</a></li>
-                                        <li><a href="#">Cadastrar Produto</a></li>
+                                        <li><a href="ListaProdutos">Listagem de Produtos</a></li>
+                                        <li><a href="ProdutoManut.jsp">Cadastrar Produto</a></li>
                                     </ul>
                                 </div>
                             </li>
