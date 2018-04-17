@@ -38,6 +38,7 @@ public class SalvarCliente extends HttpServlet {
         cli.setBairro(req.getParameter("bairro"));
         cli.setEmail(req.getParameter("email"));
         cli.setSenha(req.getParameter("senha"));
+        cli.setAtivo("a");
         
         ClienteModel dao = new ClienteModel();
         dao.salvarNovoCliente(cli);

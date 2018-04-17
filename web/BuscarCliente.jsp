@@ -149,67 +149,68 @@
 
 	<!-- BREADCRUMB -->
 	<div id="breadcrumb">
-		<div class="container">
-			<ul class="breadcrumb">
-				<li><a href="#">Home</a></li>
-				<li class="active">Buscar Cliente</li>
-			</ul>
-		</div>
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Buscar Cliente</li>
+                </ul>
+            </div>
 	</div>
 	<!-- /BREADCRUMB -->
 
 	<!-- section -->
 	<div class="section">
-		<!-- container -->
-		<div class="container">
+            <!-- container -->
+            <div class="container">
 		<form action="BuscarCliente">
-			<div class="row">
-				<div class="col-sm-2">
-					<label>Nome</label>
-						<input class="form-control" type="text" id="nome" name="nome" value="">
-				</div>
-			</div>
-				<br>
-			<input class="btn btn-default" type="submit" name="buscar" value="Buscar" title="Buscar registros"/>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <label>Nome</label>
+                            <input class="form-control" type="text" id="nome" name="nome" value="">
+                        </div>
+                    </div>
+                    <br>
+                    <input class="btn btn-default" type="submit" name="buscar" value="Buscar" title="Buscar registros"/>
 		</form>
-				<br>
-				<br>
-			<!-- row -->
-                        <jsp:useBean id="lista" scope="request" class="java.util.List" />
-			<table class="table table-hover">
-				<thead>
-					<tr>
-						<th>Id</th>
-						<th>Nome</th>
-						<th>E-mail</th>
-						<th>Endereço</th>
-						<th>Telefone</th>
-						<th></th>
-					</tr>
-				</thead>
-				<tbody>
-                                    <% for (int i=0;i<lista.size();i++) {
-                                        ClienteBean cli = (ClienteBean)lista.get(i); %>
-					<tr>
-						<td><%= cli.getId() %></td>
-						<td><%= cli.getNome() %></td>
-						<td><%= cli.getEmail() %></td>
-						<td><%= cli.getEndereco() %></td>
-						<td><%= cli.getTelefone() %></td>
-						<td>
-							<a href="cadastrocliente.html?idcliente=01"><span title="Editar Cliente" class="glyphicon glyphicon-pencil"></span></a>
-							<span title="Ver Cliente" class="glyphicon glyphicon-user"></span>
-							<span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
-							<span title="Ativar Cliente" class="glyphicon glyphicon-wrench"></span>
-						</td>
-					</tr>
-                                    <% } %>
-						
-				</tbody>
-			</table>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
+                <br>
+                <br>
+                <!-- row -->
+                <jsp:useBean id="lista" scope="request" class="java.util.List" />
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nome</th>
+                            <th>E-mail</th>
+                            <th>Endereço</th>
+                            <th>Telefone</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% for (int i=0;i<lista.size();i++) {
+                            ClienteBean cli = (ClienteBean)lista.get(i); %>
+                            <tr>
+                                <td><%= cli.getId() %></td>
+                                <td><%= cli.getNome() %></td>
+                                <td><%= cli.getEmail() %></td>
+                                <td><%= cli.getEndereco() %></td>
+                                <td><%= cli.getTelefone() %></td>
+                                <td>
+                                    <a href="cadastrocliente.html?id=<%= cli.getId() %>"><span title="Editar Cliente" class="glyphicon glyphicon-pencil"></span></a>
+                                    <span title="Ver Cliente" class="glyphicon glyphicon-user"></span>
+                                    <span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
+                                    <a href=""><span title=
+                                                     <% if (cli.getAtivo().equals("a")) {%>"Inativar" <% } else { %>"Ativar"<% } %>                                                    
+                                                    class="glyphicon glyphicon-wrench"></span></a>
+                                </td>
+                            </tr>
+                        <% } %>
+                    </tbody>
+                </table>
+                <!-- /row -->
+            </div>
+            <!-- /container -->
 	</div>
 	<!-- /section -->
 

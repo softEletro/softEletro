@@ -31,6 +31,7 @@ public class ClienteBean {
         String bairro;
         String email;
         String senha;
+        String ativo;
 
     public Long getId() {
         return Id;
@@ -143,4 +144,14 @@ public class ClienteBean {
     public void setSenha(String senha) {
         this.senha = senha;
     }
+
+    public String getAtivo() {
+        return ativo;
+    }
+
+    public void setAtivo(String ativo) {
+        this.ativo = ativo;
+    }
+        
+        
 }
