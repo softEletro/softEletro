@@ -166,10 +166,6 @@
 							<option value="2">Computador </option>
 				</select>
 			    </div>
-				<div class="col-sm-2">
-				    <label></label>
-				    <input type="hidden" class="form-control" id="codigo" name="codigo" value="">
-			    </div>
 			</div>
 			<br>
 			<div class="row">
@@ -183,7 +179,7 @@
 			    </div>
 			    <div class="col-sm-2">
 				    <label>Preço</label>
-				    <input type="text" class="form-control" id="preço" name="preço" value="R$ ">
+				    <input type="text" class="form-control" id="preco" name="preco" value="">
 			    </div>
 			    <div class="col-sm-2">
 				    <label>Quantidade</label>

@@ -10,5 +10,6 @@
     <property name="hibernate.hbm2ddl.auto">update</property>
         
     <mapping class="com.bean.ClienteBean" />
+    <mapping class="com.bean.ProdutoBean" />
   </session-factory>
 </hibernate-configuration>

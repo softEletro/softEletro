@@ -33,7 +33,7 @@
             <input type="text" class="form-control" id="quantidade" name="quantidade" value="">
             <br>
             <label>Descrição</label>
-            <textarea rows="5" type="text" class="form-control" id="descricao" name="descricao" value=""></textarea>
+            <textarea rows="5" type="text" class="form-control" id="descricao" name="descricao" value=""></textarea>         
             <br>
             <label>Imagem</label>
             <input type="text" class="form-control" id="imagem" name="imagem" value="">
