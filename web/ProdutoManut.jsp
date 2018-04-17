@@ -72,50 +72,70 @@
 
 	<!-- NAVIGATION -->
 	<div id="navigation">
-            <!-- container -->
-            <div class="container">
-                <div id="responsive-nav">
-                    <!-- menu nav -->
-                    <div class="menu-nav">
-                        <span class="menu-header">Menu <i class="fa fa-bars"></i></span>
-                        <ul class="menu-list">
-                            <li><a href="#">Home</a></li>
-                            <li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Cliente <i class="fa fa-caret-down"></i></a>
-                                <div class="custom-menu">		
-                                    <ul class="list-links">
-                                        <li><a href="#">Buscar Cliente</a></li>
-                                        <li><a href="#">Cadastrar Cliente</a></li>
-                                    </ul>
-                                    <hr class="hidden-md hidden-lg">
-                                </div>
-                            </li>
-                            <li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Produto <i class="fa fa-caret-down"></i></a>
-                                <div class="custom-menu">
-                                    <ul class="list-links">
-                                        <li><a href="#">Buscar Produto</a></li>
-                                        <li><a href="#">Cadastrar Produto</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Pedido <i class="fa fa-caret-down"></i></a>
-				<div class="custom-menu">
-                                    <div class="row">
-					<div class="col-md-3">
-                                            <ul class="list-links">
-                                                <li><a href="#">Venda Produto</a></li>
-                                                <li><a href="#">Historico Pedidos do Cliente</a></li>
-                                                <li><a href="#">Lista de Itens</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                <!-- menu nav -->
-                </div>
-            </div>
-            <!-- /container -->
+		<!-- container -->
+		<div class="container">
+			<div id="responsive-nav">
+			
+				<!-- /category nav -->
+
+				<!-- menu nav -->
+				<div class="menu-nav">
+					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
+					<ul class="menu-list">
+						<li><a href="#">Home</a></li>
+						<li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Cliente <i class="fa fa-caret-down"></i></a>
+							<div class="custom-menu">
+								
+									
+										<ul class="list-links">
+											<li>
+											<li><a href="#">Alterar Cliente</a></li>
+											<li><a href="#">Ativar Cliente</a></li>
+											<li><a href="#">Buscar Cliente</a></li>
+											<li><a href="#">Cadastrar Cliente</a></li>
+											<li><a href="#">Inativar Cliente</a></li>
+											</li>
+										</ul>
+										<hr class="hidden-md hidden-lg">
+									
+								
+							</div>
+						</li>
+						<li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Produto <i class="fa fa-caret-down"></i></a>
+							<div class="custom-menu">
+								<div class="row">
+									<div class="col-md-3">
+										<ul class="list-links">
+											<li><a href="#">Alterar Produto</a></li>
+											<li><a href="#">Ativar Produto</a></li>
+											<li><a href="#">Buscar Produto</a></li>
+											<li><a href="#">Cadastrar Produto</a></li>
+											<li><a href="#">Inativar Cliente</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+						
+						<li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Pedido <i class="fa fa-caret-down"></i></a>
+							<div class="custom-menu">
+								<div class="row">
+									<div class="col-md-3">
+										<ul class="list-links">
+											<li><a href="#">Venda Produto</a></li>
+											<li><a href="#">Historico Pedidos do Cliente</a></li>
+											<li><a href="#">Lista de Itens</a></li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- menu nav -->
+			</div>
+		</div>
+		<!-- /container -->
 	</div>
 
 	<!-- /NAVIGATION -->
@@ -133,56 +153,55 @@
 
 	<!-- section -->
 	<div class="section">
-            <form action="SalvarProduto">
-                <!-- container -->
-                <div class="container">
-                    <!-- row -->
-                    <div class="row">
-                        <div class="col-sm-2">
-                            <label>Produto</label>
-                            <select name="produto" id="produto" class="form-control">
-                                <option value="0" selected="selected"></option>
-                                <option value="1">Celular </option>
-                                <option value="2">Computador </option>
-                            </select>
-                        </div>
-                    </div>
-                    <br />
-                    <div class="row">
-                        <div class="col-sm-3">
-                            <label>Nome</label>
-                            <input type="text" class="form-control" id="nome" name="nome" value="">
-                        </div>
-                        <div class="col-sm-3">
-                            <label>Marca</label>
-                            <input type="text" class="form-control" id="marca" name="marca" value="">
-                        </div>
-                        <div class="col-sm-2">
-                            <label>Preço</label>
-                            <input type="text" class="form-control" id="preco" name="preco" value="">
-                        </div>
-                        <div class="col-sm-2">
-                            <label>Quantidade</label>
-                            <input type="text" class="form-control" id="quantidade" name="quantidade" value="">
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="col-sm-6">
-                            <label>Descrição</label>
-                            <textarea rows="5" type="text" class="form-control" id="descricao" name="descricao" value=""></textarea>
-                        </div>
-                        <div class="col-sm-4">
-                            <label>Imagem</label>
-                            <input type="text" class="form-control" id="imagem" name="imagem" value="">
-                        </div>
-                    </div>
-                    <br>
-                    <input class="btn btn-default" type="submit" name="btnSalvar" value="Salvar">
-                            <!-- /row -->
-                </div>
-            <!-- /container -->
-            </form>
+	<form action="SalvarProduto">
+		<!-- container -->
+		<div class="container">
+			<!-- row -->
+			<div class="row">
+				<div class="col-sm-2">
+						<label>Produto</label>
+						<select name="produto" id="produto" class="form-control">
+							<option value="0" selected="selected"></option>
+							<option value="1">Celular </option>
+							<option value="2">Computador </option>
+				</select>
+			    </div>
+			</div>
+			<br>
+			<div class="row">
+			   	<div class="col-sm-3">
+				    <label>Nome</label>
+				    <input type="text" class="form-control" id="nome" name="nome" value="">
+			    </div>
+			    <div class="col-sm-3">
+				    <label>Marca</label>
+				    <input type="text" class="form-control" id="marca" name="marca" value="">
+			    </div>
+			    <div class="col-sm-2">
+				    <label>Preço</label>
+				    <input type="text" class="form-control" id="preco" name="preco" value="">
+			    </div>
+			    <div class="col-sm-2">
+				    <label>Quantidade</label>
+				    <input type="text" class="form-control" id="quantidade" name="quantidade" value="">
+			    </div>
+			</div><br>
+			<div class="row">
+				<div class="col-sm-6">
+				    <label>Descrição</label>
+				    <textarea rows="5" type="text" class="form-control" id="descricao" name="descricao" value=""></textarea>
+			    </div>
+				<div class="col-sm-4">
+				    <label>Imagem</label>
+				    <input type="text" class="form-control" id="imagem" name="imagem" value="">
+			    </div>
+			</div>
+			<br>
+			<input class="btn btn-default" type="submit" name="btnSalvar" value="Salvar">
+			<!-- /row -->
+		</div>
+		<!-- /container -->
+		</form>
 	</div>
 	<!-- /section -->
 
