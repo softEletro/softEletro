@@ -104,7 +104,7 @@
                                     <ul class="list-links">
                                         <li><a href="#">Venda Produto</a></li>
                                         <li><a href="#">Historico Pedidos do Cliente</a></li>
-                                        <li><a href="#">Lista de Itens</a></li>
+                                        <li><a href="#">Lista de Itens</a></li> <!-- carrinho (?) -->
                                     </ul>
                                 </div>
                             </li>
