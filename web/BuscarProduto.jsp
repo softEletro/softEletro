@@ -159,7 +159,7 @@
 	<div class="section">
 		<!-- container -->
 		<div class="container">
-		<form action="/buscarProdutos.html">
+		<form action="BuscarProduto">
 			<!-- row -->
 			<div class="row">
 				<div class="col-sm-2">
@@ -189,18 +189,18 @@
 					</thead>
 					<tbody>
 						<% for (int i=0;i<lista.size();i++) {
-                            ProdutoBean pro = (ProdutoBean)lista.get(i); %>
+                            ProdutoBean Pro = (ProdutoBean)lista.get(i); %>
                             <tr>
-                                <td><%= pro.getId() %></td>
-                                <td><%= pro.getNome() %></td>
-                                <td><%= pro.getMarca() %></td>
-                                <td><%= pro.getPreco() %></td>
+                                <td><%= Pro.getId() %></td>
+                                <td><%= Pro.getNome() %></td>
+                                <td><%= Pro.getMarca() %></td>
+                                <td><%= Pro.getPreco() %></td>
                                 <td>
-                                    <a href="ProdutoManut.html?id=<%= pro.getId() %>"><span title="Editar Produto" class="glyphicon glyphicon-pencil"></span></a>
-                                    <span title="Ver Cliente" class="glyphicon glyphicon-user"></span>
+                                    <a href="ProdutoManut.html?id=<%= Pro.getId() %>"><span title="Editar Produto" class="glyphicon glyphicon-pencil"></span></a>
+                                    <span title="Ver Produto" class="glyphicon glyphicon-user"></span>
                                     <span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
                                     <a href=""><span title=
-                                                     <% if (pro.getAtivo().equals("a")) {%>"Inativar" <% } else { %>"Ativar"<% } %>                                                    
+                                                     <% if (Pro.getAtivo().equals("a")) {%>"Inativar" <% } else { %>"Ativar"<% } %>                                                    
                                                     class="glyphicon glyphicon-wrench"></span></a>
                                 </td>
                             </tr>

@@ -25,15 +25,17 @@ import javax.servlet.http.HttpServletResponse;
 public class BuscarProduto extends HttpServlet {
     @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        ProdutoBean pro = new ProdutoBean();
-        ProdutoModel dao = new ProdutoModel();
         
-        int id = Integer.parseInt(req.getParameter("id"));
-        List lista = dao.buscarCodigo(id);
+        ProdutoBean Pro = new ProdutoBean();
+        ProdutoModel dao = new ProdutoModel();
+              
+        String nome = req.getParameter("nome");
+        
+        List lista = dao.buscarnome(nome);  
         
         req.setAttribute("lista", lista);
         
-        RequestDispatcher rd = req.getRequestDispatcher("/busca.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/BuscarProduto.jsp");
         rd.forward(req,resp);
     }
 }
