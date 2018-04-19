@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ListaProduto extends HttpServlet {
     @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{ 
-        ProdutoBean cli = new ProdutoBean();
+        ProdutoBean pro = new ProdutoBean();
         ProdutoModel dao = new ProdutoModel();
         List lista = dao.listarProdutos();
         

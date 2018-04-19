@@ -25,11 +25,11 @@ import javax.servlet.http.HttpServletResponse;
 public class BuscarProduto extends HttpServlet {
     @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        ProdutoBean cli = new ProdutoBean();
+        ProdutoBean pro = new ProdutoBean();
         ProdutoModel dao = new ProdutoModel();
         
-        int codigo = Integer.parseInt(req.getParameter("codigo"));
-        List lista = dao.buscarCodigo(codigo);
+        int id = Integer.parseInt(req.getParameter("id"));
+        List lista = dao.buscarCodigo(id);
         
         req.setAttribute("lista", lista);
         

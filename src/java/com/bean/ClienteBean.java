@@ -32,6 +32,7 @@ public class ClienteBean {
         String email;
         String senha;
         String ativo;
+        String Inativo;
 
     public Long getId() {
         return Id;
@@ -151,6 +152,14 @@ public class ClienteBean {
 
     public void setAtivo(String ativo) {
         this.ativo = ativo;
+    }
+
+    public String getInativo() {
+        return Inativo;
+    }
+
+    public void setInativo(String Inativo) {
+        this.Inativo = Inativo;
     }
         
         

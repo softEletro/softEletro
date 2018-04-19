@@ -26,6 +26,8 @@ public class ProdutoBean {
     String imagem;
     Double preco;
     int quantidade;
+    String Ativo;
+    String Inativo;
 
     public Long getId() {
         return id;
@@ -90,4 +92,21 @@ public class ProdutoBean {
     public void setQuantidade(int quantidade) {
         this.quantidade = quantidade;
     }
+
+    public String getAtivo() {
+        return Ativo;
+    }
+
+    public void setAtivo(String Ativo) {
+        this.Ativo = Ativo;
+    }
+
+    public String getInativo() {
+        return Inativo;
+    }
+
+    public void setInativo(String Inativo) {
+        this.Inativo = Inativo;
+    }
+    
 }
