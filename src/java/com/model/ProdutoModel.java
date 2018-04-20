@@ -49,13 +49,26 @@ public class ProdutoModel {
         return Pro.list();
     }
     
-    // Método de buscar pelo código
-    public List<ProdutoBean> buscarnome(String nome) {
+    // Método de buscar pelo nome
+    public List<ProdutoBean> buscarNome(String nome) {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         
-        Criteria crit = session.createCriteria(ProdutoBean.class).add(Restrictions.eq("nome",nome));
+        Criteria crit = session.createCriteria(ProdutoBean.class)
+                .add(Restrictions.like("nome",nome+"%"));
+        
+        return crit.list();
+    }  
+    
+    // Método de buscar pelo preço
+    public List<ProdutoBean> buscarPreco(Double preco) {
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        
+        Criteria crit = session.createCriteria(ProdutoBean.class)
+                .add(Restrictions.gt("preco",preco));
         
         return crit.list();
     }      

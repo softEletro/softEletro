@@ -163,8 +163,8 @@
 			<!-- row -->
 			<div class="row">
 				<div class="col-sm-2">
-					<label>Codigo do Produto</label>
-						<input class="form-control" type="text" name="id" value="">
+					<label>Preço médio do Produto</label>
+						<input class="form-control" type="text" name="preco" value="">
 				</div>
 				<div class="col-sm-2">
 					<label>Nome do Produto</label>

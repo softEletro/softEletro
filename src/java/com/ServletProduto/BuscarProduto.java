@@ -28,12 +28,18 @@ public class BuscarProduto extends HttpServlet {
         
         ProdutoBean Pro = new ProdutoBean();
         ProdutoModel dao = new ProdutoModel();
-              
-        String nome = req.getParameter("nome");
         
-        List lista = dao.buscarnome(nome);  
-        
-        req.setAttribute("lista", lista);
+        if (req.getParameter("nome") != "") {
+            String nome = req.getParameter("nome");
+
+            List lista = dao.buscarNome(nome); 
+            req.setAttribute("lista", lista); 
+        } else if (req.getParameter("preco") != "") {            
+            Double preco = Double.parseDouble(req.getParameter("preco"));
+
+            List lista = dao.buscarPreco(preco); 
+            req.setAttribute("lista", lista); 
+        }
         
         RequestDispatcher rd = req.getRequestDispatcher("/BuscarProduto.jsp");
         rd.forward(req,resp);
