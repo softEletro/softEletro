@@ -93,19 +93,11 @@ public class ProdutoBean {
     }
 
     public String getAtivo() {
-        return Ativo;
+        return ativo;
     }
 
-    public void setAtivo(String Ativo) {
-        this.Ativo = Ativo;
-    }
-
-    public String getInativo() {
-        return Inativo;
-    }
-
-    public void setInativo(String Inativo) {
-        this.Inativo = Inativo;
+    public void setAtivo(String ativo) {
+        this.ativo = ativo;
     }
     
 }
