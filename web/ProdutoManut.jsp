@@ -69,54 +69,9 @@
 		<!-- container -->
 	</header>
 	<!-- /HEADER -->
-
-	<!-- NAVIGATION -->
-	<div id="navigation">
-            <!-- container -->
-            <div class="container">
-                <div id="responsive-nav">
-                    <!-- /category nav -->
-                    <!-- menu nav -->
-                    <div class="menu-nav">
-                        <span class="menu-header">Menu <i class="fa fa-bars"></i></span>
-                        <ul class="menu-list">
-                            <li><a href="#">Home</a></li>
-                            <li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Cliente <i class="fa fa-caret-down"></i></a>
-                                <div class="custom-menu">
-                                    <ul class="list-links">
-                                        <li>
-                                        <li><a href="ListaCliente">Listagem de Clientes</a></li>
-                                        <li><a href="ClienteManut.jsp">Cadastrar Cliente</a></li>
-                                    </ul>
-                                    <hr class="hidden-md hidden-lg">
-                                </div>
-                            </li>
-                            <li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Produto <i class="fa fa-caret-down"></i></a>
-                                <div class="custom-menu">
-                                    <ul class="list-links">
-                                        <li><a href="ListaProduto">Listagem de Produtos</a></li>
-                                        <li><a href="ProdutoManut.jsp">Cadastrar Produto</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Pedido <i class="fa fa-caret-down"></i></a>
-                                <div class="custom-menu">
-                                    <ul class="list-links">
-                                        <li><a href="#">Venda Produto</a></li>
-                                        <li><a href="#">Historico Pedidos do Cliente</a></li>
-                                        <li><a href="#">Lista de Itens</a></li> <!-- carrinho (?) -->
-                                    </ul>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                <!-- menu nav -->
-                </div>
-            </div>
-        <!-- /container -->
-	</div>
-
-	<!-- /NAVIGATION -->
+        
+        <!-- INCLUI O MENU -->
+        <%@include file="/menu.html" %>
 
 	<!-- BREADCRUMB -->
 	<div id="breadcrumb">
