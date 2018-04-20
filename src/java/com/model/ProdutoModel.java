@@ -44,19 +44,20 @@ public class ProdutoModel {
         
         session.beginTransaction();
         
-        Criteria crit = session.createCriteria(ProdutoBean.class);
+        Criteria Pro  = session.createCriteria(ProdutoBean.class);
         
-        return crit.list();
+        return Pro.list();
     }
     
     // Método de buscar pelo código
-    public List<ProdutoBean> buscarCodigo(int codigo) {
+    public List<ProdutoBean> buscarnome(String nome) {
 
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         
-        Criteria crit = session.createCriteria(ProdutoBean.class).add(Restrictions.eq("nome",codigo));
+        Criteria crit = session.createCriteria(ProdutoBean.class).add(Restrictions.eq("nome",nome));
         
         return crit.list();
     }      
-} // Fim da classe
+
+  } // Fim da classe

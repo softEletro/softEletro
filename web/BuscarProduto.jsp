@@ -4,6 +4,7 @@
     Author     : bcustodio
 --%>
 
+<%@page import="com.bean.ProdutoBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -113,11 +114,8 @@
 								<div class="row">
 									<div class="col-md-3">
 										<ul class="list-links">
-											<li><a href="#">Alterar Produto</a></li>
-											<li><a href="#">Ativar Produto</a></li>
 											<li><a href="#">Buscar Produto</a></li>
 											<li><a href="#">Cadastrar Produto</a></li>
-											<li><a href="#">Inativar Cliente</a></li>
 										</ul>
 									</div>
 								</div>
@@ -161,16 +159,16 @@
 	<div class="section">
 		<!-- container -->
 		<div class="container">
-		<form action="/buscarProdutos.html">
+		<form action="BuscarProduto">
 			<!-- row -->
 			<div class="row">
 				<div class="col-sm-2">
 					<label>Codigo do Produto</label>
-						<input class="form-control" type="text" name="cpf" value="">
+						<input class="form-control" type="text" name="id" value="">
 				</div>
 				<div class="col-sm-2">
 					<label>Nome do Produto</label>
-						<input class="form-control" type="text" name="cpf" value="">
+						<input class="form-control" type="text" name="nome" value="">
 				</div>
 			</div>
 				<br>
@@ -178,6 +176,7 @@
 		</form>
 				<br>
 				<br>
+                                <jsp:useBean id="lista" scope="request" class="java.util.List" />
 				<table class="table table-hover">
 					<thead>
 						<tr>
@@ -189,26 +188,23 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
-							<td>0001</td>
-							<td>NomeProdutoExemplo</td>
-							<td>MarcaProdutoExemplo</td>
-							<td>R$ 1.500,00</td>
-							<td>
-								<a href=""><span title="Alterar Produto" class="glyphicon glyphicon-pencil"></span></a>
-								<span title="Ativar Produto" class="glyphicon glyphicon-wrench"></span>
-							</td>
-						</tr>
-						<tr>
-							<td>0002</td>
-							<td>NomeProdutoExemplo</td>
-							<td>MarcaProdutoExemplo</td>
-							<td>R$ 900,00</td>
-							<td>
-								<a href=""><span title="Alterar Produto" class="glyphicon glyphicon-pencil"></span></a>
-								<span title="Ativar Produto" class="glyphicon glyphicon-wrench"></span>
-							</td>
-						</tr>
+						<% for (int i=0;i<lista.size();i++) {
+                            ProdutoBean Pro = (ProdutoBean)lista.get(i); %>
+                            <tr>
+                                <td><%= Pro.getId() %></td>
+                                <td><%= Pro.getNome() %></td>
+                                <td><%= Pro.getMarca() %></td>
+                                <td><%= Pro.getPreco() %></td>
+                                <td>
+                                    <a href="ProdutoManut.html?id=<%= Pro.getId() %>"><span title="Editar Produto" class="glyphicon glyphicon-pencil"></span></a>
+                                    <span title="Ver Produto" class="glyphicon glyphicon-user"></span>
+                                    <span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
+                                    <a href=""><span title=
+                                                     <% if (Pro.getAtivo().equals("a")) {%>"Inativar" <% } else { %>"Ativar"<% } %>                                                    
+                                                    class="glyphicon glyphicon-wrench"></span></a>
+                                </td>
+                            </tr>
+                        <% } %>
 					</tbody>
 				</table>
 			</div>
