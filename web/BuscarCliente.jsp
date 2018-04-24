@@ -190,7 +190,7 @@
                             ClienteBean cli = (ClienteBean)lista.get(i); %>
                             <tr <%if (cli.getAtivo().equals("i")) {%>class="danger"<% } %>>
                                 <td><%= cli.getId() %></td>
-                                <td><%= cli.getNome() %></td>
+                                <td><%= cli.getNome() %> <%= cli.getSobrenome() %></td>
                                 <td><%= cli.getEmail() %></td>
                                 <td><%= cli.getEndereco() %></td>
                                 <td><%= cli.getTelefone() %></td>

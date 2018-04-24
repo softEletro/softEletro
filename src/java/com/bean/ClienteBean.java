@@ -8,12 +8,14 @@ import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  *
  * @author BrendaÀ
  */
 @Entity
+@Table(name="clientes")
 public class ClienteBean {
     @GeneratedValue
     @Id
