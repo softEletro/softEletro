@@ -57,18 +57,7 @@ public class ClienteModel {
         session.close();        
     }  
     
-    // ------------------- MÉTODOS DE READ -------------------------------------
-    // Busca todos os registros para listagem.
-    public List<ClienteBean> listarClientes() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        
-        session.beginTransaction();
-        
-        Criteria cli = session.createCriteria(ClienteBean.class);
-        
-        return cli.list();
-    }
-    
+    // ------------------- MÉTODOS DE READ -------------------------------------    
     // Busca todos clientes pelo nome
     public List<ClienteBean> buscarnome(String nome) {
         Session session = HibernateUtil.getSessionFactory().openSession();
@@ -86,5 +75,41 @@ public class ClienteModel {
         return (ClienteBean)session.createCriteria(ClienteBean.class)
                 .add(Restrictions.eq("id",id))
                 .uniqueResult();
-    }  
+    }
+    
+    // ---------- MÉTODOS PARA LISTAGEM ------------
+    // Busca todos os registros.
+    public List<ClienteBean> listarClientes() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        
+        session.beginTransaction();
+        
+        Criteria cli = session.createCriteria(ClienteBean.class);
+        
+        return cli.list();
+    }
+    
+    // Busca todos os registros ativos.
+    public List<ClienteBean> listarClientesAtivos() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        
+        session.beginTransaction();
+        
+        Criteria cli = session.createCriteria(ClienteBean.class)
+                .add(Restrictions.eq("ativo", "a"));
+        
+        return cli.list();
+    }
+    
+    // Busca todos os registros inaativos.
+    public List<ClienteBean> listarClientesInativos() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        
+        session.beginTransaction();
+        
+        Criteria cli = session.createCriteria(ClienteBean.class)
+                .add(Restrictions.eq("ativo", "i"));
+        
+        return cli.list();
+    }
 } // Fim da classe

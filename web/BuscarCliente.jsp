@@ -178,7 +178,11 @@
                             <th>E-mail</th>
                             <th>Endereço</th>
                             <th>Telefone</th>
-                            <th></th>
+                            <th>
+                                <a href="ListaClientesAtivos"><span title="Mostrar clientes ativos" class="glyphicon glyphicon-plus"></span></a>
+                                <a href="ListaClientesInativos"><span title="Mostrar clientes inativos" class="glyphicon glyphicon-minus"></span></a>
+                                <a href="ListaCliente"><span title="Mostrar todos os clientes" class="glyphicon glyphicon-asterisk"></span></a>
+                            </th>
                         </tr>
                     </thead>
                     <tbody>
@@ -194,13 +198,13 @@
                                     <a href="cadastrocliente.html?id=<%= cli.getId() %>"><span title="Editar Cliente" class="glyphicon glyphicon-pencil"></span></a>
                                     <span title="Ver Cliente" class="glyphicon glyphicon-user"></span>
                                     <span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
-                                    <a href="
-                                            <% if (cli.getAtivo().equals("a")) { %>InativarCliente?id=<%= cli.getId() %>
-                                            <% } else { %>AtivarCliente?id=<%= cli.getId() %><% } %>">
-                                    <span title="
-                                            <% if (cli.getAtivo().equals("a")) { %>Inativar cliente<% } else { %>Ativar cliente<% } %>"
-                                            class="glyphicon glyphicon-wrench">
-                                    </span></a>
+                                    <% if (cli.getAtivo().equals("a")) { %>
+                                        <a href="InativarCliente?id=<%= cli.getId() %>">
+                                            <span title="Inativar cliente" class="glyphicon glyphicon-minus"></span></a>
+                                    <% } else { %>
+                                        <a href="AtivarCliente?id=<%= cli.getId() %>">
+                                            <span title="Ativar cliente" class="glyphicon glyphicon-plus"></span></a>
+                                    <% } %>
                                 </td>
                             </tr>
                         <% } %>
