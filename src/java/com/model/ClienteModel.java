@@ -19,7 +19,8 @@ import org.hibernate.criterion.Restrictions;
  * @since Classe criada em 13/10/2016
  * Obs.: classe aprimorada em 20/10/2016
  */
-public class ClienteModel {    
+public class ClienteModel {
+    // --------------------- MÉTODOS DE GRAVAR NO BD ---------------------------
     //Método para gravação do cliente no BD.
     public void salvarNovoCliente (ClienteBean cli){
         // Cria e abre uma sessão
@@ -36,8 +37,28 @@ public class ClienteModel {
         // Libera a memória e encerra a sessão
         session.flush();
         session.close();
-    }    
-
+    }  
+    
+    // Altera o cliente.
+    public void alteraCliente(ClienteBean cli){
+        // Cria e abre uma sessão
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        // Inicia uma transação
+        session.beginTransaction();
+        
+        // Realiza a operação salvar
+        session.update(cli);
+        
+        // Comita a transação
+        session.getTransaction().commit();
+        
+        // Libera a memória e encerra a sessão
+        session.flush();
+        session.close();        
+    }  
+    
+    // ------------------- MÉTODOS DE READ -------------------------------------
+    // Busca todos os registros para listagem.
     public List<ClienteBean> listarClientes() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         
@@ -48,6 +69,7 @@ public class ClienteModel {
         return cli.list();
     }
     
+    // Busca todos clientes pelo nome
     public List<ClienteBean> buscarnome(String nome) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
@@ -55,5 +77,14 @@ public class ClienteModel {
         Criteria crit = session.createCriteria(ClienteBean.class).add(Restrictions.eq("nome",nome));
         
         return crit.list();
-    }      
+    }
+    
+    // Busca cliente por id.
+    public ClienteBean buscarId(Long id) {        
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        return (ClienteBean)session.createCriteria(ClienteBean.class)
+                .add(Restrictions.eq("id",id))
+                .uniqueResult();
+    }  
 } // Fim da classe

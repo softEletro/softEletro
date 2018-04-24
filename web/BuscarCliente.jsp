@@ -184,7 +184,7 @@
                     <tbody>
                         <% for (int i=0;i<lista.size();i++) {
                             ClienteBean cli = (ClienteBean)lista.get(i); %>
-                            <tr>
+                            <tr <%if (cli.getAtivo().equals("i")) {%>class="danger"<% } %>>
                                 <td><%= cli.getId() %></td>
                                 <td><%= cli.getNome() %></td>
                                 <td><%= cli.getEmail() %></td>
@@ -194,9 +194,13 @@
                                     <a href="cadastrocliente.html?id=<%= cli.getId() %>"><span title="Editar Cliente" class="glyphicon glyphicon-pencil"></span></a>
                                     <span title="Ver Cliente" class="glyphicon glyphicon-user"></span>
                                     <span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
-                                    <a href=""><span title=
-                                                     <% if (cli.getAtivo().equals("a")) {%>"Inativar" <% } else { %>"Ativar"<% } %>                                                    
-                                                    class="glyphicon glyphicon-wrench"></span></a>
+                                    <a href="
+                                            <% if (cli.getAtivo().equals("a")) { %>InativarCliente?id=<%= cli.getId() %>
+                                            <% } else { %>AtivarCliente?id=<%= cli.getId() %><% } %>">
+                                    <span title="
+                                            <% if (cli.getAtivo().equals("a")) { %>Inativar cliente<% } else { %>Ativar cliente<% } %>"
+                                            class="glyphicon glyphicon-wrench">
+                                    </span></a>
                                 </td>
                             </tr>
                         <% } %>
