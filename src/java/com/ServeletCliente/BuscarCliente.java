@@ -23,26 +23,15 @@ import javax.servlet.http.HttpServletResponse;
  */
 @WebServlet(name = "BuscarCliente", urlPatterns = {"/BuscarCliente"})
 public class BuscarCliente extends HttpServlet {
-
-    /**
-     *
-     * @param req
-     * @param resp
-     * @throws ServletException
-     * @throws IOException
-     */
     @Override
-    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{     
-        
+    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{        
         ClienteBean cli = new ClienteBean();
         ClienteModel dao = new ClienteModel();
         
-        String nome = req.getParameter("nome");
-        
+        String nome = req.getParameter("nome");        
         List lista = dao.buscarnome(nome);
         
-        req.setAttribute("lista", lista);
-        
+        req.setAttribute("lista", lista);        
         RequestDispatcher rd = req.getRequestDispatcher("/BuscarCliente.jsp");
         rd.forward(req,resp);
     }

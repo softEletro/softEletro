@@ -24,6 +24,7 @@ public class AtivarCliente extends HttpServlet {
     @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         Long id = Long.parseLong(req.getParameter("id"));
+        
         ClienteModel dao= new ClienteModel();
         ClienteBean cli = dao.buscarId(id);
         

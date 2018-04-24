@@ -24,8 +24,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "ListaClientesAtivos", urlPatterns = {"/ListaClientesAtivos"})
 public class ListaClientesAtivos extends HttpServlet {
     @Override
-    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{ 
-        ClienteBean cli = new ClienteBean();
+    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         ClienteModel dao = new ClienteModel();
         List lista = dao.listarClientesAtivos();
         
