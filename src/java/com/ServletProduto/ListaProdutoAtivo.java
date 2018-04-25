@@ -5,6 +5,7 @@
  */
 package com.ServletProduto;
 
+
 import com.bean.ProdutoBean;
 import com.model.ProdutoModel;
 import java.io.IOException;
@@ -16,26 +17,22 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 /**
  *
- * @author BrendaÀ
+ * @author leona
  */
-@WebServlet(name = "BuscarProduto", urlPatterns = {"/BuscarProduto"})
-public class BuscarProduto extends HttpServlet {
+@WebServlet(name = "ListaProdutoAtivo", urlPatterns = {"/ListaProdutoAtivo"})
+public class ListaProdutoAtivo extends HttpServlet {
     @Override
-    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        
+    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{ 
         ProdutoBean Pro = new ProdutoBean();
         ProdutoModel dao = new ProdutoModel();
+        List lista = dao.listarProdutoAtivos();
         
-        
-        String nome = req.getParameter("nome");
-
-        List lista = dao.buscarNome(nome); 
         req.setAttribute("lista", lista);
         
         RequestDispatcher rd = req.getRequestDispatcher("/BuscarProduto.jsp");
         rd.forward(req,resp);
     }
+
 }

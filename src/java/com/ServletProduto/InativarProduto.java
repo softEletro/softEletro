@@ -9,33 +9,29 @@ import com.bean.ProdutoBean;
 import com.model.ProdutoModel;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
 /**
  *
- * @author BrendaÀ
+ * @author leona
  */
-@WebServlet(name = "BuscarProduto", urlPatterns = {"/BuscarProduto"})
-public class BuscarProduto extends HttpServlet {
+@WebServlet(name = "InativarProduto", urlPatterns = {"/InativarProduto"})
+public class InativarProduto extends HttpServlet {
     @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+        Long id = Long.parseLong(req.getParameter("id"));
         
-        ProdutoBean Pro = new ProdutoBean();
-        ProdutoModel dao = new ProdutoModel();
+        ProdutoModel dao= new ProdutoModel();
+        ProdutoBean pro = dao.buscarId(id);
         
+        pro.setAtivo("i");
         
-        String nome = req.getParameter("nome");
-
-        List lista = dao.buscarNome(nome); 
-        req.setAttribute("lista", lista);
+        dao.alterarProduto(pro);
         
-        RequestDispatcher rd = req.getRequestDispatcher("/BuscarProduto.jsp");
-        rd.forward(req,resp);
+        PrintWriter out = resp.getWriter();
+        out.print("<script>alert(\"Produto desativado com sucesso!\");</script>");
     }
 }

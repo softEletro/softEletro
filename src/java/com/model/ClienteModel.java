@@ -63,7 +63,8 @@ public class ClienteModel {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         
-        Criteria crit = session.createCriteria(ClienteBean.class).add(Restrictions.eq("nome",nome));
+          Criteria crit = session.createCriteria(ClienteBean.class)
+                .add(Restrictions.like("nome",nome+"%"));
         
         return crit.list();
     }

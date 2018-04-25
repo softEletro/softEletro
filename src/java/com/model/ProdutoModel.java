@@ -61,16 +61,54 @@ public class ProdutoModel {
         return crit.list();
     }  
     
-    // Método de buscar pelo preço
-    public List<ProdutoBean> buscarPreco(Double preco) {
-
+    // Método de buscar pelo id
+    public ProdutoBean  buscarId(Long id) {        
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
-        
-        Criteria crit = session.createCriteria(ProdutoBean.class)
-                .add(Restrictions.gt("preco",preco));
-        
-        return crit.list();
+        return (ProdutoBean)session.createCriteria(ProdutoBean.class)
+                .add(Restrictions.eq("id",id))
+                .uniqueResult();
     }      
 
+     // Altera o cliente.
+    public void alterarProduto(ProdutoBean pro){
+        // Cria e abre uma sessão
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        // Inicia uma transação
+        session.beginTransaction();
+        
+        // Realiza a operação salvar
+        session.update(pro);
+        
+        // Comita a transação
+        session.getTransaction().commit();
+        
+        // Libera a memória e encerra a sessão
+        session.flush();
+        session.close();        
+    }  
+    
+      // Busca todos os registros ativos.
+    public List<ProdutoBean> listarProdutoAtivos() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        
+        session.beginTransaction();
+        
+        Criteria cli = session.createCriteria(ProdutoBean.class)
+                .add(Restrictions.eq("ativo", "a"));
+        
+        return cli.list();
+    }
+    
+    // Busca todos os registros inaativos.
+    public List<ProdutoBean> listarProdutoInativos() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        
+        session.beginTransaction();
+        
+        Criteria cli = session.createCriteria(ProdutoBean.class)
+                .add(Restrictions.eq("ativo", "i"));
+        
+        return cli.list();
+    }
   } // Fim da classe

@@ -163,8 +163,8 @@
 			<!-- row -->
 			<div class="row">
 				<div class="col-sm-2">
-					<label>Preço médio do Produto</label>
-						<input class="form-control" type="text" name="preco" value="">
+					<label>Id do Produto</label>
+						<input class="form-control" type="text" name="id" value="">
 				</div>
 				<div class="col-sm-2">
 					<label>Nome do Produto</label>
@@ -184,13 +184,17 @@
 							<th>Nome</th>
 							<th>Marca</th>
 							<th>Preço</th>
-							<th></th>
+                                                        <th>
+                                                            <a href="ListaProdutoAtivo"><span title="Mostrar clientes ativos" class="glyphicon glyphicon-plus"></span></a>
+                                                            <a href="ListaProdutoInativos"><span title="Mostrar clientes inativos" class="glyphicon glyphicon-minus"></span></a>
+                                                            <a href="ListaProduto"><span title="Mostrar todos os clientes" class="glyphicon glyphicon-asterisk"></span></a>
+                                                        </th>
 						</tr>
 					</thead>
 					<tbody>
 						<% for (int i=0;i<lista.size();i++) {
                             ProdutoBean Pro = (ProdutoBean)lista.get(i); %>
-                            <tr>
+                            <tr <%if (Pro.getAtivo().equals("i")) {%>class="danger"<% } %>>
                                 <td><%= Pro.getId() %></td>
                                 <td><%= Pro.getNome() %></td>
                                 <td><%= Pro.getMarca() %></td>
@@ -199,9 +203,13 @@
                                     <a href="ProdutoManut.html?id=<%= Pro.getId() %>"><span title="Editar Produto" class="glyphicon glyphicon-pencil"></span></a>
                                     <span title="Ver Produto" class="glyphicon glyphicon-user"></span>
                                     <span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
-                                    <a href=""><span title=
-                                                     <% if (Pro.getAtivo().equals("a")) {%>"Inativar" <% } else { %>"Ativar"<% } %>                                                    
-                                                    class="glyphicon glyphicon-wrench"></span></a>
+                                    <% if (Pro.getAtivo().equals("a")) { %>
+                                        <a href="InativarProduto?id=<%= Pro.getId() %>">
+                                            <span title="Inativar Produto" class="glyphicon glyphicon-minus"></span></a>
+                                    <% } else { %>
+                                        <a href="AtivarProduto?id=<%= Pro.getId() %>">
+                                            <span title="Ativar Produto" class="glyphicon glyphicon-plus"></span></a>
+                                    <% } %>
                                 </td>
                             </tr>
                         <% } %>
