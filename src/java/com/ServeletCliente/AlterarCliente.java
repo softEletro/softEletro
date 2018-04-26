@@ -14,18 +14,20 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.swing.JOptionPane;
 
 /**
  *
  * @author bcustodio
  */
-@WebServlet(name = "SalvarCliente", urlPatterns = {"/SalvarCliente"})
-public class SalvarCliente extends HttpServlet {
+@WebServlet(name = "AlterarCliente", urlPatterns = {"/AlterarCliente"})
+public class AlterarCliente extends HttpServlet {
     @Override
-    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        ClienteBean cli = new ClienteBean();
-        
+    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{ 
+        Long id = Long.parseLong(req.getParameter("id"));
+           
+        ClienteModel dao = new ClienteModel();
+        ClienteBean cli = dao.buscarId(id);
+
         cli.setNome(req.getParameter("nome"));
         cli.setSobrenome(req.getParameter("sobrenome"));
         cli.setCpf(req.getParameter("cpf"));
@@ -39,13 +41,7 @@ public class SalvarCliente extends HttpServlet {
         cli.setBairro(req.getParameter("bairro"));
         cli.setEmail(req.getParameter("email"));
         cli.setSenha(req.getParameter("senha"));
-        cli.setAtivo("a");
         
-        ClienteModel dao = new ClienteModel();
-        dao.salvarNovoCliente(cli);
-        
-        PrintWriter out = resp.getWriter();
-        out.println("Salvo com sucesso!");
+        dao.alteraCliente(cli);
     }
-
 }
