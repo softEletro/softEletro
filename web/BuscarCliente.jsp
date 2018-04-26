@@ -108,7 +108,7 @@
                                 <td><%= cli.getEndereco() %></td>
                                 <td><%= cli.getTelefone() %></td>
                                 <td>
-                                    <a href="cadastrocliente.html?id=<%= cli.getId() %>"><span title="Editar Cliente" class="glyphicon glyphicon-pencil"></span></a>
+                                    <a href="MostrarCliente?id=<%= cli.getId() %>"><span title="Editar Cliente" class="glyphicon glyphicon-pencil"></span></a>
                                     <span title="Ver Cliente" class="glyphicon glyphicon-user"></span>
                                     <span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
                                     <% if (cli.getAtivo().equals("a")) { %>
