@@ -113,7 +113,7 @@
                                                                          <td><%= Pro.getPreco() %></td>
                                                                          <td>
                                                                             
-                                                                                <a href="ProdutoManut.jsp?id=<%= Pro.getId() %>">
+                                                                                <a href="MostrarProduto?id=<%= Pro.getId() %>">
                                                                                 <span title="Editar Produto" class="glyphicon glyphicon-pencil"></span></a>
                                                                                 
                                                                                 <span title="Ver Produto" class="glyphicon glyphicon-user"></span>                                                              

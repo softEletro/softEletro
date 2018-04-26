@@ -68,14 +68,12 @@
     
         <%if(!nome.equals("")) { %>
         <form action="AlterarProduto">
-             <jsp:useBean id="Quantidade" scope="request" class="java.lang.Integer" />
-             <jsp:useBean id="Preco" scope="request" class="java.lang.Double" />
-             <jsp:useBean id="id" scope="request" class="java.lang.Long" />
-             <input type="hidden" id="id" name="id" value="<%= id %>" />
-             <jsp:useBean id="lista" scope="request" class="java.util.List" />
-              
-            <% } else { %>
-        <form action="SalvaProduto">
+            <jsp:useBean id="quantidade" scope="request" class="java.lang.Integer" />
+            <jsp:useBean id="preco" scope="request" class="java.lang.Double" />
+            <jsp:useBean id="id" scope="request" class="java.lang.Long" />
+            <input type="hidden" id="id" name="id" value="<%= id %>" />
+        <% } else { %>
+            <form action="SalvaProduto">
         <% } %>
 		<!-- container -->
 		<div class="container">
@@ -94,7 +92,7 @@
 			<div class="row">
 			   	<div class="col-sm-3">
 				    <label>Nome</label>
-				    <input type="text" class="form-control" id="nome" name="nome" value=<%=nome%>>
+				    <input type="text" class="form-control" id="nome" name="nome" value="<%=nome%>">
 			    </div>
 			    <div class="col-sm-3">
 				    <label>Marca</label>
