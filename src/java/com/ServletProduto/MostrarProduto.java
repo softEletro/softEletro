@@ -41,7 +41,8 @@ public class MostrarProduto extends HttpServlet {
         req.setAttribute("produto", produto);
         req.setAttribute("marca", marca);
         req.setAttribute("descricao", descricao);
-        req.setAttribute("quantidade", quantidade);
+         req.setAttribute("imagem", imagem);
+        req.setAttribute("quantidade",quantidade);
         req.setAttribute("preco",preco);
         req.setAttribute("id", id);
             

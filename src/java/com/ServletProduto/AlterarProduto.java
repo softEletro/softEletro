@@ -38,6 +38,7 @@ public class AlterarProduto extends HttpServlet {
         pro.setMarca(req.getParameter("marca"));
         pro.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
         pro.setDescricao(req.getParameter("descricao"));
+        pro.setImagem(req.getParameter("imagem"));
         
         dao.alterarProduto(pro);
     }

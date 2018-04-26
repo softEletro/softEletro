@@ -61,10 +61,10 @@
 	<!-- section -->
 	<div class="section">
         <jsp:useBean id="nome" scope="request" class="java.lang.String" />
-        <jsp:useBean id="Produto" scope="request" class="java.lang.String" />
-        <jsp:useBean id="Marca" scope="request" class="java.lang.String" />
-        <jsp:useBean id="Descricao" scope="request" class="java.lang.String" />
-        <jsp:useBean id="Imagem" scope="request" class="java.lang.String" />
+        <jsp:useBean id="produto" scope="request" class="java.lang.String" />
+        <jsp:useBean id="marca" scope="request" class="java.lang.String" />
+        <jsp:useBean id="descricao" scope="request" class="java.lang.String" />
+        <jsp:useBean id="imagem" scope="request" class="java.lang.String" />
     
         <%if(!nome.equals("")) { %>
         <form action="AlterarProduto">
@@ -82,9 +82,22 @@
 				<div class="col-sm-2">
 						<label>Produto</label>
 						<select name="produto" id="produto" class="form-control">
-							<option value="0" selected="selected"></option>
-							<option value="1">Celular </option>
-							<option value="2">Computador </option>
+							<option value="0"  
+                                                                <option value="0"
+                                                                    <% if ("".equals(produto)) { %>
+                                                                            selected="selected">
+                                                                             <% } %>
+                                                                </option>
+                                                                <option value="1"
+                                                                        <% if ("1".equals(produto)) { %>
+                                                                              selected="selected">
+                                                                              <% } %>Celular
+                                                                </option>
+                                                                <option value="2"
+                                                                        <% if ("2".equals(produto)) { %>
+                                                                               selected="selected">
+                                                                               <% } %>Computador
+                                                                </option>
 				</select>
 			    </div>
 			</div>
@@ -96,7 +109,7 @@
 			    </div>
 			    <div class="col-sm-3">
 				    <label>Marca</label>
-				    <input type="text" class="form-control" id="marca" name="marca" value="">
+				    <input type="text" class="form-control" id="marca" name="marca" value="<%=marca%>">
 			    </div>
 			    <div class="col-sm-2">
 				    <label>Preço</label>
@@ -110,12 +123,25 @@
 			<div class="row">
 				<div class="col-sm-6">
 				    <label>Descrição</label>
-				    <textarea rows="10" type="text" class="form-control" id="descricao" name="descricao" value=""></textarea>
+				    <textarea rows="10" type="text" class="form-control" id="descricao" name="descricao" value="<%=descricao%>"></textarea>
 			    </div>
 				<div class="col-sm-4">
 				    <label>Imagem 260x370</label>
-				    <input type="text" class="form-control" id="imagem" name="imagem" value="">
+				    <input type="text" class="form-control" id="imagem" name="imagem" value="<%=imagem%>">
 			    </div>
+                            <div class="col-sm-4">
+				    <label>Imagem 300x300</label>
+				    <input type="text" class="form-control" id="imagem300" name="imagem300" value="">
+			    </div>
+                            <div class="col-sm-4">
+				    <label>Imagem 1200x1200</label>
+				    <input type="text" class="form-control" id="imagem1200" name="imagem1200" value="">
+			    </div>
+                            <div class="col-sm-4">
+				    <label>Imagem 50x50</label>
+				    <input type="text" class="form-control" id="imagem50" name="imagem50" value="">
+			    </div>
+			</div>
                             
 			<br>
 			<input class="btn btn-default" type="submit" name="btnSalvar" value="Salvar">
