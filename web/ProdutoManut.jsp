@@ -41,33 +41,7 @@
 
 <body>
 	<!-- HEADER -->
-	<header>
-
-
-		<!-- header -->
-		<div id="header" body style="background-color:#F8694A;">
-			<div class="container">
-				<div class="pull-left" >
-					<!-- Logo -->
-					<h1>
-					softEletro.com.br
-					</h1>
-					<!-- /Logo -->
-				</div>
-				<div class="pull-right">
-					<ul class="header-btns">
-						<!-- Mobile nav toggle-->
-						<li class="nav-toggle">
-							<button class="nav-toggle-btn main-btn icon-btn"><i class="fa fa-bars"></i></button>
-						</li>
-						<!-- / Mobile nav toggle -->
-					</ul>
-				</div>
-			</div>
-			<!-- header -->
-		</div>
-		<!-- container -->
-	</header>
+	<%@include file="/headerAdm.html" %>
 	<!-- /HEADER -->
         
         <!-- INCLUI O MENU -->
@@ -122,11 +96,23 @@
 			<div class="row">
 				<div class="col-sm-6">
 				    <label>Descrição</label>
-				    <textarea rows="5" type="text" class="form-control" id="descricao" name="descricao" value=""></textarea>
+				    <textarea rows="10" type="text" class="form-control" id="descricao" name="descricao" value=""></textarea>
 			    </div>
 				<div class="col-sm-4">
-				    <label>Imagem</label>
-				    <input type="text" class="form-control" id="imagem" name="imagem" value="">
+				    <label>Imagem 260x370</label>
+				    <input type="text" class="form-control" id="imagem260" name="imagem260" value="">
+			    </div>
+                            <div class="col-sm-4">
+				    <label>Imagem 300x300</label>
+				    <input type="text" class="form-control" id="imagem300" name="imagem300" value="">
+			    </div>
+                            <div class="col-sm-4">
+				    <label>Imagem 1200x1200</label>
+				    <input type="text" class="form-control" id="imagem1200" name="imagem1200" value="">
+			    </div>
+                            <div class="col-sm-4">
+				    <label>Imagem 50x50</label>
+				    <input type="text" class="form-control" id="imagem50" name="imagem50" value="">
 			    </div>
 			</div>
 			<br>
@@ -139,31 +125,7 @@
 	<!-- /section -->
 
 	<!-- FOOTER -->
-	<footer id="footer" class="section section-grey">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<!-- footer widget -->
-			</div>
-			<!-- /row -->
-			<hr>
-			<!-- row -->
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<!-- footer copyright -->
-					<div class="footer-copyright">
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>document.write(new Date().getFullYear());</script> SoftEletro</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					</div>
-					<!-- /footer copyright -->
-				</div>
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</footer>
+	<%@include file="/footer.html" %>
 	<!-- /FOOTER -->
 
 	<!-- jQuery Plugins -->

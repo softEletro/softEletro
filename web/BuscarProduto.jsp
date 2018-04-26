@@ -49,99 +49,11 @@
 
 <body>
 	<!-- HEADER -->
-	<header>
-
-
-		<!-- header -->
-		<div id="header" body style="background-color:#F8694A;">
-			<div class="container">
-				<div class="pull-left" >
-					<!-- Logo -->
-					<h1>
-					softEletro.com.br
-					</h1>
-					<!-- /Logo -->
-				</div>
-				<div class="pull-right">
-					<ul class="header-btns">
-						<!-- Mobile nav toggle-->
-						<li class="nav-toggle">
-							<button class="nav-toggle-btn main-btn icon-btn"><i class="fa fa-bars"></i></button>
-						</li>
-						<!-- / Mobile nav toggle -->
-					</ul>
-				</div>
-			</div>
-			<!-- header -->
-		</div>
-		<!-- container -->
-	</header>
+	<%@include file="/headerAdm.html" %>
 	<!-- /HEADER -->
 
 	<!-- NAVIGATION -->
-	<div id="navigation">
-		<!-- container -->
-		<div class="container">
-			<div id="responsive-nav">
-			
-				<!-- /category nav -->
-
-				<!-- menu nav -->
-				<div class="menu-nav">
-					<span class="menu-header">Menu <i class="fa fa-bars"></i></span>
-					<ul class="menu-list">
-						<li><a href="#">Home</a></li>
-						<li class="dropdown mega-dropdown"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Cliente <i class="fa fa-caret-down"></i></a>
-							<div class="custom-menu">
-								
-									
-										<ul class="list-links">
-											<li>
-											<li><a href="#">Alterar Cliente</a></li>
-											<li><a href="#">Ativar Cliente</a></li>
-											<li><a href="#">Buscar Cliente</a></li>
-											<li><a href="#">Cadastrar Cliente</a></li>
-											<li><a href="#">Inativar Cliente</a></li>
-											</li>
-										</ul>
-										<hr class="hidden-md hidden-lg">
-									
-								
-							</div>
-						</li>
-						<li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Produto <i class="fa fa-caret-down"></i></a>
-							<div class="custom-menu">
-								<div class="row">
-									<div class="col-md-3">
-										<ul class="list-links">
-											<li><a href="#">Buscar Produto</a></li>
-											<li><a href="#">Cadastrar Produto</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</li>
-						
-						<li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Pedido <i class="fa fa-caret-down"></i></a>
-							<div class="custom-menu">
-								<div class="row">
-									<div class="col-md-3">
-										<ul class="list-links">
-											<li><a href="#">Venda Produto</a></li>
-											<li><a href="#">Historico Pedidos do Cliente</a></li>
-											<li><a href="#">Lista de Itens</a></li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-				<!-- menu nav -->
-			</div>
-		</div>
-		<!-- /container -->
-	</div>
+	<%@include file="/menu.html" %>
 	<!-- /NAVIGATION -->
 
 	<!-- BREADCRUMB -->
@@ -223,31 +135,7 @@
 	<!-- /section -->
 
 	<!-- FOOTER -->
-	<footer id="footer" class="section section-grey">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<!-- footer widget -->
-			</div>
-			<!-- /row -->
-			<hr>
-			<!-- row -->
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2 text-center">
-					<!-- footer copyright -->
-					<div class="footer-copyright">
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						Copyright &copy;<script>document.write(new Date().getFullYear());</script> SoftEletro</a>
-						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-					</div>
-					<!-- /footer copyright -->
-				</div>
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</footer>
+	<%@include file="/footer.html" %>
 	<!-- /FOOTER -->
 
 	<!-- jQuery Plugins -->

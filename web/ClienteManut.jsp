@@ -46,7 +46,7 @@
         <%@include file="/header.html" %>
         
         <!-- INCLUI O MENU -->
-        <%@include file="/menu.html" %>
+        <%@include file="/menuCliente.html" %>
 
 
 	<!-- BREADCRUMB -->
@@ -172,7 +172,7 @@
 	<!-- /section -->
 
 	<!-- FOOTER -->
-	<%@include file="/footer.html" %>
+	<%@include file="/footerCliente.html" %>
 	<!-- /FOOTER -->
 
 	<!-- jQuery Plugins -->

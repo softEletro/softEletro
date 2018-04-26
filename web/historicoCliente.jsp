@@ -101,7 +101,7 @@
 	<!-- /section -->
 
 	<!-- FOOTER -->
-	<%@include file="/footer.html" %>
+	<%@include file="/footerCliente.html" %>
 	<!-- /FOOTER -->
 
 	<!-- jQuery Plugins -->
