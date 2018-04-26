@@ -60,7 +60,23 @@
 
 	<!-- section -->
 	<div class="section">
-	<form action="SalvarProduto">
+        <jsp:useBean id="nome" scope="request" class="java.lang.String" />
+        <jsp:useBean id="Produto" scope="request" class="java.lang.String" />
+        <jsp:useBean id="Marca" scope="request" class="java.lang.String" />
+        <jsp:useBean id="Descricao" scope="request" class="java.lang.String" />
+        <jsp:useBean id="Imagem" scope="request" class="java.lang.String" />
+    
+        <%if(!nome.equals("")) { %>
+        <form action="AlterarProduto">
+             <jsp:useBean id="Quantidade" scope="request" class="java.lang.Integer" />
+             <jsp:useBean id="Preco" scope="request" class="java.lang.Double" />
+             <jsp:useBean id="id" scope="request" class="java.lang.Long" />
+             <input type="hidden" id="id" name="id" value="<%= id %>" />
+             <jsp:useBean id="lista" scope="request" class="java.util.List" />
+              
+            <% } else { %>
+        <form action="SalvaProduto">
+        <% } %>
 		<!-- container -->
 		<div class="container">
 			<!-- row -->
@@ -78,7 +94,7 @@
 			<div class="row">
 			   	<div class="col-sm-3">
 				    <label>Nome</label>
-				    <input type="text" class="form-control" id="nome" name="nome" value="">
+				    <input type="text" class="form-control" id="nome" name="nome" value=<%=nome%>>
 			    </div>
 			    <div class="col-sm-3">
 				    <label>Marca</label>
@@ -100,21 +116,9 @@
 			    </div>
 				<div class="col-sm-4">
 				    <label>Imagem 260x370</label>
-				    <input type="text" class="form-control" id="imagem260" name="imagem260" value="">
+				    <input type="text" class="form-control" id="imagem" name="imagem" value="">
 			    </div>
-                            <div class="col-sm-4">
-				    <label>Imagem 300x300</label>
-				    <input type="text" class="form-control" id="imagem300" name="imagem300" value="">
-			    </div>
-                            <div class="col-sm-4">
-				    <label>Imagem 1200x1200</label>
-				    <input type="text" class="form-control" id="imagem1200" name="imagem1200" value="">
-			    </div>
-                            <div class="col-sm-4">
-				    <label>Imagem 50x50</label>
-				    <input type="text" class="form-control" id="imagem50" name="imagem50" value="">
-			    </div>
-			</div>
+                            
 			<br>
 			<input class="btn btn-default" type="submit" name="btnSalvar" value="Salvar">
 			<!-- /row -->

@@ -104,27 +104,35 @@
 						</tr>
 					</thead>
 					<tbody>
-						<% for (int i=0;i<lista.size();i++) {
-                            ProdutoBean Pro = (ProdutoBean)lista.get(i); %>
-                            <tr <%if (Pro.getAtivo().equals("i")) {%>class="danger"<% } %>>
-                                <td><%= Pro.getId() %></td>
-                                <td><%= Pro.getNome() %></td>
-                                <td><%= Pro.getMarca() %></td>
-                                <td><%= Pro.getPreco() %></td>
-                                <td>
-                                    <a href="ProdutoManut.html?id=<%= Pro.getId() %>"><span title="Editar Produto" class="glyphicon glyphicon-pencil"></span></a>
-                                    <span title="Ver Produto" class="glyphicon glyphicon-user"></span>
-                                    <span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
-                                    <% if (Pro.getAtivo().equals("a")) { %>
-                                        <a href="InativarProduto?id=<%= Pro.getId() %>">
-                                            <span title="Inativar Produto" class="glyphicon glyphicon-minus"></span></a>
-                                    <% } else { %>
-                                        <a href="AtivarProduto?id=<%= Pro.getId() %>">
-                                            <span title="Ativar Produto" class="glyphicon glyphicon-plus"></span></a>
-                                    <% } %>
-                                </td>
-                            </tr>
-                        <% } %>
+                                                        <% for (int i=0;i<lista.size();i++) {
+                                                            ProdutoBean Pro = (ProdutoBean)lista.get(i); %>
+                                                            <tr <%if (Pro.getAtivo().equals("i")) {%>class="danger"<% } %>>
+                                                                         <td><%= Pro.getId() %></td>
+                                                                         <td><%= Pro.getNome() %></td>
+                                                                         <td><%= Pro.getMarca() %></td>
+                                                                         <td><%= Pro.getPreco() %></td>
+                                                                         <td>
+                                                                            
+                                                                                <a href="ProdutoManut.jsp?id=<%= Pro.getId() %>">
+                                                                                <span title="Editar Produto" class="glyphicon glyphicon-pencil"></span></a>
+                                                                                
+                                                                                <span title="Ver Produto" class="glyphicon glyphicon-user"></span>                                                              
+                                                                                <span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
+                                                                                <% if (Pro.getAtivo().equals("a")) { %>
+                                                                                <a href="InativarProduto?id=<%= Pro.getId() %>">
+                                                                                <span title="Inativar Produto" class="glyphicon glyphicon-minus"></span></a>
+                                                                                <% } else { %>
+                                                                                            <a href="AtivarProduto?id=<%= Pro.getId() %>">
+                                                                                            <span title="Ativar Produto" class="glyphicon glyphicon-plus"></span></a>
+                                                                                        <% } %>
+                                                                                                                                              
+                                                                            
+                 
+                                                                         </td>
+                                                            </tr>
+                                                            <% } %>
+                                                   
+                                               
 					</tbody>
 				</table>
 			</div>

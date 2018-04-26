@@ -62,7 +62,7 @@ public class ProdutoModel {
     }  
     
     // Método de buscar pelo id
-    public ProdutoBean  buscarId(Long id) {        
+    public ProdutoBean buscarId(Long id) {        
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         return (ProdutoBean)session.createCriteria(ProdutoBean.class)

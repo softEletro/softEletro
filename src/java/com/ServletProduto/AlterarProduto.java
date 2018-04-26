@@ -5,6 +5,10 @@
  */
 package com.ServletProduto;
 
+/**
+ *
+ * @author leona
+ */
 import com.bean.ProdutoBean;
 import com.model.ProdutoModel;
 import java.io.IOException;
@@ -17,28 +21,24 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author bcustodio
+ * @author leona
  */
-@WebServlet(name = "SalvarProduto", urlPatterns = {"/SalvarProduto"})
-public class SalvarProduto extends HttpServlet {
+@WebServlet(name = "AlterarProduto", urlPatterns = {"/AlterarProduto"})
+public class AlterarProduto extends HttpServlet {
     @Override
-    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        ProdutoBean pro = new ProdutoBean();
+    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{ 
+        Long id = Long.parseLong(req.getParameter("id"));
+           
+        ProdutoModel dao= new ProdutoModel();
+        ProdutoBean pro = dao.buscarId(id);
         
         pro.setProduto(req.getParameter("produto"));
         pro.setNome(req.getParameter("nome"));
-        pro.setMarca(req.getParameter("marca"));
         pro.setPreco(Double.parseDouble(req.getParameter("preco")));
+        pro.setMarca(req.getParameter("marca"));
         pro.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
         pro.setDescricao(req.getParameter("descricao"));
-        pro.setImagem(req.getParameter("imagem"));
-        pro.setAtivo("a");
         
-        ProdutoModel dao = new ProdutoModel();
-        dao.salvarProduto(pro);
-        
-        PrintWriter out = resp.getWriter();
-       out.print("<script>alert(\"Salvo com sucesso!\");</script>");
+        dao.alterarProduto(pro);
     }
-
 }

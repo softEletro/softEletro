@@ -118,6 +118,8 @@
                                         <a href="AtivarCliente?id=<%= cli.getId() %>">
                                             <span title="Ativar cliente" class="glyphicon glyphicon-plus"></span></a>
                                     <% } %>
+                                    
+                                    
                                 </td>
                             </tr>
                         <% } %>
