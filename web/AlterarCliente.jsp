@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%><!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -67,7 +67,6 @@
             <jsp:useBean id="cpf" scope="request" class="java.lang.String" />
             <jsp:useBean id="telefone" scope="request" class="java.lang.String" />
             <jsp:useBean id="cep" scope="request" class="java.lang.String" />
-            <!-- NUMERO - INTEIRO -->
             <jsp:useBean id="endereco" scope="request" class="java.lang.String" />
             <jsp:useBean id="complemento" scope="request" class="java.lang.String" />
             <jsp:useBean id="estado" scope="request" class="java.lang.String" />
@@ -75,14 +74,11 @@
             <jsp:useBean id="bairro" scope="request" class="java.lang.String" />
             <jsp:useBean id="email" scope="request" class="java.lang.String" />
             <jsp:useBean id="senha" scope="request" class="java.lang.String" />
-
-            <%if(!nome.equals("")) { %>
+            <jsp:useBean id="numero" scope="request" class="java.lang.Integer" />
+            
             <form action="AlterarCliente">
-                 <jsp:useBean id="id" scope="request" class="java.lang.Long" />
-                 <input type="hidden" id="id" name="id" value="<%= id %>" />
-            <% } else { %>
-            <form action="SalvaCliente">
-            <% } %>
+                <jsp:useBean id="id" scope="request" class="java.lang.Long" />
+                <input type="hidden" id="id" name="id" value="<%= id %>" />
 		<!-- container -->
 		<div class="container">
                     <!-- row -->
@@ -100,25 +96,31 @@
                             <input type="text" class="form-control" id="cpf" name="cpf" value="<%= cpf %>">
                         </div>
                         <div class="col-sm-2">
-                            <label>Telefone</label>
-                            <input type="text" class="form-control" id="telefone" name="telefone" value="<%= telefone %>" >				
+                            <label>Sexo</label><br>
+                            <input type="radio" name="sexo" value="male"> Mulher<br>
+                            <input type="radio" name="sexo" value="male"> Homem<br>
                         </div>
                     </div>
                     <br>
                     <div class="row">
-                        <div class="col-sm-4">
-                            <label>Endereço</label>
+                        <div class="col-sm-2">
+                            <label>Telefone</label>
+                            <input type="text" class="form-control" id="telefone" name="telefone" value="<%= telefone %>" >				
+                        </div>
+                        <div class="col-sm-3">
+                            <label>EndereÃ§o</label>
                             <input type="text" class="form-control" id="endereco" name="endereco" value="<%= endereco %>">
                         </div>
                         <div class="col-sm-1">
                             <label>Numero</label>
-                            <input type="text" class="form-control" id="numero" name="numero" value="">
+                            <input type="text" class="form-control" id="numero" name="numero" value="<%= numero.toString() %>">
+                            
                         </div>
                         <div class="col-sm-2">
                             <label>CEP</label>				
                             <input type="text" class="form-control" id="cep" name="cep" value="<%= cep %>">
                         </div>
-                        <div class="col-sm-3">
+                        <div class="col-sm-2">
                             <label>Comp.</label>
                             <input type="text" class="form-control" id="complemento" name="complemento" value="<%= complemento %>">
                         </div>
@@ -138,143 +140,143 @@
                             <select name="estado" id="estado" class="form-control">
                                 <option value="0"
                                     <% if ("".equals(estado)) { %>
-                                    selected="selected">
-                                    <% } %>
+                                    selected="selected"
+                                    <% } %>>
                                 </option>
                                 <option value="1"
                                     <% if ("1".equals(estado)) { %>
-                                    selected="selected">
-                                    <% } %>AC
+                                    selected="selected"<% } %>>
+                                    AC
                                 </option>
                                 <option value="2"
                                     <% if ("2".equals(estado)) { %>
-                                    selected="selected">
-                                    <% } %>AL
+                                    selected="selected"<% } %>>
+                                    AL
                                 </option>
                                 <option value="3"
                                     <% if ("3".equals(estado)) { %>
-                                    selected="selected">
-                                    <% } %>AP
+                                    selected="selected" <% } %>>
+                                   AP
                                 </option>
                                 <option value="4"
                                     <% if ("4".equals(estado)) { %>
-                                    selected="selected">
-                                    <% } %>AM
+                                    selected="selected"<% } %>>
+                                    AM
                                 </option>
                                 <option value="5"
                                     <% if ("5".equals(estado)) { %>
-                                    selected="selected">
-                                    <% } %>BA
+                                    selected="selected"<% } %>>
+                                    BA
                                 </option>
                                 <option value="6"
                                     <% if ("6".equals(estado)) { %>
-                                    selected="selected">
-                                    <% } %>CE
+                                    selected="selected"<% } %>>
+                                    CE
                                 </option>
                                 <option value="7"
                                     <% if ("7".equals(estado)) { %>
-                                    selected="selected">
-                                    <% } %>DF
+                                    selected="selected"<% } %>>
+                                    DF
                                 </option>
                                 <option value="8"
                                         <% if ("8".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>ES
+                                        selected="selected"<% } %>>
+                                        ES
                                 </option>
                                 <option value="9"
                                         <% if ("9".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>GO
+                                        selected="selected"<% } %>>
+                                        GO
                                 </option>
                                 <option value="10"
                                         <% if ("10".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>MA
+                                        selected="selected"<% } %>>
+                                        MA
                                 </option>
                                 <option value="11"
                                         <% if ("11".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>MT
+                                        selected="selected"<% } %>>
+                                        MT
                                 </option>
                                 <option value="12"
                                         <% if ("12".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>MS
+                                        selected="selected"<% } %>>
+                                        MS
                                 </option>
                                 <option value="13"
                                         <% if ("13".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>MG
+                                        selected="selected"<% } %>>
+                                        MG
                                 </option>
                                 <option value="14"
                                         <% if ("14".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>PA
+                                        selected="selected"<% } %>>
+                                        PA
                                 </option>
                                 <option value="15"
                                         <% if ("15".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>PB
+                                        selected="selected"<% } %>>
+                                        PB
                                 </option>
                                 <option value="16"
                                         <% if ("17".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>PR
+                                        selected="selected"<% } %>>
+                                        PR
                                 </option>
                                 <option value="17"
                                         <% if ("17".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>PE
+                                        selected="selected"<% } %>>
+                                        PE
                                 </option>
                                 <option value="18"
                                         <% if ("18".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>PI
+                                        selected="selected"<% } %>>
+                                        PI
                                 </option>
                                 <option value="19"
                                         <% if ("19".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>RJ
+                                        selected="selected"<% } %>>
+                                        RJ
                                 </option>
                                 <option value="20"
                                         <% if ("20".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>RN
+                                        selected="selected"<% } %>>
+                                        RN
                                 </option>
                                 <option value="21"
                                         <% if ("21".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>RS
+                                        selected="selected"<% } %>>
+                                        RS
                                 </option>
                                 <option value="22"
                                         <% if ("22".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>RO
+                                        selected="selected"<% } %>>
+                                        RO
                                 </option>
                                 <option value="23"
                                         <% if ("23".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>RR
+                                        selected="selected"<% } %>>
+                                        RR
                                 </option>
                                 <option value="24"
                                         <% if ("24".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>SC
+                                        selected="selected"<% } %>>
+                                        SC
                                 </option>
                                 <option value="25"
                                     <% if ("25".equals(estado)) { %>
-                                    selected="selected">
-                                    <% } %>SP
+                                    selected="selected"<% } %>>
+                                    SP
                                 </option>
                                 <option value="26"
                                         <% if ("26".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>SE
+                                        selected="selected"<% } %>>
+                                        SE
                                 </option>
                                 <option value="27"
                                         <% if ("27".equals(estado)) { %>
-                                        selected="selected">
-                                        <% } %>TO
+                                        selected="selected"<% } %>>
+                                        TO
                                 </option>
                             </select>
                         </div>

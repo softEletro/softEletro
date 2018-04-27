@@ -34,7 +34,7 @@ public class MostrarProduto extends HttpServlet {
         String marca = pro.getMarca();
         String descricao = pro.getDescricao();
         String imagem = pro.getImagem();
-        Integer quantidade = pro.getQuantidade();
+        int quantidade = pro.getQuantidade();
         Double preco = pro.getPreco();
         
         req.setAttribute("nome", nome);
@@ -42,11 +42,11 @@ public class MostrarProduto extends HttpServlet {
         req.setAttribute("marca", marca);
         req.setAttribute("descricao", descricao);
          req.setAttribute("imagem", imagem);
-        req.setAttribute("quantidade",quantidade);
-        req.setAttribute("preco",preco);
+        req.setAttribute("quantidade",new Integer(quantidade));
+        req.setAttribute("preco",new Double(preco));
         req.setAttribute("id", id);
             
-        RequestDispatcher rd = req.getRequestDispatcher("/ProdutoManut.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/AlterarProduto.jsp");
         rd.forward(req,resp);
     }
 }

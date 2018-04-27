@@ -9,6 +9,7 @@ import com.bean.ClienteBean;
 import com.model.ClienteModel;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.NumberFormat;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -50,7 +51,7 @@ public class MostrarCliente extends HttpServlet {
         req.setAttribute("telefone", telefone);
         req.setAttribute("cep", cep);
         req.setAttribute("endereco", endereco);
-        req.setAttribute("numero", numero);
+        req.setAttribute("numero",new Integer(numero));
         req.setAttribute("complemento", complemento);
         req.setAttribute("estado", estado);
         req.setAttribute("cidade", cidade);
@@ -58,7 +59,7 @@ public class MostrarCliente extends HttpServlet {
         req.setAttribute("email", email);
         req.setAttribute("senha", senha);
             
-        RequestDispatcher rd = req.getRequestDispatcher("/ClienteManut.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/AlterarCliente.jsp");
         rd.forward(req,resp);
     }
 }

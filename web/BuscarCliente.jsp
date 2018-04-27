@@ -109,7 +109,6 @@
                                 <td><%= cli.getTelefone() %></td>
                                 <td>
                                     <a href="MostrarCliente?id=<%= cli.getId() %>"><span title="Editar Cliente" class="glyphicon glyphicon-pencil"></span></a>
-                                    <span title="Ver Cliente" class="glyphicon glyphicon-user"></span>
                                     <span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
                                     <% if (cli.getAtivo().equals("a")) { %>
                                         <a href="InativarCliente?id=<%= cli.getId() %>">
