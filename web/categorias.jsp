@@ -266,7 +266,7 @@
 	<!-- /section -->
 
 	<!-- FOOTER -->
-       <%@include file="/footerCliente.html" %>- /FOOTER -->
+       <%@include file="/footerCliente.html" %><!-- /FOOTER -->
 
 
 	<!-- jQuery Plugins -->
