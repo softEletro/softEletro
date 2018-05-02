@@ -28,6 +28,7 @@ public class SalvarCliente extends HttpServlet {
         
         cli.setNome(req.getParameter("nome"));
         cli.setSobrenome(req.getParameter("sobrenome"));
+        cli.setSexo(req.getParameter("sexo"));
         cli.setCpf(req.getParameter("cpf"));
         cli.setTelefone(req.getParameter("telefone"));
         cli.setCep(req.getParameter("cep"));

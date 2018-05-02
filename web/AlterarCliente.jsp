@@ -64,6 +64,7 @@
 	<div class="section">
             <jsp:useBean id="nome" scope="request" class="java.lang.String" />
             <jsp:useBean id="sobrenome" scope="request" class="java.lang.String" />
+            <jsp:useBean id="sexo" scope="request" class="java.lang.String" />
             <jsp:useBean id="cpf" scope="request" class="java.lang.String" />
             <jsp:useBean id="telefone" scope="request" class="java.lang.String" />
             <jsp:useBean id="cep" scope="request" class="java.lang.String" />
@@ -97,8 +98,20 @@
                         </div>
                         <div class="col-sm-2">
                             <label>Sexo</label><br>
-                            <input type="radio" name="sexo" value="male"> Mulher<br>
-                            <input type="radio" name="sexo" value="male"> Homem<br>
+                            <select name="sexo" id="sexo" class="form-control">
+                                <option value="0" selected="selected">
+                                </option>
+                                <option value="1"
+                                    <% if ("1".equals(sexo)) { %>
+                                    selected="selected"<% } %>>
+                                    Masculino
+                                </option>
+                                <option value="2"
+                                    <% if ("2".equals(sexo)) { %>
+                                    selected="selected"<% } %>>
+                                    Feminino
+                                </option>
+                            </select>
                         </div>
                     </div>
                     <br>

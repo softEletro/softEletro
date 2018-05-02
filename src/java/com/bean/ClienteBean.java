@@ -22,6 +22,7 @@ public class ClienteBean {
         Long Id;
         String nome;
         String sobrenome;
+        String sexo;
         String cpf;
         String telefone;
         String cep;
@@ -34,6 +35,14 @@ public class ClienteBean {
         String email;
         String senha;
         String ativo;
+
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
 
     public Long getId() {
         return Id;

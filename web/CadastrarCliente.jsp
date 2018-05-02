@@ -1,4 +1,5 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%><!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -81,8 +82,16 @@
                         </div>
                         <div class="col-sm-2">
                             <label>Sexo</label><br>
-                            <input type="radio" name="sexo" value="male"> Mulher<br>
-                            <input type="radio" name="sexo" value="male"> Homem<br>
+                            <select name="sexo" id="sexo" class="form-control">
+                                <option value="0" selected="selected">
+                                </option>
+                                <option value="1">
+                                    Masculino
+                                </option>
+                                <option value="2">
+                                    Feminino
+                                </option>
+                            </select>
                         </div>
                     </div>
                     <br>

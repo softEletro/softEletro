@@ -32,6 +32,7 @@ public class MostrarCliente extends HttpServlet {
         
         String nome = cli.getNome();
         String sobrenome = cli.getSobrenome();
+        String sexo = cli.getSexo();
         String cpf = cli.getCpf();
         String telefone =  cli.getTelefone();
         String cep = cli.getCep();
@@ -47,6 +48,7 @@ public class MostrarCliente extends HttpServlet {
         req.setAttribute("id", id);
         req.setAttribute("nome", nome);
         req.setAttribute("sobrenome", sobrenome);
+        req.setAttribute("sexo", sexo);
         req.setAttribute("cpf", cpf);
         req.setAttribute("telefone", telefone);
         req.setAttribute("cep", cep);
