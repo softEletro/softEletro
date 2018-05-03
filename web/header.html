@@ -1,114 +1,142 @@
 <header>
-		<!-- top Header -->
-		<div id="top-header">
-			<div class="container">
-				<div class="pull-left">
-					<span>Bem Vindo!</span>
-				</div>
-			</div>
-		</div>
-		<!-- /top Header -->
+    
+    <script type="text/javascript">  
+        // Switch para mudar entre Minha Conta e Entrar
+    function MudarOpcao() {        
+        var display = "Logout"; // Variavel que virá do login
+        if(display === "Logout"){
+            document.getElementById("minhaConta").style.display = 'none';
+            document.getElementById("entrarConta").style.display = 'inline-block';
+        } else {
+            document.getElementById("minhaConta").style.display = 'inline-block';
+            document.getElementById("entrarConta").style.display = 'none';
+          }
+      }
+    </script>
+    
+  <!-- top Header -->
+  <div id="top-header">
+    <div class="container">
+      <div class="pull-left">
+        <span>Bem Vindo!</span>
+      </div>
+    </div>
+  </div>
+  <!-- /top Header -->
+  <!-- header -->
+  <div id="header">
+    <div class="container">
+      <div class="pull-left">
+        <!-- Logo -->
+        <div class="header-logo">
+          <a class="logo" href="#">
+          <img src="./img/logo.png" alt="">
+          </a>
+        </div>
+        <!-- /Logo -->
+        <!-- Search -->
+        <div class="header-search">
+          <form>
+            <input class="input search-input" type="text" placeholder="Procure o Produto...">
+            <select class="input search-categories">
+              <option value="0">Categorias</option>
+              <option value="1">Computador</option>
+              <option value="1">Celular</option>
+            </select>
+            <button class="search-btn"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <!-- /Search -->
+      </div>
+      <div class="pull-right">
+        <ul class="header-btns">
+          <!--Minha conta -->
+          <li class="header-account dropdown default-dropdown" id="minhaConta" style="display: inline-block">
+            <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
+              <div class="header-btns-icon">
+                <i class="fa fa-user-o"></i>
+              </div>
+              <strong class="text-uppercase">Minha Conta <i class="fa fa-caret-down"></i></strong>
+              
+            </div>
+            
+            <ul class="custom-menu">
+              <li><a href="#"><i class="fa fa-user-o"></i> Minha Conta</a></li>
+              <li><a href="#"><i class="fa fa-check"></i> Lista de Pedidos</a></li>
+              <li><a href="#"><i class="fa fa-exchange"></i> Editar Perfil</a></li>
+            </ul>
+          </li>
+          <!-- /Minha conta -->
+          <!-- Entrar -->          
+          <li class="header-account dropdown default-dropdown" id="entrarConta" style="display: none">
+            <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">                              
+                <strong class="text-uppercase">Entrar</strong>
+            </div>
+            
+            <ul class="custom-menu">
+                <li>Usuario: <input type="text" name="usuario"></li>
+                <li>Senha: <input type="password" name="senha"></li>
+                <br />
+                <li><input type="submit" name="entrar" value="Entrar"></li>
+                <br />
+                <li>Nao tem Cadastro ?<a href="#"><i class="fa fa-user-o"></i> Cadastrar</a></li>
+            </ul>
+          </li>
+          
+          <!-- /Entrar -->
+          <!-- Cart -->
+          <li class="header-cart dropdown default-dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
+              <div class="header-btns-icon">
+                <i class="fa fa-shopping-cart"></i>
+                <span class="qty">3</span>
+              </div>
+              <strong class="text-uppercase">Carrinho:</strong>
+              <br>
+              <span>R$</span>
+            </a>
+            <div class="custom-menu">
+              <div id="shopping-cart">
+                <div class="shopping-cart-list">
+                  <div class="product product-widget">
+                    <div class="product-thumb">
+                      <img src="./img/Aifoni_XIS_300x300.jpg" alt="">
+                    </div>
+                    <div class="product-body">
+                      <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
+                      <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                    </div>
+                    <button class="cancel-btn"><i class="fa fa-trash"></i></button>
+                  </div>
+                  <div class="product product-widget">
+                    <div class="product-thumb">
+                      <img src="./img/thumb-product01.jpg" alt="">
+                    </div>
+                    <div class="product-body">
+                      <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
+                      <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                    </div>
+                    <button class="cancel-btn"><i class="fa fa-trash"></i></button>
+                  </div>
+                </div>
+                <div class="shopping-cart-btns">
+                  <button class="main-btn">View Cart</button>
+                  <button class="primary-btn">Checkout <i class="fa fa-arrow-circle-right"></i></button>
+                </div>
+              </div>
+            </div>
+          </li>
+          <!-- /Cart -->
+          <!-- Mobile nav toggle-->
+          <li class="nav-toggle">
+            <button class="nav-toggle-btn main-btn icon-btn"><i class="fa fa-bars"></i></button>
+          </li>
+          <!-- / Mobile nav toggle -->
+        </ul>
+      </div>
+    </div>
+    <!-- header -->
+  </div>
+  <!-- container -->
+</header>
 
-		<!-- header -->
-		<div id="header">
-			<div class="container">
-				<div class="pull-left">
-					<!-- Logo -->
-					<div class="header-logo">
-						<a class="logo" href="#">
-							<img src="./img/logo.png" alt="">
-						</a>
-					</div>
-					<!-- /Logo -->
-
-					<!-- Search -->
-					<div class="header-search">
-						<form>
-							<input class="input search-input" type="text" placeholder="Procure o Produto...">
-							<select class="input search-categories">
-								<option value="0">Categorias</option>
-								<option value="1">Computador</option>
-								<option value="1">Celular</option>
-							</select>
-							<button class="search-btn"><i class="fa fa-search"></i></button>
-						</form>
-					</div>
-					<!-- /Search -->
-				</div>
-				<div class="pull-right">
-					<ul class="header-btns">
-						<!-- Account -->
-						<li class="header-account dropdown default-dropdown">
-							<div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
-								<div class="header-btns-icon">
-									<i class="fa fa-user-o"></i>
-								</div>
-								<strong class="text-uppercase">Minha Conta <i class="fa fa-caret-down"></i></strong>
-								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-							</div>
-							<a href="#" class="text-uppercase">Entrar/Cadastrar</a>
-			
-							<ul class="custom-menu">
-								<li><a href="#"><i class="fa fa-user-o"></i> Minha Conta</a></li>
-								<li><a href="#"><i class="fa fa-check"></i> Lista de Pedidos</a></li>
-								<li><a href="#"><i class="fa fa-exchange"></i> Editar Perfil</a></li>
-							</ul>
-						</li>
-						<!-- /Account -->
-						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-						<!-- Cart -->
-						<li class="header-cart dropdown default-dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-								<div class="header-btns-icon">
-									<i class="fa fa-shopping-cart"></i>
-									<span class="qty">3</span>
-								</div>
-								<strong class="text-uppercase">Carrinho:</strong>
-								<br>
-								<span>R$</span>
-							</a>
-							<div class="custom-menu">
-								<div id="shopping-cart">
-									<div class="shopping-cart-list">
-										<div class="product product-widget">
-											<div class="product-thumb">
-												<img src="./img/Aifoni_XIS_300x300.jpg" alt="">
-											</div>
-											<div class="product-body">
-												<h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-												<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-											</div>
-											<button class="cancel-btn"><i class="fa fa-trash"></i></button>
-										</div>
-										<div class="product product-widget">
-											<div class="product-thumb">
-												<img src="./img/thumb-product01.jpg" alt="">
-											</div>
-											<div class="product-body">
-												<h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-												<h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-											</div>
-											<button class="cancel-btn"><i class="fa fa-trash"></i></button>
-										</div>
-									</div>
-									<div class="shopping-cart-btns">
-										<button class="main-btn">View Cart</button>
-										<button class="primary-btn">Checkout <i class="fa fa-arrow-circle-right"></i></button>
-									</div>
-								</div>
-							</div>
-						</li>
-						<!-- /Cart -->
-
-						<!-- Mobile nav toggle-->
-						<li class="nav-toggle">
-							<button class="nav-toggle-btn main-btn icon-btn"><i class="fa fa-bars"></i></button>
-						</li>
-						<!-- / Mobile nav toggle -->
-					</ul>
-				</div>
-			</div>
-			<!-- header -->
-		</div>
-		<!-- container -->
-	</header>
