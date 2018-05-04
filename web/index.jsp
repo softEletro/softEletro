@@ -65,14 +65,14 @@
                     <div id="home-slick">
                         <!-- banner -->
                         <div class="banner banner-1">
-                            <img src="./img/banner20.jpg" alt="">
+                            <img src="./img/banner20.jpg" class="imgSlide" alt="">
 
                         </div>                       
                         <div class="banner banner-1">
-                            <img src="./img/banner21.jpg" alt="">
+                            <img src="./img/banner21.jpg" class="imgSlide" alt="">
                         </div>
                         <div class="banner banner-1">
-                            <img src="./img/banner22.jpg" alt="">
+                            <img src="./img/banner22.jpg" class="imgSlide" alt="">
                         </div>
                     </div>
                 </div>
@@ -104,7 +104,7 @@
                     <!-- banner -->
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="banner banner-2">
-                            <img src="./img/banner14.jpg" alt="">
+                            <img src="./img/banner14.jpg" class="imgBanner" alt="">
                             <div class="banner-caption">                               
                             </div>
                         </div>
@@ -122,8 +122,8 @@
                                             <span>Novo</span>
                                             <span class="sale">-20%</span>
                                         </div>                                       
-											<button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product01.jpg" alt="">
+                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                        <img src="./img/product01.jpg" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
@@ -142,7 +142,7 @@
                                             <span class="sale">-20%</span>
                                         </div>                                      
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product07.jpg" alt="">
+                                        <img src="./img/product07.jpg" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
@@ -162,7 +162,7 @@
                                             <span class="sale">-20%</span>
                                         </div>                                       
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product06.jpg" alt="">
+                                        <img src="./img/product06.jpg" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
@@ -183,7 +183,7 @@
                                             <span class="sale">-20%</span>
                                         </div>        
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product08.jpg" alt="">
+                                        <img src="./img/product08.jpg" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>                                
@@ -223,7 +223,7 @@
                                     <span class="sale">-20%</span>
                                 </div>                               
                                 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                <img src="./img/product01.jpg" alt="">
+                                <img src="./img/product01.jpg" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
                                 <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
@@ -244,7 +244,7 @@
                                 <div class="product product-single">
                                     <div class="product-thumb">
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product06.jpg" alt="">
+                                        <img src="./img/product06.jpg" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$32.50</h3>
@@ -263,7 +263,7 @@
                                             <span class="sale">-20%</span>
                                         </div>
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product05.jpg" alt="">
+                                        <img src="./img/product05.jpg" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>                                      
@@ -279,7 +279,7 @@
                                 <div class="product product-single">
                                     <div class="product-thumb">
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product04.jpg" alt="">
+                                        <img src="./img/product04.jpg" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$32.50</h3>
@@ -300,7 +300,7 @@
                                             <span class="sale">-20%</span>
                                         </div>
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product03.jpg" alt="">
+                                        <img src="./img/product03.jpg" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
@@ -342,7 +342,7 @@
                         <div class="product product-single">
                             <div class="product-thumb">
                                 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                <img src="./img/product01.jpg" alt="">
+                                <img src="./img/product01.jpg" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
                                 <h3 class="product-price">R$32.50</h3>
@@ -364,7 +364,7 @@
                                     <span class="sale">-20%</span>
                                 </div>
                                 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                <img src="./img/product02.jpg" alt="">
+                                <img src="./img/product02.jpg" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
                                 <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
@@ -386,7 +386,7 @@
                                     <span class="sale">-20%</span>
                                 </div>
                                 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                <img src="./img/product03.jpg" alt="">
+                                <img src="./img/product03.jpg" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
                                 <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
@@ -407,7 +407,7 @@
                                     <span>Novo</span>
                                 </div>
                                 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                <img src="./img/product04.jpg" alt="">
+                                <img src="./img/product04.jpg" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
                                 <h3 class="product-price">R$32.50</h3>

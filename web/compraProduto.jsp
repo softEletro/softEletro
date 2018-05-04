@@ -83,7 +83,7 @@
       <tbody>
         <tr>
           <th>1</th>
-			<td><img src="img/motoxcarrinho.png"> Motorola Moto X4</td>
+			<td><img src="img/motoxcarrinho.png" class="imgCarrinho"> Motorola Moto X4</td>
 			<td class="quantidade">
 				<select name="quantidade">
 					<option value="1">1</option>
@@ -99,36 +99,20 @@
 					</td>
 			<td>R$ 999,00	</td>
 			<td><span title="Remover Produto" class="glyphicon glyphicon-remove"></td>
-		<tr>
-          <th>2</th>
-			<td><img src="img/j7carrinho.png">Samsung Galaxy J7 Prime</td>
-			<td class="quantidade">
-				<select name="quantidade">
-					<option value="1">1</option>
-					<option value="1">2</option>
-					<option value="1">3</option>
-					<option value="1">4</option>
-					<option value="1">5</option>
-					<option value="1">6</option>
-					<option value="1">7</option>
-					<option value="1">8</option>
-					<option value="1">9</option>
-					</td>
-			<td>R$ 1099,00	</td>
-			<td><span title="Remover Produto" class="glyphicon glyphicon-remove"></td>
-		</tr>
-		<tr>
+		
+                        <!-- Forma de pagamento -->
+                    <tr>
 			<td colspan="2"></td>
 			<td><strong>Forma de pagamento</strong></td>
 			<td>
-				<select name="formapagamento">
-					<option value="0" selected="selected"></option>
+				<select name="formapagamento" class="">
+					<option value="" selected="selected"></option>
 					<option value="1">Boleto</option>
-					<option value="1">Cartão</option>
+					<option value="2">Cartão</option>
 				</select>
 			<td>
-		</tr>
-		<tr>
+                    </tr>
+                    <tr>
 			<td colspan="2"></td>
 			<td><strong>Desconto</strong></td>
 			<td>R$ 0.000,00</td>

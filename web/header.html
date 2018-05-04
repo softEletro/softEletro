@@ -2,7 +2,7 @@
     
     <script type="text/javascript">  
         // Switch para mudar entre Minha Conta e Entrar
-    function MudarOpcao() {        
+    window.onload = function MudarOpcao() {        
         var display = "Logout"; // Variavel que virá do login
         if(display === "Logout"){
             document.getElementById("minhaConta").style.display = 'none';
@@ -29,8 +29,8 @@
       <div class="pull-left">
         <!-- Logo -->
         <div class="header-logo">
-          <a class="logo" href="#">
-          <img src="./img/logo.png" alt="">
+          <a class="logo" href="index.jsp">
+          <img src="./img/logo.png" class="imgLogo" alt="">
           </a>
         </div>
         <!-- /Logo -->
@@ -38,9 +38,8 @@
         <div class="header-search">
           <form>
             <input class="input search-input" type="text" placeholder="Procure o Produto...">
-            <select class="input search-categories">
-              <option value="0">Categorias</option>
-              <option value="1">Computador</option>
+            <select class="input search-categories">              
+              <option value="0">Computador</option>
               <option value="1">Celular</option>
             </select>
             <button class="search-btn"><i class="fa fa-search"></i></button>
@@ -77,9 +76,9 @@
                 <li>Usuario: <input type="text" name="usuario"></li>
                 <li>Senha: <input type="password" name="senha"></li>
                 <br />
-                <li><input type="submit" name="entrar" value="Entrar"></li>
+                <li><input class="btn btn-default" type="submit" name="entrar" value="Entrar"></li>
                 <br />
-                <li>Nao tem Cadastro ?<a href="#"><i class="fa fa-user-o"></i> Cadastrar</a></li>
+                <li>Nao tem Cadastro ?<a href="CadastrarCliente.jsp"><i class="fa fa-user-o"></i> Cadastrar</a></li>
             </ul>
           </li>
           
@@ -89,42 +88,12 @@
             <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
               <div class="header-btns-icon">
                 <i class="fa fa-shopping-cart"></i>
-                <span class="qty">3</span>
+                <span class="qty">3</span> <!-- Qtd de Itens no Carrinho -->
               </div>
               <strong class="text-uppercase">Carrinho:</strong>
               <br>
               <span>R$</span>
-            </a>
-            <div class="custom-menu">
-              <div id="shopping-cart">
-                <div class="shopping-cart-list">
-                  <div class="product product-widget">
-                    <div class="product-thumb">
-                      <img src="./img/Aifoni_XIS_300x300.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                      <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-                      <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-                    </div>
-                    <button class="cancel-btn"><i class="fa fa-trash"></i></button>
-                  </div>
-                  <div class="product product-widget">
-                    <div class="product-thumb">
-                      <img src="./img/thumb-product01.jpg" alt="">
-                    </div>
-                    <div class="product-body">
-                      <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-                      <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-                    </div>
-                    <button class="cancel-btn"><i class="fa fa-trash"></i></button>
-                  </div>
-                </div>
-                <div class="shopping-cart-btns">
-                  <button class="main-btn">View Cart</button>
-                  <button class="primary-btn">Checkout <i class="fa fa-arrow-circle-right"></i></button>
-                </div>
-              </div>
-            </div>
+            </a>            
           </li>
           <!-- /Cart -->
           <!-- Mobile nav toggle-->

@@ -1725,3 +1725,52 @@ textarea.input {
     width: 100%;
   }
 }
+
+.imgLista{
+    max-width:46vmin;
+    max-height:46vmin;
+    width: auto;
+    height: auto;
+}
+
+.imgBanner{
+    max-width:100vmin;
+    max-height:100vmin;
+    width: auto;
+    height: auto;
+}
+
+.imgSlide{
+    max-width:130vmin;
+    max-height:130vmin;
+    width: auto;
+    height: auto;
+}
+
+.imgLogo{
+    max-width:15vmin;
+    max-height:15vmin;
+    width: auto;
+    height: auto;
+}
+
+.imgMini{
+    max-width:15vmin;
+    max-height:15vmin;
+    width: auto;
+    height: auto;
+}
+
+.imgPreview{
+    max-width:80vmin;
+    max-height:80vmin;
+    width: auto;
+    height: auto;
+}
+
+.imgCarrinho{
+    max-width:10vmin;
+    max-height:10vmin;
+    width: auto;
+    height: auto;
+}

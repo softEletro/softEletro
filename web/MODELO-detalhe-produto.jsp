@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+    
+    <%@ page contentType="text/html; charset=UTF-8" %>
 
 <head>
-	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
@@ -39,121 +40,9 @@
 </head>
 
 <body>
-	<!-- HEADER -->
-        <header>
-            <!-- top Header -->
-            <div id="top-header">
-                <div class="container">
-                    <div class="pull-left">
-                        <span>Seja Bem Vindo a softEletro</span>
-                    </div>
-                </div>
-            </div>
-            <!-- /top Header -->
-
-            <!-- header -->
-            <div id="header">
-                <div class="container">
-                    <div class="pull-left">
-                        <!-- Logo -->
-                        <div class="header-logo">
-                            <a class="logo" href="#">
-                                <img src="./img/logo.png" class="imgLogo" alt="">
-                            </a>
-                        </div>
-                        <!-- /Logo -->
-
-                        <!-- Search -->
-                         <div class="header-search">
-                            <form>
-                                <input class="input search-input" type="text" placeholder="Procure o Produto...">
-                                <select class="input search-categories">                                    
-                                    <option value="0">Computador</option>
-                                    <option value="1">Celular</option>
-                                </select>
-                                <button class="search-btn"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                        <!-- /Search -->
-                    </div>
-                    <div class="pull-right">
-                        <ul class="header-btns">
-                            <!-- Account -->
-                            <li class="header-account dropdown default-dropdown">
-                                <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
-                                    <div class="header-btns-icon">
-                                        <i class="fa fa-user-o"></i>
-                                    </div>
-                                    <strong class="text-uppercase">Minha Conta <i class="fa fa-caret-down"></i></strong>
-                                    <br>
-                                    <span><a href="#" class="text-uppercase">Entrar/Cadastrar</a></span>
-									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                </div>
-
-								<ul class="custom-menu">
-								<li><a href="#"><i class="fa fa-user-o"></i> Minha Conta</a></li>
-								<li><a href="#"><i class="fa fa-check"></i> Lista de Pedidos</a></li>
-								<li><a href="#"><i class="fa fa-exchange"></i> Editar Perfil</a></li>
-							</ul>
-                            </li>
-                            <!-- /Account -->
-							
-                            <!-- Cart -->
-                            <li class="header-cart dropdown default-dropdown">
-                                <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
-                                    <div class="header-btns-icon">
-                                        <i class="fa fa-shopping-cart"></i>
-                                    </div>
-                                    <strong class="text-uppercase">Carrinho:</strong>
-                                <br>
-                                <span>R$</span>
-                            </a>
-                            <div class="custom-menu">
-                                <div id="shopping-cart">
-                                    <div class="shopping-cart-list">
-                                        <div class="product product-widget">
-                                            <div class="product-thumb">
-                                                <img src="./img/Aifoni_XIS_300x300.jpg" alt="">
-                                            </div>
-                                            <div class="product-body">
-                                                <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-                                                <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-                                            </div>
-                                            <button class="cancel-btn"><i class="fa fa-trash"></i></button>
-                                        </div>
-                                        <div class="product product-widget">
-                                            <div class="product-thumb">
-                                                <img src="./img/thumb-product01.jpg" alt="">
-                                            </div>
-                                            <div class="product-body">
-                                                <h3 class="product-price">$32.50 <span class="qty">x3</span></h3>
-                                                <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-                                            </div>
-                                            <button class="cancel-btn"><i class="fa fa-trash"></i></button>
-                                        </div>
-                                    </div>
-                                    <div class="shopping-cart-btns">
-                                        <button class="main-btn">View Cart</button>
-                                        <button class="primary-btn">Checkout <i class="fa fa-arrow-circle-right"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                            <!-- /Cart -->
-
-                            <!-- Mobile nav toggle-->
-                            <li class="nav-toggle">
-                                <button class="nav-toggle-btn main-btn icon-btn"><i class="fa fa-bars"></i></button>
-                            </li>
-                            <!-- / Mobile nav toggle -->
-                        </ul>
-                    </div>
-                </div>
-                <!-- header -->
-            </div>
-            <!-- container -->
-        </header>
-	<!-- /HEADER -->
+	 <!-- HEADER -->
+        <%@include file="/header.html" %>
+        <!-- /HEADER -->
 
 	<!-- NAVIGATION -->
         <div id="navigation">
@@ -325,18 +214,24 @@
 					<div class="col-md-6">
 						<div id="product-main-view">
 							<div class="product-view">
-								<img src="./img/banner_iphonex1200x1200.jpg" alt="">
+								<img src="./img/banner_iphonex.jpg" class="imgPreview" alt="">
 							</div>
 							<div class="product-view">
-								<img src="./img/banner_iphonex_lado1200x1200.jpg" alt="">
+								<img src="./img/banner_iphonex_lado.jpg" class="imgPreview" alt="">
+							</div>
+                                                        <div class="product-view">
+								<img src="./img/banner_iphonex_tras.jpg" class="imgPreview" alt="">
 							</div>
 						</div>
 						<div id="product-view">
 							<div class="product-view">
-								<img src="./img/banner_iphonex300x300.jpg" alt="">
+								<img src="./img/banner_iphonex.jpg" class="imgMini" alt="">
 							</div>
 							<div class="product-view">
-								<img src="./img/banner_iphonex_lado300x300.jpg" alt="">
+								<img src="./img/banner_iphonex_lado.jpg" class="imgMini" alt="">
+							</div>
+                                                        <div class="product-view">
+								<img src="./img/banner_iphonex_tras.jpg" class="imgMini" alt="">
 							</div>
 						</div>
 					</div>
@@ -348,22 +243,22 @@
 									<span class="sale">-20%</span>
 								 --> 
 							</div>
-							<h2 class="product-name">iPhone X Apple 256GB Cinza Espacial 4G Tela 5,8” - Retina Câm 12MP + Selfie 7MP iOS 11 Proc. Chip A11</h2>
+							<h2 class="product-name">iPhone X Apple 256GB Cinza Espacial 4G Tela 5,8â - Retina CÃ¢m 12MP + Selfie 7MP iOS 11 Proc. Chip A11</h2>
 							<h3 class="product-price">R$6.999,00 
 							<!-- Quantidade de Deconto	
 							<del class="product-old-price">$45.00</del> 
 							 -->
 							</h3>
 							<div>
-								<a href="#Avaliações"> Avaliações / Fazer Avaliação</a>
+								<a href="#AvaliaÃ§Ãµes"> AvaliaÃ§Ãµes / Fazer AvaliaÃ§Ã£o</a>
 							</div>
 							<p><strong>Disponibilidade:</strong> Em Estoque</p>
 							<p><strong>Marca:</strong>  Apple</p>
-							<p>O novo smartphone da Apple, o <b>iPhone X</b>, traz tantas novidades incríveis que vai fazer você repensar o modo como você usa o seu smartphone. Seu novo design, ainda mais bonito, foi construído com um resistente vidro na frente e atrás, moldura de aço inoxidável de qualidade cirúrgica, e toda a estrutura é protegida contra água e poeira.<br>
+							<p>O novo smartphone da Apple, o <b>iPhone X</b>, traz tantas novidades incrÃ­veis que vai fazer vocÃª repensar o modo como vocÃª usa o seu smartphone. Seu novo design, ainda mais bonito, foi construÃ­do com um resistente vidro na frente e atrÃ¡s, moldura de aÃ§o inoxidÃ¡vel de qualidade cirÃºrgica, e toda a estrutura Ã© protegida contra Ã¡gua e poeira.<br>
 
-							O <b>iPhone X</b> tem tela maior, a inovadora <b>tela Super Retina de 5,8 polegadas com tecnologia OLED</b> praticamente ocupa toda a frente do aparelho, e não conta mais com o clássico botão Home, agora é só deslizar o dedo para acessar a tela de Início.<br>
+							O <b>iPhone X</b> tem tela maior, a inovadora <b>tela Super Retina de 5,8 polegadas com tecnologia OLED</b> praticamente ocupa toda a frente do aparelho, e nÃ£o conta mais com o clÃ¡ssico botÃ£o Home, agora Ã© sÃ³ deslizar o dedo para acessar a tela de InÃ­cio.<br>
 
-							Já na parte de traz, ele conta com <b>câmera dupla de 12 MP com estabilização óptica de imagem</b>, uma com lente grande-angular de abertura ƒ/1.8 e outra teleobjetiva com abertura de ƒ/2.4. Juntas você vai conseguir registrar surpreendentes fotos e com recursos impressionantes.</p>
+							JÃ¡ na parte de traz, ele conta com <b>cÃ¢mera dupla de 12 MP com estabilizaÃ§Ã£o Ã³ptica de imagem</b>, uma com lente grande-angular de abertura Æ/1.8 e outra teleobjetiva com abertura de Æ/2.4. Juntas vocÃª vai conseguir registrar surpreendentes fotos e com recursos impressionantes.</p>
 							<div class="product-options">
 							</div>
 
@@ -380,44 +275,44 @@
 						<div class="product-tab">
 							<ul class="tab-nav">
 								<li class="active"><a data-toggle="tab" href="#tab1">Detalhes</a></li>
-								<li><a data-toggle="tab" href="#tab2">Ficha Técnica</a></li>
-								<li><a data-toggle="tab" href="#tab3">Avaliações</a></li>
+								<li><a data-toggle="tab" href="#tab2">Ficha TÃ©cnica</a></li>
+								<li><a data-toggle="tab" href="#tab3">AvaliaÃ§Ãµes</a></li>
 							</ul>
 							<div class="tab-content">
 								<div id="tab1" class="tab-pane fade in active">
-									<p><b>Diga alô para o futuro.</b><br>
+									<p><b>Diga alÃ´ para o futuro.</b><br>
 
-										iPhone X. Você nunca viu nada como ele. Ele nunca viu nada como você.  <br><br>
+										iPhone X. VocÃª nunca viu nada como ele. Ele nunca viu nada como vocÃª.  <br><br>
 
-										O iPhone X tem tela Super Retina HD de 5,8 polegadas sem bordas, HDR e True Tone(1). Ele possui o vidro mais resistente da categoria, moldura de aço inoxidável de qualidade cirúrgica, recarga sem fio(2) e toda a sua estrutura é protegida contra água e poeira(3). A câmera dupla de 12 MP com dupla estabilização de imagem tira fotos lindas mesmo em pouca luz. Usando a câmera TrueDepth, você tira selfies com modo Retrato e a nova Iluminação de Retrato(4). O Face ID permite desbloquear o celular só com o olhar, e apps e jogos ganham vida de um jeito impressionante em realidade aumentada. Tanto desempenho só é possível graças ao chip A11 Bionic, o mais inteligente e poderoso em um smartphone. É por tudo isso que o iPhone X inicia uma nova era para o iPhone.<br><br>
+										O iPhone X tem tela Super Retina HD de 5,8 polegadas sem bordas, HDR e True Tone(1). Ele possui o vidro mais resistente da categoria, moldura de aÃ§o inoxidÃ¡vel de qualidade cirÃºrgica, recarga sem fio(2) e toda a sua estrutura Ã© protegida contra Ã¡gua e poeira(3). A cÃ¢mera dupla de 12 MP com dupla estabilizaÃ§Ã£o de imagem tira fotos lindas mesmo em pouca luz. Usando a cÃ¢mera TrueDepth, vocÃª tira selfies com modo Retrato e a nova IluminaÃ§Ã£o de Retrato(4). O Face ID permite desbloquear o celular sÃ³ com o olhar, e apps e jogos ganham vida de um jeito impressionante em realidade aumentada. Tanto desempenho sÃ³ Ã© possÃ­vel graÃ§as ao chip A11 Bionic, o mais inteligente e poderoso em um smartphone. Ã por tudo isso que o iPhone X inicia uma nova era para o iPhone.<br><br>
 
 
-										<b>Lista das principais características</b><br><br>
+										<b>Lista das principais caracterÃ­sticas</b><br><br>
 
 									 - Tela Super Retina HD de 5,8 polegadas com HDR e True Tone(1)<br>
 
-									 - Design todo em vidro e aço inoxidável, resistente à água e poeira(3)<br>
+									 - Design todo em vidro e aÃ§o inoxidÃ¡vel, resistente Ã  Ã¡gua e poeira(3)<br>
 
-								   	 - Câmera dupla de 12 MP com dupla estabilização óptica de imagem, modo Retrato, Iluminação de Retrato e vídeo 4K a até 60 qps(4)<br>
+								   	 - CÃ¢mera dupla de 12 MP com dupla estabilizaÃ§Ã£o Ã³ptica de imagem, modo Retrato, IluminaÃ§Ã£o de Retrato e vÃ­deo 4K a atÃ© 60 qps(4)<br>
 
-									 - Câmera TrueDepth frontal de 7 MP com modo Retrato e Iluminação de Retrato(4)<br>
+									 - CÃ¢mera TrueDepth frontal de 7 MP com modo Retrato e IluminaÃ§Ã£o de Retrato(4)<br>
 
-									 - Face ID para autenticação segura<br>
+									 - Face ID para autenticaÃ§Ã£o segura<br>
 
 									 - A11 Bionic, o chip mais inteligente e poderoso em um smartphone<br>
 
-									 - Recarga sem fio - funciona com carregadores padrão Qi(2)<br><br>
+									 - Recarga sem fio - funciona com carregadores padrÃ£o Qi(2)<br><br>
 
 
 									<b>Avisos legais</b><br><br>
 
-									(1) A tela do iPhone X tem bordas arredondadas. Quando medida como um retângulo, a tela tem 5,85 polegadas na diagonal. A área real de visualização é menor.<br>
+									(1) A tela do iPhone X tem bordas arredondadas. Quando medida como um retÃ¢ngulo, a tela tem 5,85 polegadas na diagonal. A Ã¡rea real de visualizaÃ§Ã£o Ã© menor.<br>
 
 									(2) Carregador sem fio vendido separadamente.<br>
 
-									(3) O iPhone X é resistente à água, respingos e poeira e foi testado em condições controladas em laboratório, classificado como IP67 segundo a norma IEC 60529. A resistência à água, respingos e poeira não é uma condição permanente e pode diminuir com o tempo. Não tente recarregar um iPhone molhado. Veja instruções no guia do usuário para limpeza e secagem. Danos decorrentes de contato com líquidos não estão incluídos na garantia. <br>
+									(3) O iPhone X Ã© resistente Ã  Ã¡gua, respingos e poeira e foi testado em condiÃ§Ãµes controladas em laboratÃ³rio, classificado como IP67 segundo a norma IEC 60529. A resistÃªncia Ã  Ã¡gua, respingos e poeira nÃ£o Ã© uma condiÃ§Ã£o permanente e pode diminuir com o tempo. NÃ£o tente recarregar um iPhone molhado. Veja instruÃ§Ãµes no guia do usuÃ¡rio para limpeza e secagem. Danos decorrentes de contato com lÃ­quidos nÃ£o estÃ£o incluÃ­dos na garantia. <br>
 
-									(4) Iluminação de Retrato disponível em versão beta.</p><br>
+									(4) IluminaÃ§Ã£o de Retrato disponÃ­vel em versÃ£o beta.</p><br>
 								</div>
 
 								<div id="tab2" class="tab-pane fade in active">
@@ -455,10 +350,10 @@
             							<tr>
                 							<th><b>Memoria Interna</b></th>
                 							<td></td>
-                							<td>256GB, Não possui entrada para cartão de memória</td>
+                							<td>256GB, NÃ£o possui entrada para cartÃ£o de memÃ³ria</td>
             							</tr>
             							<tr>
-                							<th><b>Memória RAM</b></th>
+                							<th><b>MemÃ³ria RAM</b></th>
                 							<td></td>
                 							<td>3GB</td>
             							</tr>
@@ -468,7 +363,7 @@
                 							<td>5.8"</td>
             							</tr>
             							<tr>
-                							<th><b>Câmera Traseira, Frontal</b></th>
+                							<th><b>CÃ¢mera Traseira, Frontal</b></th>
                 							<td></td>
                 							<td>12MP, 7MP</td>
             							</tr>
@@ -483,7 +378,7 @@
 
 									<div class="row">
 										<div class="col-md-6">
-											<div class="section-title" id="Avaliações">
+											<div class="section-title" id="AvaliaÃ§Ãµes">
 												<div class="product-reviews">
 													<div class="single-review">
 														<div class="review-heading">
@@ -491,7 +386,7 @@
 															<div><a href="#"><i class="fa fa-clock-o"></i> 09/04/2018</a></div>
 														</div>
 													<div class="review-body">
-														<p>Extremamente satisfeito, o melhor aparelho já lançado pela Apple!.</p>
+														<p>Extremamente satisfeito, o melhor aparelho jÃ¡ lanÃ§ado pela Apple!.</p>
 													</div>
 												</div>
 
@@ -501,7 +396,7 @@
 														<div><a href="#"><i class="fa fa-clock-o"></i> 29/03/2018</a></div>
 													</div>
 													<div class="review-body">
-														<p>O aparelho é excelente e o design é incrível, porém o preço é incompatível com a realidade.</p>
+														<p>O aparelho Ã© excelente e o design Ã© incrÃ­vel, porÃ©m o preÃ§o Ã© incompatÃ­vel com a realidade.</p>
 													</div>
 												</div>
 
@@ -511,7 +406,7 @@
 														<div><a href="#"><i class="fa fa-clock-o"></i> 05/02/2018</a></div>
 													</div>
 													<div class="review-body">
-														<p>Qualidade e design fenomenal! O smartphone tem sistema operacional próprio, é incrivelmente rápido, estável e seguro..</p>
+														<p>Qualidade e design fenomenal! O smartphone tem sistema operacional prÃ³prio, Ã© incrivelmente rÃ¡pido, estÃ¡vel e seguro..</p>
 													</div>
 												</div>
 
@@ -525,8 +420,8 @@
 											</div>
 										</div>
 										<div class="col-md-6">
-											<h4 class="text-uppercase">ESCREVA SUA AVALIAÇÃO</h4>
-											<p>Seu endereço de e-mail não será publicado.</p>
+											<h4 class="text-uppercase">ESCREVA SUA AVALIAÃÃO</h4>
+											<p>Seu endereÃ§o de e-mail nÃ£o serÃ¡ publicado.</p>
 											<form class="review-form">
 												<div class="form-group">
 													<input class="input" type="text" placeholder="Nome" />
@@ -535,7 +430,7 @@
 													<input class="input" type="email" placeholder="E-mail" />
 												</div>
 												<div class="form-group">
-													<textarea class="input" placeholder="Sua Avaliação"></textarea>
+													<textarea class="input" placeholder="Sua AvaliaÃ§Ã£o"></textarea>
 												</div>
 												<button class="primary-btn">Enviar</button>
 											</form>
@@ -567,7 +462,7 @@
 				<!-- section title -->
 				<div class="col-md-12">
 					<div class="section-title">
-						<h2 class="title">Recomendados Para Você</h2>
+						<h2 class="title">Recomendados Para VocÃª</h2>
 					</div>
 				</div>
 				<!-- section title -->
@@ -735,7 +630,7 @@
                     <!-- footer widget -->
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="footer">
-                            <h3 class="footer-header">Serviço ao cliente</h3>
+                            <h3 class="footer-header">ServiÃ§o ao cliente</h3>
                             <ul class="list-links">
                                 <li><a href="#">Sobre</a></li>
                             </ul>
