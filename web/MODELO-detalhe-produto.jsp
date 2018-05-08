@@ -315,7 +315,7 @@
                                             (4) IluminaÃ§Ã£o de Retrato disponÃ­vel em versÃ£o beta.</p><br>
                                     </div>
 
-                                    <div id="tab2" class="tab-pane fade in active">
+                                    <div id="tab2" class="tab-pane fade in">
                                         <table id="vertical-1">
                                             <p>	<tr>
                                                 <th><b>Marca</b></th>
