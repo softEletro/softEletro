@@ -71,7 +71,7 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <label>Nome: <%= nome %></label>
-                            <input type="text" class="form-control" id="idProduto" name="idProduto" value="<%= idProduto %>" disabled>
+                            <input type="hidden" class="form-control" id="idProduto" name="idProduto" value="<%= idProduto %>">
                         </div>		
                     </div><br>
                     <!-- row -->
