@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ServletProduto;
+package com.ServletFicha;
 
-import com.bean.ProdutoBean;
+import com.bean.FichaTecnicaBean;
 import com.model.ProdutoModel;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -19,23 +19,26 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author bcustodio
  */
-@WebServlet(name = "SalvarProduto", urlPatterns = {"/SalvarProduto"})
-public class SalvarProduto extends HttpServlet {
+@WebServlet(name = "SalvarFicha", urlPatterns = {"/SalvarFicha"})
+public class SalvarFicha extends HttpServlet {
     @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        ProdutoBean pro = new ProdutoBean();
+        FichaTecnicaBean fic = new FichaTecnicaBean();
         
-        pro.setProduto(req.getParameter("produto"));
-        pro.setNome(req.getParameter("nome"));
-        pro.setMarca(req.getParameter("marca"));
-        pro.setPreco(Double.parseDouble(req.getParameter("preco")));
-        pro.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
-        pro.setDescricao(req.getParameter("descricao"));
-        pro.setImagem(req.getParameter("imagem"));
-        pro.setAtivo("a");
+        fic.setIdProduto(Integer.parseInt(req.getParameter("idProduto")));
+        fic.setModelo(req.getParameter("modelo"));
+        fic.setCor(req.getParameter("cor"));
+        fic.setSistema(req.getParameter("sistema"));
+        fic.setProcessador(req.getParameter("processador"));
+        fic.setChip(req.getParameter("chip"));
+        fic.setInterna(req.getParameter("interna"));
+        fic.setRam(req.getParameter("ram"));
+        fic.setDisplay(req.getParameter("display"));
+        fic.setCamera(req.getParameter("camera"));
+        fic.setBateria(req.getParameter("bateria"));
         
         ProdutoModel dao = new ProdutoModel();
-        dao.salvarProduto(pro);
+        dao.salvarFicha(fic);
         
         PrintWriter out = resp.getWriter();
        out.print("<script>alert(\"Salvo com sucesso!\");</script>");

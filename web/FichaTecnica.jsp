@@ -65,7 +65,7 @@
 	<div class="section">
         <jsp:useBean id="nome" scope="request" class="java.lang.String" />
         <jsp:useBean id="idProduto" scope="request" class="java.lang.Integer" />
-            <form action="XXXXXXXX">
+            <form action="SalvarFicha">
                 <!-- container -->
 		<div class="container">
                     <div class="row">
