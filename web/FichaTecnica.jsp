@@ -63,13 +63,15 @@
 
 	<!-- section -->
 	<div class="section">
+        <jsp:useBean id="nome" scope="request" class="java.lang.String" />
+        <jsp:useBean id="idProduto" scope="request" class="java.lang.Integer" />
             <form action="XXXXXXXX">
                 <!-- container -->
 		<div class="container">
                     <div class="row">
                         <div class="col-sm-3">
-                            <label>Nome: iPhone X</label>
-                            <input type="text" class="form-control" id="IDproduto" name="IDproduto" value="1" disabled>
+                            <label>Nome: <%= nome %></label>
+                            <input type="text" class="form-control" id="idProduto" name="idProduto" value="<%= idProduto %>" disabled>
                         </div>		
                     </div><br>
                     <!-- row -->

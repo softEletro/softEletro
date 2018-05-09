@@ -11,5 +11,6 @@
         
     <mapping class="com.bean.ClienteBean" />
     <mapping class="com.bean.ProdutoBean" />
+    <mapping class="com.bean.FichaTecnicaBean" />
   </session-factory>
 </hibernate-configuration>

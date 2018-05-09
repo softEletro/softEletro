@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package com.model;
+import com.bean.FichaTecnicaBean;
 import java.sql.Statement;
 import com.bean.ProdutoBean;
 import com.util.HibernateUtil;
@@ -19,7 +20,8 @@ import org.hibernate.criterion.Restrictions;
  * @since Classe criada em 13/10/2016
  * Obs.: classe aprimorada em 20/10/2016
  */
-public class ProdutoModel {    
+public class ProdutoModel {
+    // --------------------- MÉTODOS DE GRAVAR NO BD ---------------------------
     //Método para gravação do cliente no BD.
     public void salvarProduto (ProdutoBean pro){
         // Cria e abre uma sessão
@@ -36,39 +38,7 @@ public class ProdutoModel {
         // Libera a memória e encerra a sessão
         session.flush();
         session.close();
-    }    
-
-    // Método para listagem de produtos.
-    public List<ProdutoBean> listarProdutos() {
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        
-        session.beginTransaction();
-        
-        Criteria Pro  = session.createCriteria(ProdutoBean.class);
-        
-        return Pro.list();
     }
-    
-    // Método de buscar pelo nome
-    public List<ProdutoBean> buscarNome(String nome) {
-
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
-        
-        Criteria crit = session.createCriteria(ProdutoBean.class)
-                .add(Restrictions.like("nome",nome+"%"));
-        
-        return crit.list();
-    }  
-    
-    // Método de buscar pelo id
-    public ProdutoBean buscarId(int id) {        
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        session.beginTransaction();
-        return (ProdutoBean)session.createCriteria(ProdutoBean.class)
-                .add(Restrictions.eq("id",id))
-                .uniqueResult();
-    }      
 
      // Altera o cliente.
     public void alterarProduto(ProdutoBean pro){
@@ -86,9 +56,61 @@ public class ProdutoModel {
         // Libera a memória e encerra a sessão
         session.flush();
         session.close();        
-    }  
+    }
+
+     // Salvar/alterar a ficha técnica.
+    public void salvarFicha(FichaTecnicaBean fic){
+        // Cria e abre uma sessão
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        // Inicia uma transação
+        session.beginTransaction();
+        
+        // Realiza a operação salvar
+        session.saveOrUpdate(fic);
+        
+        // Comita a transação
+        session.getTransaction().commit();
+        
+        // Libera a memória e encerra a sessão
+        session.flush();
+        session.close();        
+    }
     
-      // Busca todos os registros ativos.
+    // --------------------- MÉTODOS DE BUSCAR NO BD ---------------------------
+    // Método de buscar pelo nome
+    public List<ProdutoBean> buscarNome(String nome) {
+
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        
+        Criteria crit = session.createCriteria(ProdutoBean.class)
+                .add(Restrictions.like("nome",nome+"%"));
+        
+        return crit.list();
+    }
+    
+    // Método de buscar pelo id
+    public ProdutoBean buscarId(int id) {        
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        return (ProdutoBean)session.createCriteria(ProdutoBean.class)
+                .add(Restrictions.eq("id",id))
+                .uniqueResult();
+    }
+    
+    // --------------------- MÉTODOS DE LISTAR NO BD ---------------------------
+    // Método para listagem de produtos.
+    public List<ProdutoBean> listarProdutos() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        
+        session.beginTransaction();
+        
+        Criteria Pro  = session.createCriteria(ProdutoBean.class);
+        
+        return Pro.list();
+    }
+    
+    // Busca todos os registros ativos.
     public List<ProdutoBean> listarProdutoAtivos() {
         Session session = HibernateUtil.getSessionFactory().openSession();
         

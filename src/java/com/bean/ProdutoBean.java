@@ -18,7 +18,7 @@ import javax.persistence.Id;
 public class ProdutoBean {
     @GeneratedValue
     @Id
-    Long id;
+    int id;
     String nome;
     String produto;
     String marca;
@@ -28,11 +28,11 @@ public class ProdutoBean {
     int quantidade;
     String ativo;
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 

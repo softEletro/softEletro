@@ -23,7 +23,7 @@ import javax.servlet.RequestDispatcher;
 @WebServlet(name = "MostrarProduto", urlPatterns = {"/MostrarProduto"})
 public class MostrarProduto extends HttpServlet {
     @Override
-    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{ 
+    protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         int id = Integer.parseInt(req.getParameter("id"));
         
         ProdutoModel dao= new ProdutoModel();
@@ -41,7 +41,7 @@ public class MostrarProduto extends HttpServlet {
         req.setAttribute("produto", produto);
         req.setAttribute("marca", marca);
         req.setAttribute("descricao", descricao);
-         req.setAttribute("imagem", imagem);
+        req.setAttribute("imagem", imagem);
         req.setAttribute("quantidade",new Integer(quantidade));
         req.setAttribute("preco",new Double(preco));
         req.setAttribute("id", id);
