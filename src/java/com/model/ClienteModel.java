@@ -70,12 +70,22 @@ public class ClienteModel {
     }
     
     // Busca cliente por id.
-    public ClienteBean buscarId(Long id) {        
+    public ClienteBean buscarId(int id) {        
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         return (ClienteBean)session.createCriteria(ClienteBean.class)
                 .add(Restrictions.eq("id",id))
                 .uniqueResult();
+    }
+    
+    // Verifica nome e senha para efetuar login
+    public ClienteBean efetuarLogin (String email, String senha) {        
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+         return (ClienteBean)session.createCriteria(ClienteBean.class)
+                 .add(Restrictions.eq("email",email))
+                 .add(Restrictions.eq("senha",senha))
+                 .uniqueResult();
     }
     
     // ---------- MÉTODOS PARA LISTAGEM ------------

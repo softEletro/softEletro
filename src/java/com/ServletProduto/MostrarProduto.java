@@ -24,7 +24,7 @@ import javax.servlet.RequestDispatcher;
 public class MostrarProduto extends HttpServlet {
     @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{ 
-        Long id = Long.parseLong(req.getParameter("id"));
+        int id = Integer.parseInt(req.getParameter("id"));
         
         ProdutoModel dao= new ProdutoModel();
         ProdutoBean pro = dao.buscarId(id);

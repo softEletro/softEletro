@@ -117,8 +117,6 @@
                                         <a href="AtivarCliente?id=<%= cli.getId() %>">
                                             <span title="Ativar cliente" class="glyphicon glyphicon-plus"></span></a>
                                     <% } %>
-                                    
-                                     <a href="DeletarCliente?id=<%= cli.getId() %>"><span title="Excluir Cliente" class="glyphicon glyphicon-trash"></span></a>
                                 </td>
                             </tr>
                         <% } %>

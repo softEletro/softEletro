@@ -63,15 +63,15 @@
 
 	<!-- section -->
 	<div class="section">
-            <form action="SalvarCliente">
+            <form action="XXXXXXXX">
                 <!-- container -->
 		<div class="container">
                     <div class="row">
                         <div class="col-sm-3">
                             <label>Nome: iPhone X</label>
-                            <input class="form-control" id="IDproduto" name="IDproduto" value="1" disabled>
-                        </div>
-                </div>
+                            <input type="text" class="form-control" id="IDproduto" name="IDproduto" value="1" disabled>
+                        </div>		
+                    </div><br>
                     <!-- row -->
                     <div class="row">
                         <div class="col-sm-3">

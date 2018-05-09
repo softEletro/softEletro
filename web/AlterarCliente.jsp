@@ -1,4 +1,5 @@
-<%@page contentType="text/html" pageEncoding="UTF-8"%><!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -76,9 +77,9 @@
             <jsp:useBean id="email" scope="request" class="java.lang.String" />
             <jsp:useBean id="senha" scope="request" class="java.lang.String" />
             <jsp:useBean id="numero" scope="request" class="java.lang.Integer" />
+            <jsp:useBean id="id" scope="request" class="java.lang.Integer" />
             
             <form action="AlterarCliente">
-                <jsp:useBean id="id" scope="request" class="java.lang.Long" />
                 <input type="hidden" id="id" name="id" value="<%= id %>" />
 		<!-- container -->
 		<div class="container">

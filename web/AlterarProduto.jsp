@@ -67,7 +67,7 @@
         <jsp:useBean id="imagem" scope="request" class="java.lang.String" />
         <jsp:useBean id="quantidade" scope="request" class="java.lang.Integer" />
         <jsp:useBean id="preco" scope="request" class="java.lang.Double" />
-        <jsp:useBean id="id" scope="request" class="java.lang.Long" />
+        <jsp:useBean id="id" scope="request" class="java.lang.Integer" />
     
         <form action="AlterarProduto">
             <input type="hidden" id="id" name="id" value="<%= id %>" />

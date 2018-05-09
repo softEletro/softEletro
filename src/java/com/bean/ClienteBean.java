@@ -19,7 +19,7 @@ import javax.persistence.Table;
 public class ClienteBean {
     @GeneratedValue
     @Id
-        Long id;
+        int id;
         String nome;
         String sobrenome;
         String sexo;
@@ -44,11 +44,11 @@ public class ClienteBean {
         this.sexo = sexo;
     }
 
-    public Long getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
