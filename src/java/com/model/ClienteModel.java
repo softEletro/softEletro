@@ -113,4 +113,20 @@ public class ClienteModel {
         
         return cli.list();
     }
+      public void deletarCliente(ClienteBean cli){
+        // Cria e abre uma sessão
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        // Inicia uma transação
+        session.beginTransaction();
+        
+        // Realiza a operação salvar
+        session.delete(cli);
+        
+        // Comita a transação
+        session.getTransaction().commit();
+        
+        // Libera a memória e encerra a sessão
+        session.flush();
+        session.close();        
+    }    
 } // Fim da classe
