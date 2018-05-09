@@ -117,7 +117,7 @@
                                                                                 <span title="Editar Produto" class="glyphicon glyphicon-pencil"></span></a>
                                                                                 
                                                                                 <span title="Ver Produto" class="glyphicon glyphicon-phone"></span>                                                              
-                                                                                <span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
+                                                                                <a href="FichaTecnica.jsp">span title="Alterar Ficha Técnica" class="glyphicon glyphicon-list-alt"></span></a>
                                                                                 <% if (Pro.getAtivo().equals("a")) { %>
                                                                                 <a href="InativarProduto?id=<%= Pro.getId() %>">
                                                                                 <span title="Inativar Produto" class="glyphicon glyphicon-minus"></span></a>
