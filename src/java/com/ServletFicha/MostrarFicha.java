@@ -30,7 +30,7 @@ public class MostrarFicha extends HttpServlet {
         FichaTecnicaBean fic = dao.buscarId(idProduto);
         req.setAttribute("idProduto",new Integer(idProduto));
         if(fic!=null){
-            
+        
         String modelo = fic.getModelo();
         String cor = fic.getCor();
         String sistema = fic.getSistema();
@@ -41,7 +41,6 @@ public class MostrarFicha extends HttpServlet {
         String display = fic.getDisplay();
         String camera = fic.getCamera();
         String bateria = fic.getBateria();
-        
         
         
         req.setAttribute("modelo",modelo);

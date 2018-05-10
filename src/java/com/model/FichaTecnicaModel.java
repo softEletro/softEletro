@@ -25,7 +25,7 @@ public class FichaTecnicaModel {
         session.beginTransaction();
         
         // Realiza a operação salvar
-        session.persist(fic);
+        session.saveOrUpdate(fic);
         
         // Comita a transação
         session.getTransaction().commit();

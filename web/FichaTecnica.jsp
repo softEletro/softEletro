@@ -63,8 +63,8 @@
 
 	<!-- section -->
 	<div class="section">
-        <jsp:useBean id="id" scope="request" class="java.lang.Integer" />
         <jsp:useBean id="idProduto" scope="request" class="java.lang.Integer" />
+        <jsp:useBean id="id" scope="request" class="java.lang.Integer" />
         <jsp:useBean id="modelo" scope="request" class="java.lang.String" />
         <jsp:useBean id="cor" scope="request" class="java.lang.String" />
         <jsp:useBean id="sistema" scope="request" class="java.lang.String" />
@@ -75,10 +75,8 @@
         <jsp:useBean id="display" scope="request" class="java.lang.String" />
         <jsp:useBean id="camera" scope="request" class="java.lang.String" />
         <jsp:useBean id="bateria" scope="request" class="java.lang.String" />
-        <% if(id==0)%>
-                    <form action="SalvarFicha">
-                  else 
-                <form action="AlterarFicha">
+        <form action="SalvarFicha">
+        <form action="AlterarFicha">
                     
                 <!-- container -->
 		<div class="container">
