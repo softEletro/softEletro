@@ -6,7 +6,9 @@
 package com.ServletFicha;
 
 import com.bean.FichaTecnicaBean;
+import com.bean.ProdutoBean;
 import com.model.FichaTecnicaModel;
+import com.model.ProdutoModel;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.RequestDispatcher;
@@ -26,10 +28,15 @@ public class MostrarFicha extends HttpServlet {
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         int idProduto = Integer.parseInt(req.getParameter("idProduto"));
         
-        FichaTecnicaModel dao= new FichaTecnicaModel();
+        FichaTecnicaModel dao = new FichaTecnicaModel();
         FichaTecnicaBean fic = dao.buscarId(idProduto);
+        
+        ProdutoModel dao2 = new ProdutoModel();
+        ProdutoBean pro = dao2.buscarId(idProduto);
+        String nome = pro.getNome();
+        
         req.setAttribute("idProduto",new Integer(idProduto));
-        req.setAttribute("nomeProduto", "buguei");
+        req.setAttribute("nomeProduto", nome);
         
         if(fic==null){
             RequestDispatcher rd = req.getRequestDispatcher("/CadastrarFicha.jsp");

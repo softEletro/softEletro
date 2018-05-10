@@ -72,7 +72,7 @@
         <jsp:useBean id="cor" scope="request" class="java.lang.String" />
         <jsp:useBean id="sistema" scope="request" class="java.lang.String" />
         <jsp:useBean id="processador" scope="request" class="java.lang.String" />
-        <jsp:useBean id="chip" scope="request" class="java.lang.Integer" />
+        <jsp:useBean id="chip" scope="request" class="java.lang.String" />
         <jsp:useBean id="interna" scope="request" class="java.lang.String" />
         <jsp:useBean id="ram" scope="request" class="java.lang.String" />
         <jsp:useBean id="display" scope="request" class="java.lang.String" />
