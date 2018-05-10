@@ -48,11 +48,11 @@
 
         <body>
             <!-- HEADER -->
-            <%@include file="/header.html" %>
+            <%@include file="src/header.html" %>
                 <!-- /HEADER -->
 
                 <!-- NAVIGATION -->
-                <%@include file="/menuCliente.html" %>
+                <%@include file="src/menuCliente.html" %>
                     <!-- /NAVIGATION -->
 
                     <!-- BREADCRUMB -->
@@ -167,7 +167,7 @@
 	<br><!--/pulando linhas -->
 
 	<!-- FOOTER -->
-	<%@include file="/footerCliente.html" %>
+	<%@include file="src/footerCliente.html" %>
 	<!-- /FOOTER -->
 
 	<!-- jQuery Plugins -->

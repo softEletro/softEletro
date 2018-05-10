@@ -57,11 +57,11 @@
 
     <body>
         <!-- HEADER -->
-        <%@include file="/header.html" %>
+        <%@include file="src/header.html" %>
         <!-- /HEADER -->
 
         <!-- INCLUI O MENU -->
-        <%@include file="/menuCliente.html" %>
+        <%@include file="src/menuCliente.html" %>
 
         <!-- BREADCRUMB -->
         <div id="breadcrumb">
@@ -361,71 +361,8 @@
 
 
         <!-- FOOTER -->
-        <footer id="footer" class="section section-grey">
-            <!-- container -->
-            <div class="container">
-                <!-- row -->
-                <div class="row">
-                    <!-- footer widget -->
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="footer">
-                            <!-- footer logo -->
-                            <div class="footer-logo">
-                                <a class="logo" href="#">
-                                    <p>softEletro2018</p>
-                                    <img src="./img/logo.png" alt="">
-                                </a>
-                            </div>
-                            <!-- /footer logo -->
-                        </div>
-                    </div>
-                    <!-- /footer widget -->
-
-                    <!-- footer widget -->
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="footer">
-                            <h3 class="footer-header">Minha Conta</h3>
-                            <ul class="list-links">
-                                <li><a href="#">Minha Conta</a></li>
-                                <li><a href="#">Login</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /footer widget -->
-
-                    <div class="clearfix visible-sm visible-xs"></div>
-
-                    <!-- footer widget -->
-                    <div class="col-md-3 col-sm-6 col-xs-6">
-                        <div class="footer">
-                            <h3 class="footer-header">ServiÃ§o ao cliente</h3>
-                            <ul class="list-links">
-                                <li><a href="#">Sobre</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /footer widget -->
-                    <!-- /footer subscribe -->
-                </div>
-                <!-- /row -->
-                <hr>
-                <!-- row -->
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center">
-                        <!-- footer copyright -->
-                        <div class="footer-copyright">
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> softEletro
-                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        </div>
-                        <!-- /footer copyright -->
-                    </div>
-                </div>
-                <!-- /row -->
-            </div>
-            <!-- /container -->
-        </footer>
-        <!-- /FOOTER -->
+	<%@include file="src/footerCliente.html" %>
+	<!-- /FOOTER -->
 
         <!-- jQuery Plugins -->
         <script src="js/jquery.min.js"></script>

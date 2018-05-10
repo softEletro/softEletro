@@ -49,10 +49,10 @@
 
 <body>
 	<!-- HEADER -->
-        <%@include file="/headerAdm.html" %>
+        <%@include file="src/headerAdm.html" %>
         
         <!-- INCLUI O MENU -->
-        <%@include file="/menu.html" %>
+        <%@include file="src/menu.html" %>
 
 	<!-- BREADCRUMB -->
 	<div id="breadcrumb">
@@ -131,7 +131,7 @@
 	<!-- /section -->
 
 	<!-- FOOTER -->
-	<%@include file="/footer.html" %>
+	<%@include file="src/footer.html" %>
 	<!-- /FOOTER -->
 
 	<!-- jQuery Plugins -->

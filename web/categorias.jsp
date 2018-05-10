@@ -47,11 +47,11 @@
 
 <body>
 	<!-- HEADER -->
-        <%@include file="/header.html" %>
+        <%@include file="src/header.html" %>
     <!-- /HEADER -->
 
     <!-- NAVIGATION -->
-        <%@include file="/menuCliente.html" %>
+        <%@include file="src/menuCliente.html" %>
 	
 	<!-- BREADCRUMB -->
 	<div id="breadcrumb">
@@ -266,7 +266,7 @@
 	<!-- /section -->
 
 	<!-- FOOTER -->
-       <%@include file="/footerCliente.html" %><!-- /FOOTER -->
+       <%@include file="src/footerCliente.html" %><!-- /FOOTER -->
 
 
 	<!-- jQuery Plugins -->
