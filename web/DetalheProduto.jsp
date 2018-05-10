@@ -121,7 +121,11 @@
                                     <del class="product-old-price">$45.00</del> 
                                     -->
                                 </h3>
-                                <p><strong>Disponibilidade:</strong> <%= quantidade %></p>
+                                <p><strong>Disponibilidade:</strong>
+                                <% if (quantidade.equals("Indisponível")) { %>
+                                <span style="color:red"><%= quantidade %></span>
+                                <% } else { %> <%= quantidade %> <% } %>
+                                </p>
                                 <p><strong>Marca:</strong>  <%= marca %></p>
                                 <p><%= descricao %></p>
                                 <div class="product-options">
