@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 
+    <jsp:useBean id="idProduto" scope="request" class="java.lang.Integer" />
+    <jsp:useBean id="preco" scope="request" class="java.lang.Double" />
+    <jsp:useBean id="nome" scope="request" class="java.lang.String" />
+    <jsp:useBean id="quantidade" scope="request" class="java.lang.String" />
+    <jsp:useBean id="marca" scope="request" class="java.lang.String" />
+    <jsp:useBean id="descricao" scope="request" class="java.lang.String" />
+    <jsp:useBean id="modelo" scope="request" class="java.lang.String" />
+    <jsp:useBean id="cor" scope="request" class="java.lang.String" />
+    <jsp:useBean id="sistema" scope="request" class="java.lang.String" />
+    <jsp:useBean id="processador" scope="request" class="java.lang.String" />
+    <jsp:useBean id="chip" scope="request" class="java.lang.String" />
+    <jsp:useBean id="interna" scope="request" class="java.lang.String" />
+    <jsp:useBean id="ram" scope="request" class="java.lang.String" />
+    <jsp:useBean id="display" scope="request" class="java.lang.String" />
+    <jsp:useBean id="camera" scope="request" class="java.lang.String" />
+    <jsp:useBean id="bateria" scope="request" class="java.lang.String" />
     <%@ page contentType="text/html; charset=UTF-8" %>
 
     <head>
@@ -8,7 +24,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <title>iPhone X Apple 256GB Cinza Espacial 4G Tela 5,8</title>
+        <title><%= nome %></title>
         <link rel="sortcut icon" href="img/logotitulo.png" type="image/x-icon" />
 
         <!-- Google font -->
@@ -44,152 +60,8 @@
         <%@include file="/header.html" %>
         <!-- /HEADER -->
 
-        <!-- NAVIGATION -->
-        <div id="navigation">
-            <!-- container -->
-            <div class="container">
-
-                <!-- category nav -->
-                <div class="category-nav">
-                    <span class="category-header">Categorias <i class="fa fa-list"></i></span>
-                </div>
-                <!-- /category nav -->
-
-                <!-- menu nav -->
-                <div class="menu-nav">
-                    <span class="menu-header">Menu <i class="fa fa-bars"></i></span>
-                    <ul class="menu-list">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="dropdown mega-dropdown full-width"><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Computadores <i class="fa fa-caret-down"></i></a>
-                            <div class="custom-menu">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="hidden-sm hidden-xs">
-                                            <a class="banner banner-1" href="#">
-                                                <img src="./img/bannerRazer.jpg" alt="">
-                                                <div class="banner-caption text-center">
-                                                    <h3 class="white-color text-uppercase"></h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <hr>
-                                        <ul class="list-links">
-                                            <li>
-                                                <h3 class="list-links-title">Razer</h3></li>
-                                            <li><a href="#">Razer Blade</a></li>
-                                            <li><a href="#">Razer Stealth</a></li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="hidden-sm hidden-xs">
-                                            <a class="banner banner-1" href="#">
-                                                <img src="./img/bannerDell.jpg" alt="">
-                                                <div class="banner-caption text-center">
-                                                    <h3 class="white-color text-uppercase"></h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <hr>
-                                        <ul class="list-links">
-                                            <li>
-                                                <h3 class="list-links-title">Dell</h3></li>
-                                            <li><a href="#">Inspiron 14 7472</a></li>
-                                            <li><a href="#">XPS 8930</a></li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="hidden-sm hidden-xs">
-                                            <a class="banner banner-1" href="#">
-                                                <img src="./img/bannerPositivo.jpg" alt="">
-                                                <div class="banner-caption text-center">
-                                                    <h3 class="white-color text-uppercase"></h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <hr>
-                                        <ul class="list-links">
-                                            <li>
-                                                <h3 class="list-links-title">Positivo</h3></li>
-                                            <li><a href="#">Stilo DS3568</a></li>
-                                            <li><a href="#">Station C41TAi</a></li>
-
-                                        </ul>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </li>
-                        <li class="dropdown mega-dropdown full-width "><a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">Celulares <i class="fa fa-caret-down"></i></a>
-                            <div class="custom-menu">
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="hidden-sm hidden-xs">
-                                            <a class="banner banner-1" href="#" >
-                                                <img src="./img/bannerApple.jpg" alt="">
-                                                <div class="banner-caption text-center">
-                                                    <h3 class="white-color text-uppercase"></h3>
-                                                </div>
-                                            </a>
-                                            <hr>
-                                        </div>
-                                        <ul class="list-links">
-                                            <li>
-                                                <h3 class="list-links-title">Apple</h3></li>
-                                            <li><a href="#">iPhone X</a></li>
-                                            <li><a href="#">iPhone 8</a></li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="hidden-sm hidden-xs">
-                                            <a class="banner banner-1" href="#">
-                                                <img src="./img/bannerSamsung.jpg" alt="">
-                                                <div class="banner-caption text-center">
-                                                    <h3 class="white-color text-uppercase"></h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <hr>
-                                        <ul class="list-links">
-                                            <li>
-                                                <h3 class="list-links-title">Samsung</h3></li>
-                                            <li><a href="#">Galaxy Note 8</a></li>
-                                            <li><a href="#">Galaxy S9</a></li>
-
-                                        </ul>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="hidden-sm hidden-xs">
-                                            <a class="banner banner-1" href="#">
-                                                <img src="./img/bannerMotorola.jpg" alt="">
-                                                <div class="banner-caption text-center">
-                                                    <h3 class="white-color text-uppercase"></h3>
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <hr>
-                                        <ul class="list-links">
-                                            <li>
-                                                <h3 class="list-links-title">Motorola</h3></li>
-                                            <li><a href="#">Moto Z2</a></li>
-                                            <li><a href="#">Moto Play</a></li>
-
-
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <!-- menu nav -->
-            </div>
-            <!-- /container -->
-        </div>
-        <!-- /NAVIGATION -->
+        <!-- INCLUI O MENU -->
+        <%@include file="/menuCliente.html" %>
 
         <!-- BREADCRUMB -->
         <div id="breadcrumb">
@@ -197,7 +69,7 @@
                 <ul class="breadcrumb">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="products.html">Produtos</a></li>
-                    <li class="active">iPhone X</li>
+                    <li class="active"><%= nome %></li>
                 </ul>
             </div>
         </div>
@@ -243,29 +115,28 @@
                                             <span class="sale">-20%</span>
                                     --> 
                                 </div>
-                                <h2 class="product-name">iPhone X Apple 256GB Cinza Espacial 4G Tela 5,8â - Retina Câmera 12MP + Selfie 7MP iOS 11 Proc. Chip A11</h2>
-                                <h3 class="product-price">R$6.999,00 
+                                <h2 class="product-name"><%= nome %></h2>
+                                <h3 class="product-price">R$ <%= preco %>
                                     <!-- Quantidade de Deconto	
                                     <del class="product-old-price">$45.00</del> 
                                     -->
                                 </h3>
-                                <p><strong>Disponibilidade:</strong> Em Estoque</p>
-                                <p><strong>Marca:</strong>  Apple</p>
-                                <p>O novo smartphone da Apple, o <b>iPhone X</b>, traz tantas novidades incríveis que vai fazer você repensar o modo como vocÃª usa o seu smartphone. Seu novo design, ainda mais bonito, foi construÃ­do com um resistente vidro na frente e atrÃ¡s, moldura de aÃ§o inoxidÃ¡vel de qualidade cirÃºrgica, e toda a estrutura Ã© protegida contra Ã¡gua e poeira.<br>
-
-                                    O <b>iPhone X</b> tem tela maior, a inovadora <b>tela Super Retina de 5,8 polegadas com tecnologia OLED</b> praticamente ocupa toda a frente do aparelho, e nÃ£o conta mais com o clÃ¡ssico botÃ£o Home, agora Ã© sÃ³ deslizar o dedo para acessar a tela de InÃ­cio.<br>
-
-                                    JÃ¡ na parte de traz, ele conta com <b>cÃ¢mera dupla de 12 MP com estabilizaÃ§Ã£o Ã³ptica de imagem</b>, uma com lente grande-angular de abertura Æ/1.8 e outra teleobjetiva com abertura de Æ/2.4. Juntas vocÃª vai conseguir registrar surpreendentes fotos e com recursos impressionantes.</p>
+                                <p><strong>Disponibilidade:</strong> <%= quantidade %></p>
+                                <p><strong>Marca:</strong>  <%= marca %></p>
+                                <p><%= descricao %></p>
                                 <div class="product-options">
                                 </div>
-
-                                <div class="product-btns">
-                                    <div class="qty-input">
-                                        <span class="text-uppercase">Quantidade: </span>
-                                        <input class="input" type="number">
+                                
+                                <form action="XXXXXXXXXX">
+                                    <div class="product-btns">
+                                        <input type="hidden" name="idProduto" id="idProduto" value="<%= idProduto %>">
+                                        <div class="qty-input">
+                                            <span class="text-uppercase">Quantidade: </span>
+                                            <input class="input" type="number" name="quantidade" id="quantidade" value="">
+                                        </div>
+                                        <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                     </div>
-                                    <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
-                                </div>
+                                </form>
                             </div>
                         </div>
                         <div class="col-md-12">
@@ -278,57 +149,57 @@
                                         <table id="vertical-1">
                                             <p>	<tr>
                                                 <th><b>Marca</b></th>
-                                                <td></td>
-                                                <td>Apple</td>
+                                                <td colspan="2"></td>
+                                                <td><%= marca %></td>
                                             </tr>									
                                             <tr>
                                                 <th><b>Modelo</b></th>
-                                                <td></td>
-                                                <td>Iphone X Cinza - Espacial 256GB-BRA</td>
+                                                <td colspan="2"></td>
+                                                <td><%= modelo %></td>
                                             </tr>
                                             <tr>
                                                 <th><b>Cor</b></th>
-                                                <td></td>
-                                                <td>Cinza</td>
+                                                <td colspan="2"></td>
+                                                <td><%= cor %></td>
                                             </tr>
                                             <tr>
                                                 <th><b>Sistema Operacional</b></th>
-                                                <td></td>
-                                                <td>IOS 11</td>
+                                                <td colspan="2"></td>
+                                                <td><%= sistema %></td>
                                             </tr>
                                             <tr>
                                                 <th><b>Processador</b></th>
-                                                <td></td>
-                                                <td>A11 Bionic com arquitetura de 64 bits, Processador neural, Coprocessador de movimento M11 integrado</td>
+                                                <td colspan="2"></td>
+                                                <td><%= processador %></td>
                                             </tr>
                                             <tr>
                                                 <th><b>Tipo de Chip</b></th>
-                                                <td></td>
-                                                <td>Nano Chip</td>
+                                                <td colspan="2"></td>
+                                                <td><%= chip %></td>
                                             </tr>
                                             <tr>
                                                 <th><b>Memoria Interna</b></th>
-                                                <td></td>
-                                                <td>256GB, Não possui entrada para cartão de memória</td>
+                                                <td colspan="2"></td>
+                                                <td><%= interna %></td>
                                             </tr>
                                             <tr>
                                                 <th><b>Memória RAM</b></th>
-                                                <td></td>
-                                                <td>3GB</td>
+                                                <td colspan="2"></td>
+                                                <td><%= ram %></td>
                                             </tr>
                                             <tr>
                                                 <th><b>Tamanho do Display</b></th>
-                                                <td></td>
-                                                <td>5.8"</td>
+                                                <td colspan="2"></td>
+                                                <td><%= display %></td>
                                             </tr>
                                             <tr>
                                                 <th><b>Câmera Traseira, Frontal</b></th>
-                                                <td></td>
-                                                <td>12MP, 7MP</td>
+                                                <td colspan="2"></td>
+                                                <td><%= camera %></td>
                                             </tr>
                                             <th><b>Bateria</b></th>
-                                            <td></td>
-                                            <td>2716mAh Litio</td>
+                                            <td colspan="2"></td>
+                                            <td><%= bateria %></td>
                                             </tr>
                                             </p>
                                         </table>

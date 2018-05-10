@@ -45,7 +45,11 @@ public class Login extends HttpServlet {
                 session.setAttribute("id", id);
                 session.setAttribute("login", "logado");
                 
-                resp.sendRedirect("ListaCliente");
+                if (id == 100) {
+                    resp.sendRedirect("ListaCliente");
+                } else {
+                    resp.sendRedirect("index.jsp");
+                }
             }
         } else {
             PrintWriter out = resp.getWriter();

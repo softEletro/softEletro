@@ -44,10 +44,10 @@
 
 <body>
         <!-- HEADER -->
-        <%@include file="/header.html" %>
+        <%@include file="/headerAdm.html" %>
         
         <!-- INCLUI O MENU -->
-        <%@include file="/menuCliente.html" %>
+        <%@include file="/menu.html" %>
 
 
 	<!-- BREADCRUMB -->
@@ -63,26 +63,29 @@
 
 	<!-- section -->
 	<div class="section">
+        <jsp:useBean id="teste" scope="request" class="java.lang.String" />
         <jsp:useBean id="idProduto" scope="request" class="java.lang.Integer" />
+        <jsp:useBean id="nomeProduto" scope="request" class="java.lang.String" />
+        
         <jsp:useBean id="id" scope="request" class="java.lang.Integer" />
         <jsp:useBean id="modelo" scope="request" class="java.lang.String" />
         <jsp:useBean id="cor" scope="request" class="java.lang.String" />
         <jsp:useBean id="sistema" scope="request" class="java.lang.String" />
         <jsp:useBean id="processador" scope="request" class="java.lang.String" />
-        <jsp:useBean id="chip" scope="request" class="java.lang.String" />
+        <jsp:useBean id="chip" scope="request" class="java.lang.Integer" />
         <jsp:useBean id="interna" scope="request" class="java.lang.String" />
         <jsp:useBean id="ram" scope="request" class="java.lang.String" />
         <jsp:useBean id="display" scope="request" class="java.lang.String" />
         <jsp:useBean id="camera" scope="request" class="java.lang.String" />
         <jsp:useBean id="bateria" scope="request" class="java.lang.String" />
-        <form action="SalvarFicha">
+        <input type="hidden" class="form-control" id="id" name="id" value="<%= id %>">
         <form action="AlterarFicha">
                     
                 <!-- container -->
 		<div class="container">
                     <div class="row">
                         <div class="col-sm-3">
-                            <label>Nome: <%= idProduto %></label>
+                            <label>Nome: <%= nomeProduto %></label>
                             <input type="hidden" class="form-control" id="idProduto" name="idProduto" value="<%= idProduto %>">
                         </div>		
                     </div><br>
@@ -94,7 +97,7 @@
                         </div>
                         <div class="col-sm-3">
                             <label>Cor</label>
-                            <input type="text" class="form-control" id="cor" name="cor" value="<%= cor %>" >				
+                            <input type="text" class="form-control" id="cor" name="cor" value="<%= cor %>">				
                         </div>
                         <div class="col-sm-3">
                             <label>Sistema Operacional</label>
@@ -110,21 +113,23 @@
                         <div class="col-sm-2">
                             <label>Tipo de Chip</label>
                             <select name="chip" id="chip" class="form-control">
-                                <option value="0" selected="selected">
+                                <option value="0"
+                                        <% if ("0".equals(chip)) { %>
+                                                selected="selected"<% } %>>
                                 </option>
                                 <option value="1"
-                                    <% if ("1".equals(chip)) { %>
-                                    selected="selected"<% } %>>
+                                        <% if ("1".equals(chip)) { %>
+                                                selected="selected"<% } %>>
                                      Chip
                                 </option>
                                 <option value="2"
-                                    <% if ("2".equals(chip)) { %>
-                                    selected="selected"<% } %>>
+                                        <% if ("2".equals(chip)) { %>
+                                                selected="selected"<% } %>>
                                     Micro
                                 </option>
                                 <option value="3"
-                                    <% if ("3".equals(chip)) { %>
-                                    selected="selected"<% } %>>
+                                        <% if ("3".equals(chip)) { %>
+                                                selected="selected"<% } %>>
                                     Nano
                                 </option>
                                
@@ -165,7 +170,7 @@
 	<!-- /section -->
 
 	<!-- FOOTER -->
-	<%@include file="/footerCliente.html" %>
+	<%@include file="/footer.html" %>
 	<!-- /FOOTER -->
 
 	<!-- jQuery Plugins -->

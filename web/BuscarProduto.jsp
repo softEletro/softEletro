@@ -113,10 +113,8 @@
                                                                          <td><%= Pro.getPreco() %></td>
                                                                          <td>
                                                                             
-                                                                                <a href="MostrarProduto?id=<%= Pro.getId() %>">
-                                                                                <span title="Editar Produto" class="glyphicon glyphicon-pencil"></span></a>
-                                                                                
-                                                                                <span title="Ver Produto" class="glyphicon glyphicon-phone"></span>                                                              
+                                                                                <a href="MostrarProduto?id=<%= Pro.getId() %>"><span title="Editar Produto" class="glyphicon glyphicon-pencil"></span></a>
+                                                                                <a href="MostraDetalhe?id=<%= Pro.getId() %>"><span title="Ver Produto" class="glyphicon glyphicon-phone"></span></a>
                                                                                 <a href="MostrarFicha?idProduto=<%= Pro.getId() %>"><span title="Alterar Ficha Técnica" class="glyphicon glyphicon-list-alt"></span></a>
                                                                                 <% if (Pro.getAtivo().equals("a")) { %>
                                                                                 <a href="InativarProduto?id=<%= Pro.getId() %>">

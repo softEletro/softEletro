@@ -25,36 +25,42 @@ public class MostrarFicha extends HttpServlet {
     @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         int idProduto = Integer.parseInt(req.getParameter("idProduto"));
-         
+        
         FichaTecnicaModel dao= new FichaTecnicaModel();
         FichaTecnicaBean fic = dao.buscarId(idProduto);
         req.setAttribute("idProduto",new Integer(idProduto));
-        if(fic!=null){
+        req.setAttribute("nomeProduto", "buguei");
         
-        String modelo = fic.getModelo();
-        String cor = fic.getCor();
-        String sistema = fic.getSistema();
-        String processador = fic.getProcessador();
-        String chip = fic.getChip();
-        String interna = fic.getInterna();
-        String ram = fic.getRam();
-        String display = fic.getDisplay();
-        String camera = fic.getCamera();
-        String bateria = fic.getBateria();
-        
-        
-        req.setAttribute("modelo",modelo);
-        req.setAttribute("cor",cor);
-        req.setAttribute("sistema",sistema);
-        req.setAttribute("processador", processador);
-        req.setAttribute("chip", chip);
-        req.setAttribute("interna", interna);
-        req.setAttribute("ram", ram);
-        req.setAttribute("display", display);
-        req.setAttribute("camera", camera);
-        req.setAttribute("bateria", bateria);
-        } 
-        RequestDispatcher rd = req.getRequestDispatcher("/FichaTecnica.jsp");
-        rd.forward(req,resp);
+        if(fic==null){
+            RequestDispatcher rd = req.getRequestDispatcher("/CadastrarFicha.jsp");
+            rd.forward(req,resp);
+        } else {   
+            int id = fic.getId();
+            String modelo = fic.getModelo();
+            String cor = fic.getCor();
+            String sistema = fic.getSistema();
+            String processador = fic.getProcessador();
+            String chip = fic.getChip();
+            String interna = fic.getInterna();
+            String ram = fic.getRam();
+            String display = fic.getDisplay();
+            String camera = fic.getCamera();
+            String bateria = fic.getBateria();
+
+            req.setAttribute("id", id);
+            req.setAttribute("modelo",modelo);
+            req.setAttribute("cor",cor);
+            req.setAttribute("sistema",sistema);
+            req.setAttribute("processador", processador);
+            req.setAttribute("chip", chip);
+            req.setAttribute("interna", interna);
+            req.setAttribute("ram", ram);
+            req.setAttribute("display", display);
+            req.setAttribute("camera", camera);
+            req.setAttribute("bateria", bateria);
+            
+            RequestDispatcher rd = req.getRequestDispatcher("/AlterarFicha.jsp");
+            rd.forward(req,resp);
+        }
     }
 }
