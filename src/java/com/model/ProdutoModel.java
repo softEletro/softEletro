@@ -57,38 +57,17 @@ public class ProdutoModel {
         session.flush();
         session.close();        
     }
-
-     // Salvar/alterar a ficha técnica.
-    public void salvarFicha(FichaTecnicaBean fic){
-        // Cria e abre uma sessão
-        Session session = HibernateUtil.getSessionFactory().openSession();
-        // Inicia uma transação
-        session.beginTransaction();
-        
-        // Realiza a operação salvar
-        session.saveOrUpdate(fic);
-        
-        // Comita a transação
-        session.getTransaction().commit();
-        
-        // Libera a memória e encerra a sessão
-        session.flush();
-        session.close();        
-    }
-    
-    // --------------------- MÉTODOS DE BUSCAR NO BD ---------------------------
-    // Método de buscar pelo nome
-    public List<ProdutoBean> buscarNome(String nome) {
-
+ public List<ProdutoBean> buscarnome(String nome) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         
-        Criteria crit = session.createCriteria(ProdutoBean.class)
+          Criteria crit = session.createCriteria(ProdutoBean.class)
                 .add(Restrictions.like("nome",nome+"%"));
         
         return crit.list();
     }
     
+  
     // Método de buscar pelo id
     public ProdutoBean buscarId(int id) {        
         Session session = HibernateUtil.getSessionFactory().openSession();

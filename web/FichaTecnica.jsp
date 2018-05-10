@@ -63,14 +63,28 @@
 
 	<!-- section -->
 	<div class="section">
-        <jsp:useBean id="nome" scope="request" class="java.lang.String" />
+        <jsp:useBean id="id" scope="request" class="java.lang.Integer" />
         <jsp:useBean id="idProduto" scope="request" class="java.lang.Integer" />
-            <form action="SalvarFicha">
+        <jsp:useBean id="modelo" scope="request" class="java.lang.String" />
+        <jsp:useBean id="cor" scope="request" class="java.lang.String" />
+        <jsp:useBean id="sistema" scope="request" class="java.lang.String" />
+        <jsp:useBean id="processador" scope="request" class="java.lang.String" />
+        <jsp:useBean id="chip" scope="request" class="java.lang.String" />
+        <jsp:useBean id="interna" scope="request" class="java.lang.String" />
+        <jsp:useBean id="ram" scope="request" class="java.lang.String" />
+        <jsp:useBean id="display" scope="request" class="java.lang.String" />
+        <jsp:useBean id="camera" scope="request" class="java.lang.String" />
+        <jsp:useBean id="bateria" scope="request" class="java.lang.String" />
+        <% if(id==0)%>
+                    <form action="SalvarFicha">
+                  else 
+                <form action="AlterarFicha">
+                    
                 <!-- container -->
 		<div class="container">
                     <div class="row">
                         <div class="col-sm-3">
-                            <label>Nome: <%= nome %></label>
+                            <label>Nome: <%= idProduto %></label>
                             <input type="hidden" class="form-control" id="idProduto" name="idProduto" value="<%= idProduto %>">
                         </div>		
                     </div><br>
@@ -78,19 +92,19 @@
                     <div class="row">
                         <div class="col-sm-3">
                             <label>Modelo</label>
-                            <input type="text" class="form-control" id="modelo" name="modelo" value="">
+                            <input type="text" class="form-control" id="modelo" name="modelo" value="<%= modelo %>">
                         </div>
                         <div class="col-sm-3">
                             <label>Cor</label>
-                            <input type="text" class="form-control" id="cor" name="cor" value="" >				
+                            <input type="text" class="form-control" id="cor" name="cor" value="<%= cor %>" >				
                         </div>
                         <div class="col-sm-3">
                             <label>Sistema Operacional</label>
-                            <input type="text" class="form-control" id="sistema" name="sistema" value="">
+                            <input type="text" class="form-control" id="sistema" name="sistema" value="<%= sistema %>">
                         </div>
                         <div class="col-sm-3">
                             <label>Processador</label><br>
-                            <input type="text" class="form-control" id="processador" name="processador" value="">
+                            <input type="text" class="form-control" id="processador" name="processador" value="<%= processador %>">
                         </div>
                     </div>
                     <br>
@@ -100,40 +114,47 @@
                             <select name="chip" id="chip" class="form-control">
                                 <option value="0" selected="selected">
                                 </option>
-                                <option value="1">
-                                    Chip
+                                <option value="1"
+                                    <% if ("1".equals(chip)) { %>
+                                    selected="selected"<% } %>>
+                                     Chip
                                 </option>
-                                <option value="2">
+                                <option value="2"
+                                    <% if ("2".equals(chip)) { %>
+                                    selected="selected"<% } %>>
                                     Micro
                                 </option>
-                                <option value="3">
+                                <option value="3"
+                                    <% if ("3".equals(chip)) { %>
+                                    selected="selected"<% } %>>
                                     Nano
                                 </option>
+                               
                             </select>			
                         </div>
                         <div class="col-sm-3">
                             <label>Memória Interna</label>
-                            <input type="text" class="form-control" id="interna" name="interna" value="">
+                            <input type="text" class="form-control" id="interna" name="interna" value="<%= interna %>">
                         </div>
                         <div class="col-sm-2">
                             <label>Memória RAM</label>
-                            <input type="text" class="form-control" id="ram" name="ram" value="">
+                            <input type="text" class="form-control" id="ram" name="ram" value="<%= ram %>">
                             
                         </div>
                         <div class="col-sm-2">
                             <label>Tamanho do Display</label>				
-                            <input type="text" class="form-control" id="display" name="display" value="">
+                            <input type="text" class="form-control" id="display" name="display" value="<%= display %>">
                         </div>
                         <div class="col-sm-2">
                             <label>Camera Traseira/Frontal</label>
-                            <input type="text" class="form-control" id="camera" name="camera" value="">
+                            <input type="text" class="form-control" id="camera" name="camera" value="<%= camera %>">
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-sm-3">
                             <label>Bateria</label>
-                            <input type="text" class="form-control" id="bateria" name="bateria" value="">
+                            <input type="text" class="form-control" id="bateria" name="bateria" value="<%= bateria %>">
                         </div>		
                     </div>
                     <br>

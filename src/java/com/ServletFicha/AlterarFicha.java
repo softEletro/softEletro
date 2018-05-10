@@ -17,15 +17,19 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author bcustodio
+ * @author leona
  */
-@WebServlet(name = "SalvarFicha", urlPatterns = {"/SalvarFicha"})
-public class SalvarFicha extends HttpServlet {
+@WebServlet(name = "AlterarFicha", urlPatterns = {"/AlterarFicha"})
+public class AlterarFicha extends HttpServlet {
     @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        FichaTecnicaBean fic = new FichaTecnicaBean();
-        
-        fic.setIdProduto(Integer.parseInt(req.getParameter("idProduto")));
+ 
+    
+       int idProduto = Integer.parseInt(req.getParameter("idProduto"));   
+       
+       FichaTecnicaModel dao= new FichaTecnicaModel();
+        FichaTecnicaBean fic = dao.buscarId(idProduto);
+
         fic.setModelo(req.getParameter("modelo"));
         fic.setCor(req.getParameter("cor"));
         fic.setSistema(req.getParameter("sistema"));
@@ -37,10 +41,6 @@ public class SalvarFicha extends HttpServlet {
         fic.setCamera(req.getParameter("camera"));
         fic.setBateria(req.getParameter("bateria"));
         
-        FichaTecnicaModel dao = new FichaTecnicaModel();
-        dao.salvarFicha(fic);
-        
-        PrintWriter out = resp.getWriter();
-       out.print("<script>alert(\"Salvo com sucesso!\");</script>");
+        dao.alteraFichaTecnica(fic);
     }
 }

@@ -32,7 +32,7 @@ public class BuscarProduto extends HttpServlet {
         
         String nome = req.getParameter("nome");
 
-        List lista = dao.buscarNome(nome); 
+        List lista = dao.buscarnome(nome); 
         req.setAttribute("lista", lista);
         
         RequestDispatcher rd = req.getRequestDispatcher("/BuscarProduto.jsp");
