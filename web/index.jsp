@@ -48,11 +48,11 @@
 
     <body>
         <!-- HEADER -->
-        <%@include file="/header.html" %>
+        <%@include file="src/header.html" %>
         <!-- /HEADER -->
 
         <!-- NAVIGATION -->
-        <%@include file="/menuIndex.html" %>
+        <%@include file="src/menuIndex.html" %>
         <!-- /NAVIGATION -->
 
         <!-- HOME -->
@@ -428,7 +428,7 @@
         <!-- /section -->
 
         <!-- FOOTER -->
-        <%@include file="/footerCliente.html" %>
+        <%@include file="src/footerCliente.html" %>
         <!-- /FOOTER -->
 
         <!-- jQuery Plugins -->
