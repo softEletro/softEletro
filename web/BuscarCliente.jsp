@@ -100,7 +100,8 @@
                     </thead>
                     <tbody>
                         <% for (int i=0;i<lista.size();i++) {
-                            ClienteBean cli = (ClienteBean)lista.get(i); %>
+                            ClienteBean cli = (ClienteBean)lista.get(i); 
+                            if (cli.getId() != 999) { %>
                             <tr <%if (cli.getAtivo().equals("i")) {%>class="danger"<% } %>>
                                 <td><%= cli.getId() %></td>
                                 <td><%= cli.getNome() %> <%= cli.getSobrenome() %></td>
@@ -119,6 +120,7 @@
                                     <% } %>
                                 </td>
                             </tr>
+                            <% } %>
                         <% } %>
                     </tbody>
                 </table>
