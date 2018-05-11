@@ -123,13 +123,13 @@
                                             <span class="sale">-20%</span>
                                         </div>                                       
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product01.jpg" class="imgLista" alt="">
+                                        <img src="./img/note_razer_blade_270x360.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
-                                        <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                                        <h3 class="product-price">R$8.800,00 <del class="product-old-price">R$11.000,00</del></h3>
+                                        <h2 class="product-name"><a href="#">Razer Blade</a></h2>
                                         <div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                         </div>
                                     </div>
                                 </div>
@@ -142,11 +142,11 @@
                                             <span class="sale">-20%</span>
                                         </div>                                      
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product07.jpg" class="imgLista" alt="">
+                                        <img src="./img/dell_inspiron.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
-                                        <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                                        <h3 class="product-price">R$3.200,00 <del class="product-old-price">R$4.000,00</del></h3>
+                                        <h2 class="product-name"><a href="#">Dell Inspiron</a></h2>
                                         <div class="product-btns">                   
                                             <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</button>
                                         </div>
@@ -162,12 +162,12 @@
                                             <span class="sale">-20%</span>
                                         </div>                                       
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product06.jpg" class="imgLista" alt="">
+                                        <img src="./img/positivo_station.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
+                                        <h3 class="product-price">R$800,00 <del class="product-old-price">R$1.000,00</del></h3>
                                    
-                                        <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                                        <h2 class="product-name"><a href="#">Positivo Station C41TAI</a></h2>
                                         <div class="product-btns">
                                             <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                         </div>
@@ -183,11 +183,11 @@
                                             <span class="sale">-20%</span>
                                         </div>        
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product08.jpg" class="imgLista" alt="">
+                                        <img src="./img/iphone8.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>                                
-                                        <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                                        <h3 class="product-price">R$2.800,00 <del class="product-old-price">R$3.500,00</del></h3>                                
+                                        <h2 class="product-name"><a href="#">iPhone 8 Red</a></h2>
                                         <div class="product-btns">
                                             <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                         </div>
@@ -218,16 +218,13 @@
                     <!-- Product Single -->
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="product product-single product-hot">
-                            <div class="product-thumb">
-                                <div class="product-label">
-                                    <span class="sale">-20%</span>
-                                </div>                               
+                            <div class="product-thumb">                               
                                 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                <img src="./img/product01.jpg" class="imgLista" alt="">
+                                <img src="./img/galaxy_note8.png" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
-                                <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
-                                <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                                <h3 class="product-price">R$3.870,00</h3>
+                                <h2 class="product-name"><a href="#">Galaxy Note 8</a></h2>
                                 <div class="product-btns">
                                     <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                 </div>
@@ -244,11 +241,11 @@
                                 <div class="product product-single">
                                     <div class="product-thumb">
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product06.jpg" class="imgLista" alt="">
+                                        <img src="./img/s9plus.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">R$32.50</h3>
-                                        <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                                        <h3 class="product-price">R$4.150,00</h3>
+                                        <h2 class="product-name"><a href="#">Samsung Galaxy S9+</a></h2>
                                         <div class="product-btns">
                                             <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                         </div>
@@ -260,14 +257,14 @@
                                 <div class="product product-single">
                                     <div class="product-thumb">
                                         <div class="product-label">
-                                            <span class="sale">-20%</span>
+                                            <span class="sale">-5%</span>
                                         </div>
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product05.jpg" class="imgLista" alt="">
+                                        <img src="./img/iphonex.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>                                      
-                                        <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                                        <h3 class="product-price">R$3.990,00 <del class="product-old-price">R$4.200,00</del></h3>                                      
+                                        <h2 class="product-name"><a href="#">iPhone X</a></h2>
                                         <div class="product-btns">
                                             <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                         </div>
@@ -279,11 +276,11 @@
                                 <div class="product product-single">
                                     <div class="product-thumb">
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product04.jpg" class="imgLista" alt="">
+                                        <img src="./img/moto_zplay.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">R$32.50</h3>
-                                        <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                                        <h3 class="product-price">R$1.720,00</h3>
+                                        <h2 class="product-name"><a href="#">Moto Z Play</a></h2>
                                         <div class="product-btns">
                                             
                                             <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
@@ -297,13 +294,13 @@
                                     <div class="product-thumb">
                                         <div class="product-label">
                                             <span>Novo</span>
-                                            <span class="sale">-20%</span>
+                                            <span class="sale">-10%</span>
                                         </div>
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/product03.jpg" class="imgLista" alt="">
+                                        <img src="./img/moto_z2.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
+                                        <h3 class="product-price">R$1.215,00 <del class="product-old-price">R$1.350,00</del></h3>
                                         <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
                                         <div class="product-btns">
                                             <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
