@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<jsp:useBean id="idUsuario" scope="session" class="java.lang.Integer" />
 <!DOCTYPE html>
 <html lang="en">
 
@@ -47,6 +48,8 @@
 </head>
 
 <body>
+    
+<% if (idUsuario == 999) {%>
 	<!-- HEADER -->
 	<%@include file="src/headerAdm.html" %>
 	<!-- /HEADER -->
@@ -83,6 +86,7 @@
 	<script src="js/jquery.zoom.min.js"></script>
 	<script src="js/main.js"></script>
 
+<% } else {%><h2>Você não tem acesso!</h2><% } %>
 </body>
 
 </html>

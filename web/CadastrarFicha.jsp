@@ -43,6 +43,8 @@
 </head>
 
 <body>
+    <jsp:useBean id="idUsuario" scope="session" class="java.lang.Integer" />
+    <% if (idUsuario == 999) {%>
         <!-- HEADER -->
         <%@include file="src/headerAdm.html" %>
         
@@ -158,7 +160,7 @@
 	<script src="js/nouislider.min.js"></script>
 	<script src="js/jquery.zoom.min.js"></script>
 	<script src="js/main.js"></script>
-
+        <% } else { %><h2>Você não tem acesso!</h2><% } %>
 </body>
 
 </html>

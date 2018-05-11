@@ -47,7 +47,7 @@
 
 <body>
 	<!-- HEADER -->
-        <%@include file="src/header.html" %>
+        <%@include file="src/header.jsp" %>
     <!-- /HEADER -->
 
     <!-- NAVIGATION -->

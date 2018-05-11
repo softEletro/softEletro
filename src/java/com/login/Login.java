@@ -42,8 +42,8 @@ public class Login extends HttpServlet {
                 int id = cli.getId();
                 
                 HttpSession session = req.getSession();
-                session.setAttribute("id", id);
-                session.setAttribute("display", "Login");
+                session.setAttribute("idUsuario", new Integer(id));
+                session.setAttribute("logado", "Login");
                 
                 if (id == 999) {
                     resp.sendRedirect("indexAdm.jsp");

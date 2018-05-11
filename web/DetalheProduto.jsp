@@ -1,6 +1,6 @@
+<%@ page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
-
     <jsp:useBean id="idProduto" scope="request" class="java.lang.Integer" />
     <jsp:useBean id="preco" scope="request" class="java.lang.Double" />
     <jsp:useBean id="nome" scope="request" class="java.lang.String" />
@@ -17,7 +17,6 @@
     <jsp:useBean id="display" scope="request" class="java.lang.String" />
     <jsp:useBean id="camera" scope="request" class="java.lang.String" />
     <jsp:useBean id="bateria" scope="request" class="java.lang.String" />
-    <%@ page contentType="text/html; charset=UTF-8" %>
 
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -57,7 +56,7 @@
 
     <body>
         <!-- HEADER -->
-        <%@include file="src/header.html" %>
+        <%@include file="src/header.jsp" %>
         <!-- /HEADER -->
 
         <!-- INCLUI O MENU -->
