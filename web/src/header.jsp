@@ -5,17 +5,19 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean id="display" scope="request" class="java.lang.String" />
+<jsp:useBean id="display" scope="session" class="java.lang.String" />
 <header>
     
     <script type="text/javascript">  
         // Switch para mudar entre Minha Conta e Entrar
     window.onload = function MudarOpcao() {        
-        var display = <%= display %>; // Variavel que virá do login
+        var display = "<%=display %>"; // Variavel que virá do login
         if(display === "Login"){
+            alert("Mensagem 1 -> " + display); // Mensagem Teste
             document.getElementById("minhaConta").style.display = 'inline-block';
             document.getElementById("entrarConta").style.display = 'none';
         } else {
+            alert("Mensagem 2 -> " + display); // Mensagem Teste
             document.getElementById("minhaConta").style.display = 'none';
             document.getElementById("entrarConta").style.display = 'inline-block';
           }
@@ -64,7 +66,7 @@
       <div class="pull-right">
         <ul class="header-btns">
           <!--Minha conta -->
-          <li class="header-account dropdown default-dropdown" id="minhaConta" style="display: inline-block">
+          <li class="header-account dropdown default-dropdown" id="minhaConta" style="display: none">
             <div class="dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="true">
               <div class="header-btns-icon">
                 <i class="fa fa-user-o"></i>
