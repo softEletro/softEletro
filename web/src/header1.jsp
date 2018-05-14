@@ -3,8 +3,8 @@
     <script type="text/javascript">  
         // Switch para mudar entre Minha Conta e Entrar
     window.onload = function MudarOpcao() {        
-        var display = "Logout"; // Variavel que virá do login
-        if(display === "Logout"){
+        var display = "Login"; // Variavel que virá do login
+        if(display === "Login"){
             document.getElementById("minhaConta").style.display = 'none';
             document.getElementById("entrarConta").style.display = 'inline-block';
         } else {
