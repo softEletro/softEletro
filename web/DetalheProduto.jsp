@@ -17,6 +17,7 @@
     <jsp:useBean id="display" scope="request" class="java.lang.String" />
     <jsp:useBean id="camera" scope="request" class="java.lang.String" />
     <jsp:useBean id="bateria" scope="request" class="java.lang.String" />
+    <jsp:useBean id="imagem" scope="request" class="java.lang.String" />
 
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,24 +86,12 @@
                         <div class="col-md-6">
                             <div id="product-main-view">
                                 <div class="product-view">
-                                    <img src="./img/banner_iphonex.jpg" class="imgPreview" alt="">
-                                </div>
-                                <div class="product-view">
-                                    <img src="./img/banner_iphonex_lado.jpg" class="imgPreview" alt="">
-                                </div>
-                                <div class="product-view">
-                                    <img src="./img/banner_iphonex_tras.jpg" class="imgPreview" alt="">
+                                    <img src="./<%= imagem %>" class="imgPreview" alt="">
                                 </div>
                             </div>
                             <div id="product-view">
                                 <div class="product-view">
-                                    <img src="./img/banner_iphonex.jpg" class="imgMini" alt="">
-                                </div>
-                                <div class="product-view">
-                                    <img src="./img/banner_iphonex_lado.jpg" class="imgMini" alt="">
-                                </div>
-                                <div class="product-view">
-                                    <img src="./img/banner_iphonex_tras.jpg" class="imgMini" alt="">
+                                    <img src="./<%= imagem %>" class="imgMini" alt="">
                                 </div>
                             </div>
                         </div>
