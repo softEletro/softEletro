@@ -15,8 +15,8 @@
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
         <title>softEletro</title>
-		<link rel="sortcut icon" href="img/logotitulo.png" type="image/x-icon" />
-		<!-- #Titulo/iconeNoNavegador -->
+        <link rel="sortcut icon" href="img/logotitulo.png" type="image/x-icon" />
+        <!-- #Titulo/iconeNoNavegador -->
 
         <!-- Google font -->
         <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
@@ -82,7 +82,7 @@
         </div>
         <!-- /HOME -->
 
-        
+
 
         <!-- section -->
         <div class="section">
@@ -104,7 +104,7 @@
                     <!-- banner -->
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="banner banner-2">
-                            <img src="./img/banner14.jpg" class="imgBanner" alt="">
+                            <img src="./img/oferta.jpg" class="imgBanner" alt="">
                             <div class="banner-caption">                               
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$800,00 <del class="product-old-price">R$1.000,00</del></h3>
-                                   
+
                                         <h2 class="product-name"><a href="#">Positivo Station C41TAI</a></h2>
                                         <div class="product-btns">
                                             <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
@@ -282,7 +282,7 @@
                                         <h3 class="product-price">R$1.720,00</h3>
                                         <h2 class="product-name"><a href="#">Moto Z Play</a></h2>
                                         <div class="product-btns">
-                                            
+
                                             <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                         </div>
                                     </div>
@@ -301,7 +301,7 @@
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$1.215,00 <del class="product-old-price">R$1.350,00</del></h3>
-                                        <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                                        <h2 class="product-name"><a href="#">Moto Z2</a></h2>
                                         <div class="product-btns">
                                             <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                         </div>
@@ -338,12 +338,13 @@
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="product product-single">
                             <div class="product-thumb">
+
                                 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                <img src="./img/product01.jpg" class="imgLista" alt="">
+                                <img src="./img/dell_xps8930.jpg" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
-                                <h3 class="product-price">R$32.50</h3>
-                                <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                                <h3 class="product-price">R$3.800,00</h3>
+                                <h2 class="product-name"><a href="#">Dell XPS 8930</a></h2>
                                 <div class="product-btns">
                                     <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                 </div>
@@ -358,14 +359,13 @@
                             <div class="product-thumb">
                                 <div class="product-label">
                                     <span>Novo</span>
-                                    <span class="sale">-20%</span>
                                 </div>
                                 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                <img src="./img/product02.jpg" class="imgLista" alt="">
+                                <img src="./img/positivo_stilo.jpg" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
-                                <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
-                                <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                                <h3 class="product-price">R$1.450,00</h3>
+                                <h2 class="product-name"><a href="#">Positivo Stilo DS3568</a></h2>
                                 <div class="product-btns">
                                     <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                 </div>
@@ -379,17 +379,16 @@
                         <div class="product product-single">
                             <div class="product-thumb">
                                 <div class="product-label">
-                                    <span>Novo</span>
                                     <span class="sale">-20%</span>
-                                </div>
+                                </div>                                      
                                 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                <img src="./img/product03.jpg" class="imgLista" alt="">
+                                <img src="./img/dell_inspiron.png" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
-                                <h3 class="product-price">R$32.50 <del class="product-old-price">R$45.00</del></h3>
-                                <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
-                                <div class="product-btns">
-                                    <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar to Carrinho</button>
+                                <h3 class="product-price">R$3.200,00 <del class="product-old-price">R$4.000,00</del></h3>
+                                <h2 class="product-name"><a href="#">Dell Inspiron</a></h2>
+                                <div class="product-btns">                   
+                                    <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</button>
                                 </div>
                             </div>
                         </div>
@@ -402,13 +401,14 @@
                             <div class="product-thumb">
                                 <div class="product-label">
                                     <span>Novo</span>
-                                </div>
+                                    <span class="sale">-20%</span>
+                                </div>                                       
                                 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                <img src="./img/product04.jpg" class="imgLista" alt="">
+                                <img src="./img/note_razer_blade_270x360.png" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
-                                <h3 class="product-price">R$32.50</h3>
-                                <h2 class="product-name"><a href="#">Product Name Goes Here</a></h2>
+                                <h3 class="product-price">R$8.800,00 <del class="product-old-price">R$11.000,00</del></h3>
+                                <h2 class="product-name"><a href="#">Razer Blade</a></h2>
                                 <div class="product-btns">
                                     <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                 </div>
