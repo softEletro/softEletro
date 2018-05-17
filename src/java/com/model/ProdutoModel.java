@@ -57,7 +57,10 @@ public class ProdutoModel {
         session.flush();
         session.close();        
     }
- public List<ProdutoBean> buscarnome(String nome) {
+    
+    /******************** MÉTODOS DE BUSCA ***********************************/
+    // Método para buscar lista de produtos pelo nome.
+    public List<ProdutoBean> buscarnome(String nome) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         
@@ -66,7 +69,16 @@ public class ProdutoModel {
         
         return crit.list();
     }
-    
+    // Método para buscar lista de produtos pelo id.
+    public List<ProdutoBean> buscarIdLista(int id) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        
+          Criteria crit = session.createCriteria(ProdutoBean.class)
+                .add(Restrictions.eq("id",id));
+        
+        return crit.list();
+    }
   
     // Método de buscar pelo id
     public ProdutoBean buscarId(int id) {        

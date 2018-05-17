@@ -9,6 +9,7 @@ import com.bean.ClienteBean;
 import com.model.ClienteModel;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -45,8 +46,8 @@ public class SalvarCliente extends HttpServlet {
         ClienteModel dao = new ClienteModel();
         dao.salvarNovoCliente(cli);
         
-        PrintWriter out = resp.getWriter();
-        out.println("Salvo com sucesso!");
+        RequestDispatcher rd = req.getRequestDispatcher("/index.jsp");
+        rd.forward(req,resp);
     }
 
 }

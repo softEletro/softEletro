@@ -9,6 +9,7 @@ import com.bean.FichaTecnicaBean;
 import com.model.FichaTecnicaModel;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -40,7 +41,7 @@ public class SalvarFicha extends HttpServlet {
         FichaTecnicaModel dao = new FichaTecnicaModel();
         dao.salvarFicha(fic);
         
-        PrintWriter out = resp.getWriter();
-       out.print("<script>alert(\"Salvo com sucesso!\");</script>");
+        RequestDispatcher rd = req.getRequestDispatcher("ListaProduto");
+        rd.forward(req,resp);
     }
 }

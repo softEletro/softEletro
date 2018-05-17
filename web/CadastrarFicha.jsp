@@ -51,15 +51,14 @@
         <!-- INCLUI O MENU -->
         <%@include file="src/menu.html" %>
 
-
 	<!-- BREADCRUMB -->
 	<div id="breadcrumb">
-		<div class="container">
-			<ul class="breadcrumb">
-				<li><a href="#">Home</a></li>
-				<li class="active">Ficha Técnica</li>
-			</ul>
-		</div>
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Ficha Técnica</li>
+                </ul>
+            </div>
 	</div>
 	<!-- /BREADCRUMB -->
 
@@ -67,13 +66,20 @@
 	<div class="section">
         <jsp:useBean id="idProduto" scope="request" class="java.lang.Integer" />
         <jsp:useBean id="nomeProduto" scope="request" class="java.lang.String" />
-        <form action="SalvarFicha">
+        
+        <script>
+            function mensagem() {
+                alert("Cadastrada com sucesso!");
+            }
+        </script>
+        
+        <form action="SalvarFicha" onsubmit="mensagem();">
                     
                 <!-- container -->
 		<div class="container">
                     <div class="row">
                         <div class="col-sm-3">
-                            <label>Nome: <%= nomeProduto %></label>
+                            <label>Produto: <%= nomeProduto %></label>
                             <input type="hidden" class="form-control" id="idProduto" name="idProduto" value="<%= idProduto %>">
                         </div>		
                     </div><br>

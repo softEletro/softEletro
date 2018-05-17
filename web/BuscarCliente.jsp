@@ -85,6 +85,16 @@
                 <br>
                 <!-- row -->
                 <jsp:useBean id="lista" scope="request" class="java.util.List" />
+                <script>
+                    function ativo() {
+                        alert("Cliente ativado com sucesso!");
+                    }
+                    
+                    function inativo() {
+                        alert("Cliente desativado com sucesso!");
+                    }
+                </script>
+                
                 <table class="table table-hover">
                     <thead>
                         <tr>
@@ -115,10 +125,10 @@
                                     <span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span>
                                     <% if (cli.getAtivo().equals("a")) { %>
                                         <a href="InativarCliente?id=<%= cli.getId() %>">
-                                            <span title="Inativar cliente" class="glyphicon glyphicon-minus"></span></a>
+                                            <span title="Inativar cliente" class="glyphicon glyphicon-minus" onclick="inativo();"></span></a>
                                     <% } else { %>
                                         <a href="AtivarCliente?id=<%= cli.getId() %>">
-                                            <span title="Ativar cliente" class="glyphicon glyphicon-plus"></span></a>
+                                            <span title="Ativar cliente" class="glyphicon glyphicon-plus" onclick="ativo();"></span></a>
                                     <% } %>
                                 </td>
                             </tr>

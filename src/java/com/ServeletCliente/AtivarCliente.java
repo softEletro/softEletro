@@ -9,6 +9,7 @@ import com.bean.ClienteBean;
 import com.model.ClienteModel;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,7 +33,7 @@ public class AtivarCliente extends HttpServlet {
         
         dao.alteraCliente(cli);
         
-        PrintWriter out = resp.getWriter();
-        out.print("<script>alert(\"Cliente ativado com sucesso!\");</script>");
+        RequestDispatcher rd = req.getRequestDispatcher("ListaCliente");
+        rd.forward(req,resp);
     }
 }

@@ -52,18 +52,23 @@
 
 	<!-- BREADCRUMB -->
 	<div id="breadcrumb">
-		<div class="container">
-			<ul class="breadcrumb">
-				<li><a href="#">Home</a></li>
-				<li class="active">Cadastro Cliente</li>
-			</ul>
-		</div>
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Cadastro Cliente</li>
+                </ul>
+            </div>
 	</div>
 	<!-- /BREADCRUMB -->
 
 	<!-- section -->
+        <script>
+            function mensagem() {
+                alert("Cadastrado com sucesso!");
+            }
+        </script>
 	<div class="section">
-            <form action="SalvarCliente">
+            <form action="SalvarCliente" onsubmit="mensagem();">
 		<!-- container -->
 		<div class="container">
                     <!-- row -->

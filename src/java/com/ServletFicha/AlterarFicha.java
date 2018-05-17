@@ -9,6 +9,7 @@ import com.bean.FichaTecnicaBean;
 import com.model.FichaTecnicaModel;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,11 +24,9 @@ import javax.servlet.http.HttpServletResponse;
 public class AlterarFicha extends HttpServlet {
     @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
- 
-    
-       int idProduto = Integer.parseInt(req.getParameter("idProduto"));   
+        int idProduto = Integer.parseInt(req.getParameter("idProduto"));   
        
-       FichaTecnicaModel dao= new FichaTecnicaModel();
+        FichaTecnicaModel dao = new FichaTecnicaModel();
         FichaTecnicaBean fic = dao.buscarId(idProduto);
 
         fic.setModelo(req.getParameter("modelo"));
@@ -42,5 +41,8 @@ public class AlterarFicha extends HttpServlet {
         fic.setBateria(req.getParameter("bateria"));
         
         dao.alteraFichaTecnica(fic);
+        
+        RequestDispatcher rd = req.getRequestDispatcher("ListaProduto");
+        rd.forward(req,resp);
     }
 }

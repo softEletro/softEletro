@@ -29,10 +29,9 @@ public class BuscarProduto extends HttpServlet {
         ProdutoBean Pro = new ProdutoBean();
         ProdutoModel dao = new ProdutoModel();
         
-        
         String nome = req.getParameter("nome");
-
-        List lista = dao.buscarnome(nome); 
+        
+        List lista = dao.buscarnome(nome);
         req.setAttribute("lista", lista);
         
         RequestDispatcher rd = req.getRequestDispatcher("/BuscarProduto.jsp");
