@@ -5,8 +5,13 @@
  */
 package com.model;
 
+import com.bean.PedidoBean;
+import com.util.HibernateUtil;
 import java.util.ArrayList;
 import java.util.List;
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.criterion.Restrictions;
 
 
 /**
@@ -20,6 +25,14 @@ public class PedidoModel {
         
         return carrinho;
     }
-    
+    public List<PedidoBean> buscarIdPedido(int idCliente) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        
+          Criteria crit = session.createCriteria(PedidoBean.class)
+                .add(Restrictions.eq("id",idCliente));
+        
+        return crit.list();
+    }
     /**************************************************************************/
 }

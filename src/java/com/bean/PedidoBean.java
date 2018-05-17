@@ -5,13 +5,19 @@
  */
 package com.bean;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 /**
  *
  * @author leona
  */
+@Entity
 public class PedidoBean {
-    public class Pedido {
-
+     @GeneratedValue
+    @Id
+    int idCliente;
     String status;
     String produto;
     Double preco;
@@ -58,6 +64,12 @@ public class PedidoBean {
         this.pedido = pedido;
     }
 
-}
- 
+    public int getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
+    }
+
 }

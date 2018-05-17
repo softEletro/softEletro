@@ -125,4 +125,5 @@ public class ProdutoModel {
         
         return cli.list();
     }
+
   } // Fim da classe
