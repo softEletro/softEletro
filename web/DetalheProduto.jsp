@@ -67,7 +67,7 @@
         <div id="breadcrumb">
             <div class="container">
                 <ul class="breadcrumb">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.jsp">Home</a></li>
                     <li><a href="products.html">Produtos</a></li>
                     <li class="active"><%= nome %></li>
                 </ul>

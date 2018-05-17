@@ -57,7 +57,7 @@
 	<div id="breadcrumb">
 		<div class="container">
 			<ul class="breadcrumb">
-				<li><a href="#">Home</a></li>
+				<li><a href="index.jsp">Home</a></li>
 				<li class="active">Produtos</li>
 			</ul>
 		</div>
@@ -103,7 +103,7 @@
 								<div class="product product-single">
 									<div class="product-thumb">
 									        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="./img/product04.jpg" alt="">
+										<img src="" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">R$32.50 </h3>
@@ -123,7 +123,7 @@
 								<div class="product product-single">
 									<div class="product-thumb">                    
                                                                             <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="./img/product04.jpg" alt="">
+										<img src="" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">R$32.50 </h3>
@@ -143,7 +143,7 @@
 								<div class="product product-single">
 									<div class="product-thumb">
                                                                             <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="./img/product04.jpg" alt="">
+										<img src="" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">R$32.50 </h3>
@@ -163,7 +163,7 @@
 								<div class="product product-single">
 									<div class="product-thumb">
 									 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="./img/product04.jpg" alt="">
+										<img src="" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">R$32.50 </h3>
@@ -181,7 +181,7 @@
 								<div class="product product-single">
 									<div class="product-thumb">
 										                     <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="./img/product04.jpg" alt="">
+										<img src="" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">R$32.50 </h3>
@@ -201,7 +201,7 @@
 								<div class="product product-single">
 									<div class="product-thumb">
                      <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="./img/product04.jpg" alt="">
+										<img src="" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">R$32.50 </h3>
@@ -218,7 +218,7 @@
 								<div class="product product-single">
 									<div class="product-thumb">
 									                     <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="./img/product04.jpg" alt="">
+										<img src="" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">R$32.50 </h3>
@@ -237,7 +237,7 @@
 								<div class="product product-single">
 									<div class="product-thumb">
 									                     <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="./img/product04.jpg" alt="">
+										<img src="" alt="">
 									</div>
 									<div class="product-body">
 										<h3 class="product-price">R$32.50 </h3>

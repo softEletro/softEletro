@@ -51,7 +51,7 @@
 	<%@include file="src/header.jsp" %>
 
 	<!-- NAVIGATION -->
-	<%@include file="src/menu.html" %>
+	
 	<%@include file="src/menuCliente.html" %>
 	<!-- /NAVIGATION -->
 
