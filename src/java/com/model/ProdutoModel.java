@@ -69,6 +69,7 @@ public class ProdutoModel {
         
         return crit.list();
     }
+    
     // Método para buscar lista de produtos pelo id.
     public List<ProdutoBean> buscarIdLista(int id) {
         Session session = HibernateUtil.getSessionFactory().openSession();
