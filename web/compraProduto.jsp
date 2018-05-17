@@ -1,183 +1,137 @@
-<%-- 
-    Document   : compraProduto
-    Created on : 25/04/2018, 20:46:16
-    Author     : 8247936
---%>
+<%@page import="java.util.List"%>
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
-    <%@page contentType="text/html" pageEncoding="UTF-8"%>
-        <!DOCTYPE html>
-        <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-        <head>
-            <meta charset="utf-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <title>SoftEletro - Compra Produto</title>
+        <link rel="sortcut icon" href="img/logotitulo.png" type="image/x-icon" />
+        <!-- #Titulo/iconeNoNavegador -->
 
-            <title>SoftEletro - Compra Produto</title>
-            <link rel="sortcut icon" href="img/logotitulo.png" type="image/x-icon" />
-            <!-- #Titulo/iconeNoNavegador -->
+        <!-- Google font -->
+        <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
 
-            <!-- Google font -->
-            <link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet">
+        <!-- Bootstrap -->
+        <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
 
-            <!-- Bootstrap -->
-            <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+        <!-- Slick -->
+        <link type="text/css" rel="stylesheet" href="css/slick.css" />
+        <link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
 
-            <!-- Slick -->
-            <link type="text/css" rel="stylesheet" href="css/slick.css" />
-            <link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
+        <!-- nouislider -->
+        <link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
 
-            <!-- nouislider -->
-            <link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
+        <!-- Font Awesome Icon -->
+        <link rel="stylesheet" href="css/font-awesome.min.css">
 
-            <!-- Font Awesome Icon -->
-            <link rel="stylesheet" href="css/font-awesome.min.css">
+        <!-- Custom stlylesheet -->
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+    </head>
 
-            <!-- Custom stlylesheet -->
-            <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <body>
+        <!-- HEADER -->
+        <%@include file="src/header.jsp" %>
+        <!-- /HEADER -->
 
-            <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-            <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-            <!--[if lt IE 9]>
-		  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+        <!-- NAVIGATION -->
+        <%@include file="src/menuCliente.html" %>
+        <!-- /NAVIGATION -->
 
-        </head>
+        <!-- BREADCRUMB -->
+        <div id="breadcrumb">
+            <div class="container">
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li class="active">Compra Produto</li>
+                </ul>
+            </div>
+        </div>
+        <!-- /BREADCRUMB -->
 
-        <body>
-            <!-- HEADER -->
-            <%@include file="src/header.jsp" %>
-                <!-- /HEADER -->
+        <!-- section -->
+        <div class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row">
+                    <div class="table-responsive">
+                    <jsp:useBean id="carrinho" scope="session" class="java.util.List" />
+                    
+                    <jsp:useBean id="nome" scope="request" class="java.util.List" />
+                    <jsp:useBean id="imagem" scope="request" class="java.util.List" />
+                    <jsp:useBean id="quantidade" scope="request" class="java.util.List" />
+                    <jsp:useBean id="preco" scope="request" class="java.util.List" />
+                        <table class="table">
+                            <thead>
+                                <th>Id</th>
+                                <th>Produto</th>
+                                <th>Quantidade</th>
+                                <th>Preço</th>
+                            </thead>
+                            <tbody>
+                                <% for (int i=0;i<nome.size();i++) { %>
+                                <tr id="Produto<%= i %>">
+                                    <td><%= carrinho.get(i) %></td>
+                                    <td><img src="<%= imagem.get(i) %>" class="imgCarrinho"><%= nome.get(i) %></td>
+                                    <td>
+                                        <input class="input" type="number" name="quantidade" id="quantidade" value="<%= quantidade.get(i) %>">
+                                    </td>
+                                    <td><%= preco.get(i) %></td>
+                                    <td><a href="RemoverItens?idProduto=<%= carrinho.get(i) %>"><i class="glyphicon glyphicon-remove btn btn-default" /></a></td>
+                                </tr>
+                                <% } %>
+                                <!-- Forma de pagamento -->
+                                <tr>
+                                    <td colspan="2"></td>
+                                    <td><strong>Forma de pagamento</strong></td>
+                                    <td>
+                                        <select name="formapagamento" class="form-control">
+                                            <option value="" selected="selected"></option>
+                                            <option value="1">Boleto</option>
+                                            <option value="2">Cartão</option>
+                                        </select>
+                                    <td>
+                                </tr>
+                                <tr rowspan="2">
+                                    <td colspan="2"></td>
+                                    <td><h3>Valor total</h3></td>
+                                    <td>R$ 2.098,00</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
 
-                <!-- NAVIGATION -->
-                <%@include file="src/menuCliente.html" %>
-                    <!-- /NAVIGATION -->
-
-                    <!-- BREADCRUMB -->
-                    <div id="breadcrumb">
-                        <div class="container">
-                            <ul class="breadcrumb">
-                                <li><a href="#">Home</a></li>
-                                <li class="active">Compra Produto</li>
-                            </ul>
-                        </div>
+                        <br><!--pulando linhas-->
+                        <br><!--pulando linhas-->
+                        <center><input class="btn btn-default btn-lg" style="background-color:tomato" type="submit" name="btnfinalizarcompra" value="Finalizar Compra">
                     </div>
-                    <!-- /BREADCRUMB -->
+                    <!-- /row -->
+                </div>
+            <!-- /container -->
+            </div>
+    <!-- /section -->
 
-                    <!-- section -->
-                    <div class="section">
-                        <!-- container -->
-                        <div class="container">
-                            <!-- row -->
-                            <div class="row">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <thead>
-                                            <th>#</th>
-                                            <th>Produto</th>
-                                            <th>Quantidade</th>
-                                            <th>Preço</th>
-                                        </thead>
-                                        <tbody>
-                                            <tr id="Produto01">
-                                                <th>1</th>
-                                                <td><img src="img/motoxcarrinho.png" class="imgCarrinho"> Motorola Moto X4</td>
-                                                <td class="quantidade">
-                                                    <select name="quantidade">
-                                                        <option value="1">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="1">3</option>
-                                                        <option value="1">4</option>
-                                                        <option value="1">5</option>
-                                                        <option value="1">6</option>
-                                                        <option value="1">7</option>
-                                                        <option value="1">8</option>
-                                                        <option value="1">9</option>
-                                                    </select>
-                                                </td>
-                                                <td>R$ 999,00 </td>
-                                                <td><button class="glyphicon glyphicon-remove btn btn-default" onclick="removeItem('Produto01');"></button></td>
-                                            </tr>
-                                            <tr id="Produto02">
-                                                <th>2</th>
-                                                <td><img src="img/banner_iphonex.jpg" class="imgCarrinho"> Motorola Moto X5</td>
-                                                <td class="quantidade">
-                                                    <select name="quantidade">
-                                                        <option value="1">1</option>
-                                                        <option value="1">2</option>
-                                                        <option value="1">3</option>
-                                                        <option value="1">4</option>
-                                                        <option value="1">5</option>
-                                                        <option value="1">6</option>
-                                                        <option value="1">7</option>
-                                                        <option value="1">8</option>
-                                                        <option value="1">9</option>
-                                                    </select>
-                                                </td>
-                                                <td>R$ 3000,99 </td>
-                                                <td><button class="glyphicon glyphicon-remove btn btn-default" onclick="removeItem('Produto02');"></button></td>
-                                            </tr>
-                        <!-- Forma de pagamento -->
-                    <tr>
-			<td colspan="2"></td>
-			<td><strong>Forma de pagamento</strong></td>
-			<td>
-				<select name="formapagamento" class="">
-					<option value="" selected="selected"></option>
-					<option value="1">Boleto</option>
-					<option value="2">Cartão</option>
-				</select>
-			<td>
-                    </tr>
-                    <tr>
-			<td colspan="2"></td>
-			<td><strong>Desconto</strong></td>
-			<td>R$ 0.000,00</td>
-			<td></td>
-		</tr>
-		<tr></tr>
-		<tr>
-			<td colspan="2"></td>
-			<td><h3>Valor total</h3></td>
-			<td>R$ 2.098,00</td>
-			<td></td>
-		</tr>
-		</tbody>
-    	</table>
+    <br><!--/pulando linhas -->
+    <br><!--/pulando linhas -->
+<br> <!--/pulando linhas -->
+    <br><!--/pulando linhas -->
 
-	<br><!--pulando linhas-->
-	<br><!--pulando linhas-->
-	<center><input class="btn btn-default btn-lg" style="background-color:tomato" type="submit" name="btnfinalizarcompra" value="Finalizar Compra">
+    <!-- FOOTER -->
+    <%@include file="src/footerCliente.html" %>
+    <!-- /FOOTER -->
 
-			<!--cart total>
-						</div> <!-- .cart-total -->
-
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</div>
-	<!-- /section -->
-
-	<br><!--/pulando linhas -->
-	<br><!--/pulando linhas -->
-    <br> <!--/pulando linhas -->
-	<br><!--/pulando linhas -->
-
-	<!-- FOOTER -->
-	<%@include file="src/footerCliente.html" %>
-	<!-- /FOOTER -->
-
-	<!-- jQuery Plugins -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/slick.min.js"></script>
-	<script src="js/nouislider.min.js"></script>
-	<script src="js/jquery.zoom.min.js"></script>
-	<script src="js/main.js"></script>
-
+    <!-- jQuery Plugins -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/nouislider.min.js"></script>
+    <script src="js/jquery.zoom.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

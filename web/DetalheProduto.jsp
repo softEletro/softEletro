@@ -119,7 +119,7 @@
                                 <div class="product-options">
                                 </div>
                                 
-                                <form action="XXXXXXXXXX">
+                                <form action="AdicionarItens">
                                     <div class="product-btns">
                                         <input type="hidden" name="idProduto" id="idProduto" value="<%= idProduto %>">
                                         <div class="qty-input">
