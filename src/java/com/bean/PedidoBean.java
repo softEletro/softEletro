@@ -24,7 +24,6 @@ public class PedidoBean {
     Double preco;
     int quantidade;
     String numero;
-    String pagamento;
 
     public int getIdCliente() {
         return idCliente;
@@ -49,15 +48,6 @@ public class PedidoBean {
     public void setStatus(String status) {
         this.status = status;
     }
-
-    public String getPagamento() {
-        return pagamento;
-    }
-
-    public void setPagamento(String pagamento) {
-        this.pagamento = pagamento;
-    }
-    
 
     public int getIdProduto() {
         return idProduto;

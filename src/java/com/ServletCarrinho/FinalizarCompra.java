@@ -34,7 +34,7 @@ public class FinalizarCompra extends HttpServlet {
         List carrinho = (List) session.getAttribute("carrinho");
         int idCliente = (int) session.getAttribute("idUsuario");
         
-        PedidoModel dao1 = new PedidoModel();
+        /*PedidoModel dao1 = new PedidoModel();
         PedidoBean ped = new PedidoBean ();
         ProdutoModel dao = new ProdutoModel();
         
@@ -43,8 +43,8 @@ public class FinalizarCompra extends HttpServlet {
         {
             numero = numero.concat((String) carrinho.get(x));
         }
-        
-        for (int i=0;i<carrinho.size();i++) {
+                
+        /*for (int i=0;i<carrinho.size();i++) {
             int id = (int) carrinho.get(i);
             ProdutoBean pro = dao.buscarId(id);
             
@@ -55,17 +55,40 @@ public class FinalizarCompra extends HttpServlet {
             ped.setNomeProduto(nomeProduto);
             ped.setIdCliente(idCliente);
             ped.setPreco(preco);
-            //ped.setQuantidade();
+            ped.setQuantidade(10);
             ped.setNumero(numero);
             ped.setStatus("Pedido Feito");
-            ped.setPagamento(req.getParameter("pagamento"));
             
             dao1.salvarCompra(ped);            
+        }*/
+        
+        /*if (carrinho.size() > 1) {
+            
+        } else {
+            int idProduto = Integer.parseInt(req.getParameter("idProduto"));
+            
+            ProdutoBean pro = dao.buscarId(idProduto);
+            
+            String nomeProduto = pro.getNome();
+            Double preco = pro.getPreco();
+            
+            numero = numero.concat(nomeProduto);
+            numero = numero.concat (Integer.toString(idProduto));
+            
+            ped.setIdCliente(idCliente);
+            ped.setIdProduto(idProduto);
+            ped.setNomeProduto(nomeProduto);
+            ped.setPreco(preco);
+            ped.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
+            ped.setNumero(numero);
+            ped.setStatus("Pedido realizado");
+            
+            dao1.salvarCompra(ped);
         }
         
-        session.removeAttribute("carrinho");
+        session.removeAttribute("carrinho");*/
         
-        RequestDispatcher rd = req.getRequestDispatcher("VendaProduto.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("newjsp.jsp");
         rd.forward(req,resp);
     }
 }

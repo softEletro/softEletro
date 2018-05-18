@@ -53,21 +53,19 @@
         </div>
         <!-- /BREADCRUMB -->
 
+        <jsp:useBean id="carrinho" scope="session" class="java.util.List" />
+
+        <jsp:useBean id="nome" scope="request" class="java.util.List" />
+        <jsp:useBean id="imagem" scope="request" class="java.util.List" />
+        <jsp:useBean id="quantidade" scope="request" class="java.util.List" />
+        <jsp:useBean id="preco" scope="request" class="java.util.List" />
         <!-- section -->
+        
         <div class="section">
             <!-- container -->
             <div class="container">
                 <!-- row -->
                 <div class="row">
-                    <div class="table-responsive">
-                    <jsp:useBean id="carrinho" scope="session" class="java.util.List" />
-                    
-                    <jsp:useBean id="nome" scope="request" class="java.util.List" />
-                    <jsp:useBean id="imagem" scope="request" class="java.util.List" />
-                    <jsp:useBean id="quantidade" scope="request" class="java.util.List" />
-                    <jsp:useBean id="preco" scope="request" class="java.util.List" />
-                    
-                    <form action="FinalizarCompra">
                         <table class="table">
                             <thead>
                                 <th>Id</th>
@@ -78,7 +76,7 @@
                             <tbody>
                                 <% for (int i=0;i<nome.size();i++) { %>
                                 <tr id="Produto<%= i %>">
-                                    <td><%= carrinho.get(i) %></td>
+                                    <td><input type="hidden" name="idProduto" value="<%= carrinho.get(i) %>"><%= carrinho.get(i) %></td>
                                     <td><img src="<%= imagem.get(i) %>" class="imgCarrinho"><%= nome.get(i) %></td>
                                     <td>
                                         <input class="input" type="number" name="quantidade" id="quantidade" value="<%= quantidade.get(i) %>">
@@ -110,8 +108,6 @@
                         <br><!--pulando linhas-->
                         <br><!--pulando linhas-->
                         <center><input class="btn btn-default btn-lg" style="background-color:tomato" type="submit" name="FinalizarCompra" value="Finalizar Compra">
-                    </div>
-                    </form>
                     <!-- /row -->
                 </div>
             <!-- /container -->
