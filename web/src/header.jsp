@@ -76,7 +76,7 @@
             <ul class="custom-menu">
               <li><a href="#"><i class="fa fa-user-o"></i> Minha Conta</a></li>
               <li><a href="#"><i class="fa fa-check"></i> Lista de Pedidos</a></li>
-              <li><a href="#"><i class="fa fa-exchange"></i> Editar Perfil</a></li>
+              <li><a href="MostarCliente"><i class="fa fa-exchange"></i> Editar Perfil</a></li>
               <li><a href="Logout"><i class="fa fa-exchange"></i> Sair</a></li>
             </ul>
           </li>

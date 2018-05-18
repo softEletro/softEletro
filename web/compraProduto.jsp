@@ -67,7 +67,7 @@
                     <jsp:useBean id="quantidade" scope="request" class="java.util.List" />
                     <jsp:useBean id="preco" scope="request" class="java.util.List" />
                     
-                    <form action="FinalizaCompra">
+                    <form action="FinalizarCompra">
                         <table class="table">
                             <thead>
                                 <th>Id</th>
@@ -107,12 +107,11 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </form>
-
                         <br><!--pulando linhas-->
                         <br><!--pulando linhas-->
-                        <center><input class="btn btn-default btn-lg" style="background-color:tomato" type="submit" name="btnfinalizarcompra" value="Finalizar Compra">
+                        <center><input class="btn btn-default btn-lg" style="background-color:tomato" type="submit" name="FinalizarCompra" value="Finalizar Compra">
                     </div>
+                    </form>
                     <!-- /row -->
                 </div>
             <!-- /container -->
