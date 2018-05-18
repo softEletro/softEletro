@@ -59,7 +59,7 @@ public class MostrarCarrinho extends HttpServlet {
         req.setAttribute("preco", precox);
         //} else { }
 
-        RequestDispatcher rd = req.getRequestDispatcher("/testecar.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/compraProduto.jsp");
         rd.forward(req,resp);
     }
 }

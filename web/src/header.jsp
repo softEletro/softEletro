@@ -107,9 +107,7 @@
                 <i class="fa fa-shopping-cart"></i>
                 <span class="qty">3</span> <!-- Qtd de Itens no Carrinho -->
               </div>
-              <strong class="text-uppercase">Carrinho:</strong>
-              <br>
-              <span>R$</span>
+                <a href="MostrarCarrinho"><strong class="text-uppercase">Carrinho:</strong></a>
             </a>            
           </li>
           <!-- /Cart -->

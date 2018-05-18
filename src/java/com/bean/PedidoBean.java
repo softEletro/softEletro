@@ -15,14 +15,32 @@ import javax.persistence.Id;
  */
 @Entity
 public class PedidoBean {
-     @GeneratedValue
+    @GeneratedValue
     @Id
     int idCliente;
+    int idProduto;
+    String nomeProduto;
     String status;
-    String produto;
     Double preco;
-    Double valortotal;
-    int pedido;
+    int quantidade;
+    String numero;
+    String pagamento;
+
+    public int getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
+    }
+
+    public String getNomeProduto() {
+        return nomeProduto;
+    }
+
+    public void setNomeProduto(String nomeProduto) {
+        this.nomeProduto = nomeProduto;
+    }
 
     public String getStatus() {
         return status;
@@ -32,12 +50,21 @@ public class PedidoBean {
         this.status = status;
     }
 
-    public String getProduto() {
-        return produto;
+    public String getPagamento() {
+        return pagamento;
     }
 
-    public void setProduto(String produto) {
-        this.produto = produto;
+    public void setPagamento(String pagamento) {
+        this.pagamento = pagamento;
+    }
+    
+
+    public int getIdProduto() {
+        return idProduto;
+    }
+
+    public void setIdProduto(int idProduto) {
+        this.idProduto = idProduto;
     }
 
     public Double getPreco() {
@@ -48,28 +75,19 @@ public class PedidoBean {
         this.preco = preco;
     }
 
-    public Double getValortotal() {
-        return valortotal;
+    public int getQuantidade() {
+        return quantidade;
     }
 
-    public void setValortotal(Double valortotal) {
-        this.valortotal = valortotal;
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
-    public int getPedido() {
-        return pedido;
+    public String getNumero() {
+        return numero;
     }
 
-    public void setPedido(int pedido) {
-        this.pedido = pedido;
+    public void setNumero(String numero) {
+        this.numero = numero;
     }
-
-    public int getIdCliente() {
-        return idCliente;
-    }
-
-    public void setIdCliente(int idCliente) {
-        this.idCliente = idCliente;
-    }
-
 }

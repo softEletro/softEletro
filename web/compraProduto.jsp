@@ -66,6 +66,8 @@
                     <jsp:useBean id="imagem" scope="request" class="java.util.List" />
                     <jsp:useBean id="quantidade" scope="request" class="java.util.List" />
                     <jsp:useBean id="preco" scope="request" class="java.util.List" />
+                    
+                    <form action="FinalizaCompra">
                         <table class="table">
                             <thead>
                                 <th>Id</th>
@@ -105,6 +107,7 @@
                                 </tr>
                             </tbody>
                         </table>
+                    </form>
 
                         <br><!--pulando linhas-->
                         <br><!--pulando linhas-->

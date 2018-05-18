@@ -25,14 +25,23 @@ public class PedidoModel {
         
         return carrinho;
     }
-    public List<PedidoBean> buscarIdPedido(int idCliente) {
-        Session session = HibernateUtil.getSessionFactory().openSession();
+   
+    /**************************************************************************/
+    public void salvarCompra (PedidoBean ped)
+    {
+         Session session = HibernateUtil.getSessionFactory().openSession();
+        // Inicia uma transação
         session.beginTransaction();
         
-          Criteria crit = session.createCriteria(PedidoBean.class)
-                .add(Restrictions.eq("id",idCliente));
+        // Realiza a operação salvar
+        session.persist(ped);
         
-        return crit.list();
+        // Comita a transação
+        session.getTransaction().commit();
+        
+        // Libera a memória e encerra a sessão
+        session.flush();
+        session.close();
     }
-    /**************************************************************************/
+    
 }
