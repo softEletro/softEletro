@@ -44,6 +44,15 @@ public class PedidoModel {
         session.flush();
         session.close();
     }
+     public List<PedidoBean> listarPedido() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        
+        session.beginTransaction();
+        
+        Criteria ped  = session.createCriteria(PedidoBean.class);
+        
+        return ped.list();
+    }
     
     
 }

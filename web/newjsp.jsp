@@ -14,10 +14,10 @@
     <body>
         <jsp:useBean id="nomeProduto" scope="request" class="java.lang.String" />
        <jsp:useBean id="quantidade" scope="request" class="java.lang.String" />
-       <jsp:useBean id="preco" scope="request" class="java.lang.Double" />
+    
         <h1>Hello World!</h1>
        <%=nomeProduto%>
        <%=quantidade%>
-       <%=preco%>
+       
             </body>
 </html>

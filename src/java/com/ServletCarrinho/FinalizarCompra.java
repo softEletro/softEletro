@@ -62,11 +62,9 @@ public class FinalizarCompra extends HttpServlet {
             dao1.salvarCompra(ped);            
         }
         
-      
-          
         session.removeAttribute("carrinho");
         
-        RequestDispatcher rd = req.getRequestDispatcher("newjsp.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("ListaPedio");
         rd.forward(req,resp);
     }
 }

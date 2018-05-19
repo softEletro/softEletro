@@ -81,11 +81,11 @@
 						<!-- row -->
 						<div class="row">
 							<!-- Product Single -->
-                                                                                                           
+                                                        <form action="ListaProduto">                                              
 							<div class="col-md-4 col-sm-6 col-xs-6">
 								<div class="product product-single">
                                                                      <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="./img/note_razer_blade_270x360.png" alt="">
+										<img src="" alt="">
 									 <div class="product-body">
                                                                              
                                                                             <h3 class="product-price">R$8.800,00 <del class="product-old-price">R$11.000,00</del></h3>
@@ -97,6 +97,7 @@
 									
 									</div>
 								</div>
+                                                            </form>
 							</div>
                                                 </form>
 							

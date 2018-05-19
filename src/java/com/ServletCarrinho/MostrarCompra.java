@@ -46,12 +46,10 @@ public class MostrarCompra extends HttpServlet {
             Double preco = pro.getPreco();
 
             nomex.add(nome);
-            quantidadex.add(quantidade);
             precox.add(preco);
         }
 
         req.setAttribute("nome", nomex);
-        req.setAttribute("quantidade", quantidadex);
         req.setAttribute("preco", precox);
         RequestDispatcher rd = req.getRequestDispatcher("/newjsp.jsp");
         rd.forward(req,resp);
