@@ -6,6 +6,7 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="logado" scope="session" class="java.lang.String" />
+<jsp:useBean id="idUsuario" scope="session" class="java.lang.Integer" />
 <header>
     
     <script type="text/javascript">  
@@ -76,7 +77,7 @@
             <ul class="custom-menu">
               <li><a href="#"><i class="fa fa-user-o"></i> Minha Conta</a></li>
               <li><a href="#"><i class="fa fa-check"></i> Lista de Pedidos</a></li>
-              <li><a href="MostrarCliente"><i class="fa fa-exchange"></i> Editar Perfil</a></li>
+              <li><a href="MostrarCliente?id=<%= idUsuario %>"><i class="fa fa-exchange"></i> Editar Perfil</a></li>
               <li><a href="Logout"><i class="fa fa-exchange"></i> Sair</a></li>
             </ul>
           </li>
