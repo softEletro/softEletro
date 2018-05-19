@@ -81,190 +81,32 @@
 						<!-- row -->
 						<div class="row">
 							<!-- Product Single -->
+                                                                                                           
 							<div class="col-md-4 col-sm-6 col-xs-6">
 								<div class="product product-single">
-									<div class="product-thumb">
-							                <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="./img/product04.jpg" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">R$32.50 </h3>
-										<h2 class="product-name"><a href="#">Nome Do Produto</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
-										</div>
+                                                                     <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+										<img src="./img/note_razer_blade_270x360.png" alt="">
+									 <div class="product-body">
+                                                                             
+                                                                            <h3 class="product-price">R$8.800,00 <del class="product-old-price">R$11.000,00</del></h3>
+                                                                            <h2 class="product-name"><a href="#">Razer Blade</a></h2>
+                                                                            <div class="product-btns">
+                                                                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                                                                            </div>
+                                                                            </div>
+									
 									</div>
 								</div>
 							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="col-md-4 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-									        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">R$32.50 </h3>
-										<h2 class="product-name"><a href="#">Nome Do Produto</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<div class="clearfix visible-sm visible-xs"></div>
-
-							<!-- Product Single -->
-							<div class="col-md-4 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">                    
-                                                                            <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">R$32.50 </h3>
-										<h2 class="product-name"><a href="#">Nome Do Produto</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<div class="clearfix visible-md visible-lg"></div>
-
-							<!-- Product Single -->
-							<div class="col-md-4 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-                                                                            <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">R$32.50 </h3>
-										<h2 class="product-name"><a href="#">Nome Do Produto</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<div class="clearfix visible-sm visible-xs"></div>
-
-							<!-- Product Single -->
-							<div class="col-md-4 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-									 <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">R$32.50 </h3>
-										<h2 class="product-name"><a href="#">Nome Do Produto</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="col-md-4 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-										                     <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">R$32.50 </h3>
-										<h2 class="product-name"><a href="#">Nome Do Produto</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<div class="clearfix visible-md visible-lg visible-sm visible-xs"></div>
-
-							<!-- Product Single -->
-							<div class="col-md-4 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-                     <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">R$32.50 </h3>
-										<h2 class="product-name"><a href="#">Nome Do Produto</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>										</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<!-- Product Single -->
-							<div class="col-md-4 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-									                     <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">R$32.50 </h3>
-										<h2 class="product-name"><a href="#">Nome Do Produto</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>	</div>
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-
-							<div class="clearfix visible-sm visible-xs"></div>
-
-							<!-- Product Single -->
-							<div class="col-md-4 col-sm-6 col-xs-6">
-								<div class="product product-single">
-									<div class="product-thumb">
-									                     <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="" alt="">
-									</div>
-									<div class="product-body">
-										<h3 class="product-price">R$32.50 </h3>
-										<h2 class="product-name"><a href="#">Nome Do Produto</a></h2>
-										<div class="product-btns">
-											<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
-										</div>
+                                                </form>
+							
 									</div>
 								</div>
 							</div>
 							<!-- /Product Single -->
 						</div>
 						<!-- /row -->
-					</div>
-					<!-- /STORE -->
-
-					<!-- store bottom filter -->
-					<!-- /store bottom filter -->
-				</div>
-				<!-- /MAIN -->
-			</div>
-			<!-- /row -->
-		</div>
-		<!-- /container -->
-	</div>
-	<!-- /section -->
-
+					
 	<!-- FOOTER -->
        <%@include file="src/footerCliente.html" %><!-- /FOOTER -->
 

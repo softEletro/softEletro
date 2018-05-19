@@ -6,6 +6,7 @@
 package com.model;
 
 import com.bean.PedidoBean;
+import com.bean.ProdutoBean;
 import com.util.HibernateUtil;
 import java.util.ArrayList;
 import java.util.List;
@@ -43,5 +44,6 @@ public class PedidoModel {
         session.flush();
         session.close();
     }
+    
     
 }

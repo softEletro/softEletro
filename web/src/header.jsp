@@ -56,13 +56,13 @@ XXXXXXXXXXXXXXXX=<%= msg %>
         <!-- /Logo -->
         <!-- Search -->
         <div class="header-search">
-          <form>
+          <form action="BuscarProduto">
             <input class="input search-input" type="text" placeholder="Procure o Produto...">
             <select class="input search-categories">              
               <option value="0">Computador</option>
               <option value="1">Celular</option>
             </select>
-            <button class="search-btn"><i class="fa fa-search"></i></button>
+            <input class="btn btn-default" type="submit" name="buscar" value="Buscar" title="Buscar Registro"/>
           </form>
         </div>
         <!-- /Search -->

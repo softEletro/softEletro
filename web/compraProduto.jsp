@@ -66,6 +66,7 @@
             <div class="container">
                 <!-- row -->
                 <div class="row">
+                    <form action="FinalizarCompra">
                         <table class="table">
                             <thead>
                                 <th>Id</th>
@@ -107,8 +108,11 @@
                         </table>
                         <br><!--pulando linhas-->
                         <br><!--pulando linhas-->
-                        <center><input class="btn btn-default btn-lg" style="background-color:tomato" type="submit" name="FinalizarCompra" value="Finalizar Compra">
-                    <!-- /row -->
+                        <center><input class="btn btn-default btn-lg" style="background-color:tomato" type="submit" name="FinalizarCompra" value="Finalizar Compra"></center>
+                    
+                 </form>
+                        </div>
+                        <!-- /row -->
                 </div>
             <!-- /container -->
             </div>

@@ -3,7 +3,7 @@
     Created on : 17/05/2018, 16:13:50
     Author     : bcustodio
 --%>
-
+<%@page import="com.bean.ProdutoBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -12,6 +12,12 @@
         <title>JSP Page</title>
     </head>
     <body>
+        <jsp:useBean id="nomeProduto" scope="request" class="java.lang.String" />
+       <jsp:useBean id="quantidade" scope="request" class="java.lang.String" />
+       <jsp:useBean id="preco" scope="request" class="java.lang.Double" />
         <h1>Hello World!</h1>
-    </body>
+       <%=nomeProduto%>
+       <%=quantidade%>
+       <%=preco%>
+            </body>
 </html>
