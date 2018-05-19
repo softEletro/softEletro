@@ -6,7 +6,8 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="logado" scope="session" class="java.lang.String" />
-
+<jsp:useBean id="msg" scope="request" class="java.lang.String" />
+XXXXXXXXXXXXXXXX=<%= msg %>
 <header>
     
     <script type="text/javascript">  
@@ -26,7 +27,11 @@
     <script type="text/javascript">
         function removeItem(div){
             document.getElementById(div).remove();
-        }       
+        }
+        
+        function mensagem() {
+            alert("E-mail ou senha incorretos!");
+        }
     </script>
     
   <!-- top Header -->
@@ -93,7 +98,7 @@
             
             
             <ul class="custom-menu">                
-                <form action="Login">
+                <form action="Login" <% if (!"".equals(msg)) { %>onload="mensagem() <% } %>;">
                 <li>E-mail: <input type="text" class="form-control" name="email"></li>
                 <li>Senha: <input type="password" class="form-control" name="senha"></li>
                 <li><input class="btn btn-default" type="submit" name="entrar" value="Entrar"></li>

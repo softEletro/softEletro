@@ -9,6 +9,7 @@ import com.bean.ClienteBean;
 import com.model.ClienteModel;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -36,8 +37,10 @@ public class Login extends HttpServlet {
             
             // Verifica se o objeto retornou nulo.
             if (cli == null) {
-                PrintWriter out = resp.getWriter();
-                out.print("<script>alert(\"E-mail ou senha incorretos!\");</script>");
+                req.setAttribute("msg","true");
+                
+                RequestDispatcher rd = req.getRequestDispatcher("/index.jsp");
+                rd.forward(req,resp);
             } else {
                 int id = cli.getId();
                 
