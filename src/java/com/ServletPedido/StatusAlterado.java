@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ServletCarrinho;
+package com.ServletPedido;
 
 import com.bean.PedidoBean;
 import com.model.PedidoModel;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,17 +20,22 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author leona
  */
-@WebServlet(name = "ListaPedido", urlPatterns = {"/ListaPedido"})
-public class ListaPedido extends HttpServlet {
-     @Override
+@WebServlet(name = "StatusAlterado", urlPatterns = {"/StatusAlterado"})
+public class StatusAlterado extends HttpServlet {
+
+   @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        PedidoBean Pro = new PedidoBean();
+        int idCliente = Integer.parseInt(req.getParameter("idCliente"));  
         PedidoModel dao = new PedidoModel();
-        List lista = dao.listarPedido();
+        PedidoBean ped = dao.buscarId(idCliente);
+
+        ped.setStatus("Transportadora");
         
-        req.setAttribute("lista", lista);
         
-        RequestDispatcher rd = req.getRequestDispatcher("/VendaProduto.jsp");
-        rd.forward(req,resp);
+        
+        dao.alterarPedido(ped);
+        
+         RequestDispatcher rd = req.getRequestDispatcher("VendaProduto.jsp");
+         rd.forward(req,resp);
     }
 }
