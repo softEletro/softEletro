@@ -81,7 +81,7 @@
 						<!-- row -->
 						<div class="row">
 							<!-- Product Single -->
-                                                        <form action="ListaProduto">                                              
+                                               
 							<div class="col-md-4 col-sm-6 col-xs-6">
 								<div class="product product-single">
                                                                      <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
@@ -97,9 +97,8 @@
 									
 									</div>
 								</div>
-                                                            </form>
 							</div>
-                                                </form>
+                                                
 							
 									</div>
 								</div>

@@ -73,7 +73,7 @@
 			</div>
 			</div>
                         </form>
-                </form>
+                
                   <form action="AdicionarItens">
                     <div class="product-btns">
                     <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
