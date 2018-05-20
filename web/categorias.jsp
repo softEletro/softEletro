@@ -4,6 +4,7 @@
     Author     : 8244528
 --%>
 
+<%@page import="com.bean.ProdutoBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,35 +78,38 @@
 					<!-- /store top filter -->
 
 					<!-- STORE -->
-					<div id="store">
-						<!-- row -->
-						<div class="row">
-							<!-- Product Single -->
-                                               
-							<div class="col-md-4 col-sm-6 col-xs-6">
-								<div class="product product-single">
-                                                                     <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-										<img src="" alt="">
-									 <div class="product-body">
-                                                                             
-                                                                            <h3 class="product-price">R$8.800,00 <del class="product-old-price">R$11.000,00</del></h3>
-                                                                            <h2 class="product-name"><a href="#">Razer Blade</a></h2>
-                                                                            <div class="product-btns">
-                                                                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
-                                                                            </div>
-                                                                            </div>
-									
-									</div>
-								</div>
-							</div>
-                                                
-							
-									</div>
-								</div>
-							</div>
-							<!-- /Product Single -->
-						</div>
-						<!-- /row -->
+        <jsp:useBean id="lista" scope="request" class="java.util.List" />
+	<div id="store">
+            <!-- row -->
+            <div class="row">
+                    <!-- Product Single -->
+                    <% for (int i=0;i<lista.size();i++) {
+                        ProdutoBean Pro = (ProdutoBean)lista.get(i); %>
+                    <div class="col-md-4 col-sm-6 col-xs-6">
+                            <div class="product product-single">
+                                 <a class="main-btn quick-view" href="MostraDetalhe?id=<%= Pro.getId() %>"><i class="fa fa-search-plus"></i> Detalhes</a>
+                                            <img src="./<%= Pro.getImagem() %>" alt="">
+                                     <div class="product-body">
+
+                                        <h3 class="product-price">R$ <%= Pro.getPreco() %></h3>
+                                        <h2 class="product-name"><a href="#"><%= Pro.getNome() %></a></h2>
+                                        <div class="product-btns">
+                                        <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                                        </div>
+                                        </div>
+
+                                    </div>
+                            </div>
+                    </div>
+                    <% } %>
+
+
+        </div>
+                            </div>
+                    </div>
+                    <!-- /Product Single -->
+            </div>
+            <!-- /row -->
 					
 	<!-- FOOTER -->
        <%@include file="src/footerCliente.html" %><!-- /FOOTER -->
