@@ -86,6 +86,12 @@
 				</div>              
 			</div>
 			<br>
+                          <jsp:useBean id="lista" scope="request" class="java.util.List" />
+                          <jsp:useBean id="carrinho" scope="session" class="java.util.List" />
+                          <jsp:useBean id="nome" scope="request" class="java.util.List" />
+                          <jsp:useBean id="quantidade" scope="request" class="java.util.List" />
+                          <jsp:useBean id="preco" scope="request" class="java.util.List" />
+                    
 			<table class="table table-default">
 				<thead>
 					<th>Produto</th>
@@ -94,20 +100,13 @@
 					<th>Valor Total</th>
 				</thead>
 				<tbody>
-                                    <jsp:useBean id="carrinho" scope="session" class="java.util.List" />
-                                    <jsp:useBean id="nome" scope="request" class="java.util.List" />
-                                    <jsp:useBean id="quantidade" scope="request" class="java.util.List" />
-                                    <jsp:useBean id="preco" scope="request" class="java.util.List" />
-                    
-                                    <% for (int i=0;i<nome.size();i++) { %>
-                                <tr id="Produto<%= i %>">
-                                    <td><%= carrinho.get(i) %></td>
-                                    <td><img src="<%= nome.get(i) %>" class="imgCarrinho"><%= nome.get(i) %></td>
-                                    <td>
-                                        <input class="input" type="number" name="quantidade" id="quantidade" value="<%= quantidade.get(i) %>">
-                                    </td>
-                                    <td><%= preco.get(i) %></td>
-                                   
+                                  
+                                    <% for (int i=0;i<lista.size();i++) { %>
+                                        ProdutoBean pro = (ProdutoBean)lista.get(i); %>
+                                       <td><%= pro.getProduto() %></td>
+                                       <td><%= pro.getQuantidade() %></td>
+                                       <td><%= Pro.getPreco() %></td>
+                                       <td><%= Pro.getValorTotal() %></td>
                                 </tr>
                                 <% } %>
 				</tbody>
