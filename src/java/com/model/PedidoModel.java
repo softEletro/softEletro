@@ -68,13 +68,16 @@ public class PedidoModel {
         return (PedidoBean)session.createCriteria(PedidoBean.class)
                 .add(Restrictions.eq("idCliente",idCliente))
                 .uniqueResult();
+       
     }
-     public List<PedidoBean> listarPedido() {
+        //************************************************************
+     public List<PedidoBean> listarPedido(int idCliente) {
         Session session = HibernateUtil.getSessionFactory().openSession();
         
         session.beginTransaction();
         
-        Criteria ped  = session.createCriteria(PedidoBean.class);
+        Criteria ped  = session.createCriteria(PedidoBean.class)
+                .add(Restrictions.eq("idCliente",idCliente));
         
         return ped.list();
     }

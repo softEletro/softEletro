@@ -36,20 +36,20 @@ public class FinalizarCompra extends HttpServlet {
         PedidoBean ped = new PedidoBean ();
         ProdutoModel dao = new ProdutoModel();
         
-        String numero = "312383";
+        String numero = "312382223";
         for(int x=0;x<carrinho.size();x++)
         {
             numero = numero.concat("c");
         }
 
-        //for (int i=0;i<carrinho.size();i++) {
-            //int id = (int) carrinho.get(i);
-            ProdutoBean pro = dao.buscarId(Integer.parseInt(req.getParameter("idProduto")));
+        for (int i=0;i<carrinho.size();i++) {
+            int id = (int) carrinho.get(i);
+            ProdutoBean pro = dao.buscarId(id);
             
             String nomeProduto = pro.getNome();
             Double preco =  pro.getPreco();
             
-            ped.setIdProduto(Integer.parseInt(req.getParameter("idProduto")));
+            ped.setIdProduto(id);
             ped.setNomeProduto(nomeProduto);
             ped.setIdCliente(Integer.parseInt(req.getParameter("idCliente")));
             ped.setPreco(preco);
@@ -58,7 +58,7 @@ public class FinalizarCompra extends HttpServlet {
             ped.setStatus("Pedido Feito");
             
             dao1.salvarCompra(ped);            
-        //}
+        }
         
         session.removeAttribute("carrinho");
         

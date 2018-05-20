@@ -27,7 +27,8 @@ public class ListaPedido extends HttpServlet {
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         PedidoBean Pro = new PedidoBean();
         PedidoModel dao = new PedidoModel();
-        List lista = dao.listarPedido();
+        int idCliente = Integer.parseInt(req.getParameter("idCliente"));
+        List lista = dao.listarPedido(idCliente);
         
         req.setAttribute("lista", lista);
         
