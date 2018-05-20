@@ -17,6 +17,7 @@ import javax.persistence.Id;
 public class PedidoBean {
     @GeneratedValue
     @Id
+    int id;
     int idCliente;
     int idProduto;
     String nomeProduto;
@@ -24,6 +25,14 @@ public class PedidoBean {
     Double preco;
     int quantidade;
     String numero;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public int getIdCliente() {
         return idCliente;

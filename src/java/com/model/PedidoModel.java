@@ -35,7 +35,7 @@ public class PedidoModel {
         session.beginTransaction();
         
         // Realiza a operação salvar
-        session.persist(ped);
+        session.save(ped);
         
         // Comita a transação
         session.getTransaction().commit();

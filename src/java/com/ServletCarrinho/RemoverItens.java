@@ -68,7 +68,7 @@ public class RemoverItens extends HttpServlet {
         }
         
         if (carrinho.isEmpty()) {
-            RequestDispatcher rd = req.getRequestDispatcher("ListaCliente");
+            RequestDispatcher rd = req.getRequestDispatcher("/index.jsp");
             rd.forward(req,resp);
         } else {
             RequestDispatcher rd = req.getRequestDispatcher("/compraProduto.jsp");

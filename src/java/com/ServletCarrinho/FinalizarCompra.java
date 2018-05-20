@@ -28,43 +28,41 @@ import javax.servlet.http.HttpSession;
 public class FinalizarCompra extends HttpServlet {
     @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        // CÓDIGO VEM AQUI, JÁ TÁ CERTO!!!!
         HttpSession session = req.getSession();
         
         List carrinho = (List) session.getAttribute("carrinho");
-        int idCliente = (int) session.getAttribute("idUsuario");
         
         PedidoModel dao1 = new PedidoModel();
         PedidoBean ped = new PedidoBean ();
         ProdutoModel dao = new ProdutoModel();
         
-        String numero = "";
+        String numero = "312383";
         for(int x=0;x<carrinho.size();x++)
         {
-            numero = numero.concat((String) carrinho.get(x));
+            numero = numero.concat("c");
         }
-                
-        for (int i=0;i<carrinho.size();i++) {
-            int id = (int) carrinho.get(i);
-            ProdutoBean pro = dao.buscarId(id);
+
+        //for (int i=0;i<carrinho.size();i++) {
+            //int id = (int) carrinho.get(i);
+            ProdutoBean pro = dao.buscarId(Integer.parseInt(req.getParameter("idProduto")));
             
             String nomeProduto = pro.getNome();
             Double preco =  pro.getPreco();
             
-            ped.setIdProduto(id);
+            ped.setIdProduto(Integer.parseInt(req.getParameter("idProduto")));
             ped.setNomeProduto(nomeProduto);
-            ped.setIdCliente(idCliente);
+            ped.setIdCliente(Integer.parseInt(req.getParameter("idCliente")));
             ped.setPreco(preco);
-            ped.setQuantidade(10);
+            ped.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
             ped.setNumero(numero);
             ped.setStatus("Pedido Feito");
             
             dao1.salvarCompra(ped);            
-        }
+        //}
         
         session.removeAttribute("carrinho");
         
-        RequestDispatcher rd = req.getRequestDispatcher("ListaPedio");
+        RequestDispatcher rd = req.getRequestDispatcher("/index.jsp");
         rd.forward(req,resp);
     }
 }
