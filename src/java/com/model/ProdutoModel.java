@@ -102,6 +102,29 @@ public class ProdutoModel {
         return Pro.list();
     }
     
+    // Método para listagem de celulares.
+    public List<ProdutoBean> listarCelular() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        
+        session.beginTransaction();
+        
+        Criteria Pro  = session.createCriteria(ProdutoBean.class)
+                .add(Restrictions.eq("produto", "1"));
+        
+        return Pro.list();
+    }
+    // Método para listagem de computadores.
+    public List<ProdutoBean> listarComputador() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        
+        session.beginTransaction();
+        
+        Criteria Pro  = session.createCriteria(ProdutoBean.class)
+                .add(Restrictions.eq("produto", "2"));
+        
+        return Pro.list();
+    }
+    
     // Busca todos os registros ativos.
     public List<ProdutoBean> listarProdutoAtivos() {
         Session session = HibernateUtil.getSessionFactory().openSession();
