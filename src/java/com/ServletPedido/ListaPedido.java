@@ -5,7 +5,9 @@
  */
 package com.ServletPedido;
 
+import com.bean.ClienteBean;
 import com.bean.PedidoBean;
+import com.model.ClienteModel;
 import com.model.PedidoModel;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -27,12 +29,19 @@ public class ListaPedido extends HttpServlet {
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
         PedidoBean Pro = new PedidoBean();
         PedidoModel dao = new PedidoModel();
+        
         int idCliente = Integer.parseInt(req.getParameter("idCliente"));
+        
         List lista = dao.listarPedido(idCliente);
         
-        req.setAttribute("lista", lista);
+        ClienteModel dao1 = new ClienteModel();
+        ClienteBean cli = dao1.buscarId(idCliente);
         
-        RequestDispatcher rd = req.getRequestDispatcher("/VendaProduto.jsp");
+        req.setAttribute("lista", lista);
+        req.setAttribute("nome", cli.getNome());
+        req.setAttribute("sobrenome", cli.getSobrenome());
+        
+        RequestDispatcher rd = req.getRequestDispatcher("/historico.jsp");
         rd.forward(req,resp);
     }
 }

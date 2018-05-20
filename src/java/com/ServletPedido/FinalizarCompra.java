@@ -36,7 +36,7 @@ public class FinalizarCompra extends HttpServlet {
         PedidoBean ped = new PedidoBean ();
         ProdutoModel dao = new ProdutoModel();
         
-        String numero = "312382223";
+        String numero = "3223";
         for(int x=0;x<carrinho.size();x++)
         {
             numero = numero.concat("c");

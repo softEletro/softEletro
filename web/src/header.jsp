@@ -7,7 +7,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="logado" scope="session" class="java.lang.String" />
 <jsp:useBean id="msg" scope="request" class="java.lang.String" />
-XXXXXXXXXXXXXXXX=<%= msg %>
 <header>
     
     <script type="text/javascript">  
@@ -81,10 +80,10 @@ XXXXXXXXXXXXXXXX=<%= msg %>
             
             <ul class="custom-menu">
               <li><a href="#"><i class="fa fa-user-o"></i> Minha Conta</a></li>
-              <li><a href="#"><i class="fa fa-check"></i> Lista de Pedidos</a></li>
               <% if (logado.equals("Login")) { %>
                 <jsp:useBean id="idUsuario" scope="session" class="java.lang.Integer" />
-              <li><a href="MostrarCliente?id=<%= idUsuario %>"><i class="fa fa-exchange"></i> Editar Perfil</a></li>
+                <li><a href="ListaPedido?idCliente=<%= idUsuario %>"><i class="fa fa-check"></i> Lista de Pedidos</a></li>
+                <li><a href="MostrarCliente?id=<%= idUsuario %>"><i class="fa fa-exchange"></i> Editar Perfil</a></li>
               <% } %>
               <li><a href="Logout"><i class="fa fa-exchange"></i> Sair</a></li>
             </ul>
@@ -98,7 +97,7 @@ XXXXXXXXXXXXXXXX=<%= msg %>
             
             
             <ul class="custom-menu">                
-                <form action="Login" <% if (!"".equals(msg)) { %>onload="mensagem() <% } %>;">
+                <form action="Login">
                 <li>E-mail: <input type="text" class="form-control" name="email"></li>
                 <li>Senha: <input type="password" class="form-control" name="senha"></li>
                 <li><input class="btn btn-default" type="submit" name="entrar" value="Entrar"></li>
@@ -116,8 +115,7 @@ XXXXXXXXXXXXXXXX=<%= msg %>
                 <i class="fa fa-shopping-cart"></i>
                 <span class="qty">3</span> <!-- Qtd de Itens no Carrinho -->
               </div>
-                <a href="MostrarCarrinho"><strong class="text-uppercase">Carrinho:</strong></a>
-            </a>            
+                <a href="MostrarCarrinho"><strong class="text-uppercase">Carrinho:</strong></a>          
           </li>
           <!-- /Cart -->
           <!-- Mobile nav toggle-->
