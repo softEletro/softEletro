@@ -4,7 +4,7 @@
     Author     : leona
 --%>
 
-<%@page import="com.bean.ProdutoBean"%>
+<%@page import="com.bean.PedidoBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,11 +86,6 @@
 				</div>              
 			</div>
 			<br>
-                          <jsp:useBean id="lista" scope="request" class="java.util.List" />
-                          <jsp:useBean id="carrinho" scope="session" class="java.util.List" />
-                          <jsp:useBean id="nome" scope="request" class="java.util.List" />
-                          <jsp:useBean id="quantidade" scope="request" class="java.util.List" />
-                          <jsp:useBean id="preco" scope="request" class="java.util.List" />
                     
 			<table class="table table-default">
 				<thead>
@@ -100,15 +95,17 @@
 					<th>Valor Total</th>
 				</thead>
 				<tbody>
-                                  
-                                    <% for (int i=0;i<lista.size();i++) { %>
-                                        ProdutoBean pro = (ProdutoBean)lista.get(i); %>
-                                       <td><%= pro.getProduto() %></td>
-                                       <td><%= pro.getQuantidade() %></td>
-                                       <td><%= Pro.getPreco() %></td>
-                                       <td><%= Pro.getValorTotal() %></td>
-                                </tr>
-                                <% } %>
+                                     <% 
+                                            for (int i=0; i<lista.size(); i++) { 
+                                                PedidoBean ped = (PedidoBean)lista.get(i);
+                                                //int valortTotal = ped.getQuantidade() * ped.getPreco(); %>
+                                                <tr>
+                                                    <td><%=ped.getNomeProduto()%></td>
+                                                    <td><%=ped.getQuantidade()%></td>
+                                                    <td><%= ped.getPreco() %></td>
+                                                    <td>"xxxxxxxxx"</td>
+                                                </tr>
+                                            <% } %>
 				</tbody>
 			</table>
 			<!-- /row -->
