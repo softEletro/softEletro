@@ -57,7 +57,6 @@
 
         <jsp:useBean id="nome" scope="request" class="java.util.List" />
         <jsp:useBean id="imagem" scope="request" class="java.util.List" />
-        <jsp:useBean id="quantidade" scope="request" class="java.util.List" />
         <jsp:useBean id="preco" scope="request" class="java.util.List" />
         <!-- section -->
         
@@ -76,11 +75,11 @@
                             </thead>
                             <tbody>
                                 <% for (int i=0;i<nome.size();i++) { %>
-                                <tr id="Produto<%= i %>">
+                                <tr>
                                     <td><input type="hidden" name="idProduto" value="<%= carrinho.get(i) %>"><%= carrinho.get(i) %></td>
                                     <td><img src="<%= imagem.get(i) %>" class="imgCarrinho"><%= nome.get(i) %></td>
                                     <td>
-                                        <input class="input" type="number" name="quantidade" id="quantidade" value="<%= quantidade.get(i) %>">
+                                        <input class="input" type="number" name="quantidade<%= i %>" id="quantidade" value="">
                                     </td>
                                     <td><%= preco.get(i) %></td>
                                     <td><a href="RemoverItens?idProduto=<%= carrinho.get(i) %>"><i class="glyphicon glyphicon-remove btn btn-default" /></a></td>

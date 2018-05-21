@@ -9,6 +9,7 @@ import com.bean.PedidoBean;
 import com.model.PedidoModel;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -20,22 +21,17 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author leona
  */
-@WebServlet(name = "StatusAlterado", urlPatterns = {"/StatusAlterado"})
-public class StatusAlterado extends HttpServlet {
-
-   @Override
+@WebServlet(name = "TodosPedidos", urlPatterns = {"/TodosPedidos"})
+public class TodosPedidos extends HttpServlet {
+    @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-        int numero = Integer.parseInt(req.getParameter("numero"));  
         PedidoModel dao = new PedidoModel();
-        PedidoBean ped = dao.buscarNumeroAlt(numero);
 
-        ped.setStatus("Transportadora");
-        
-        
-        
-        dao.alterarPedido(ped);
-        
-         RequestDispatcher rd = req.getRequestDispatcher("/PedidosAdm.jsp");
-         rd.forward(req,resp);
+        List lista = dao.buscarTodos();
+
+        req.setAttribute("lista", lista);
+
+        RequestDispatcher rd = req.getRequestDispatcher("/PedidosAdm.jsp");
+        rd.forward(req,resp);
     }
 }

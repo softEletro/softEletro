@@ -71,7 +71,7 @@ public class PedidoModel {
         session.close();        
     }  
       //******************************************************
-        public PedidoBean buscarId(int idCliente) {        
+        public PedidoBean buscarNumeroAlt(int idCliente) {        
         Session session = HibernateUtil.getSessionFactory().openSession();
         session.beginTransaction();
         return (PedidoBean)session.createCriteria(PedidoBean.class)
@@ -87,6 +87,16 @@ public class PedidoModel {
         
         Criteria ped  = session.createCriteria(PedidoBean.class)
                 .add(Restrictions.eq("idCliente",idCliente));
+        
+        return ped.list();
+    }
+        //************************************************************
+     public List<PedidoBean> buscarTodos() {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        
+        session.beginTransaction();
+        
+        Criteria ped  = session.createCriteria(PedidoBean.class);
         
         return ped.list();
     }

@@ -85,7 +85,9 @@
                             <td><%= ped.getNumero() %></td>
                             <td></td>
                             <td><%= ped.getStatus() %></td>
-                           <td><a href="MostrarPedido?numero=<%= ped.getNumero() %>"><span class="glyphicon glyphicon-list-alt"></span></a></td>
+                           <td>
+                               <a href="MostrarPedido?numero=<%= ped.getNumero() %>"><span class="glyphicon glyphicon-list-alt"></span></a>
+                           </td>
                         </tr>
                         <% numeroOld = ped.getNumero();
                         } %>

@@ -38,7 +38,6 @@ public class AdicionarItens extends HttpServlet {
         
         List imagemx = new ArrayList();
         List nomex = new ArrayList();
-        List quantidadex = new ArrayList();
         List precox = new ArrayList();
         
         if (carrinho == null) {
@@ -51,17 +50,14 @@ public class AdicionarItens extends HttpServlet {
 
             String imagem =  pro.getImagem();
             String nome =  pro.getNome();
-            int quantidade = pro.getQuantidade();
             Double preco = pro.getPreco();
 
             imagemx.add(imagem);
             nomex.add(nome);
-            quantidadex.add(quantidade);
             precox.add(preco);
 
             req.setAttribute("nome", nomex);
             req.setAttribute("imagem", imagemx);
-            req.setAttribute("quantidade", quantidadex);
             req.setAttribute("preco", precox);
         } else {
             carrinho.add(idProduto);
@@ -74,17 +70,14 @@ public class AdicionarItens extends HttpServlet {
 
                 String imagem =  pro.getImagem();
                 String nome =  pro.getNome();
-                int quantidade = pro.getQuantidade();
                 Double preco = pro.getPreco();
 
                 imagemx.add(imagem);
                 nomex.add(nome);
-                quantidadex.add(quantidade);
                 precox.add(preco);
 
                 req.setAttribute("nome", nomex);
                 req.setAttribute("imagem", imagemx);
-                req.setAttribute("quantidade", quantidadex);
                 req.setAttribute("preco", precox);
             }
         }

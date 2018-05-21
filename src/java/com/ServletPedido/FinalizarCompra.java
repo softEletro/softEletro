@@ -51,7 +51,7 @@ public class FinalizarCompra extends HttpServlet {
             ped.setNomeProduto(nomeProduto);
             ped.setIdCliente(idCliente);
             ped.setPreco(preco);
-            ped.setQuantidade(52);
+            ped.setQuantidade(Integer.parseInt(req.getParameter("quantidade"+i)));
             ped.setNumero(numero);
             ped.setStatus("Pedido Feito");
             

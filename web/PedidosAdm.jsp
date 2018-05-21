@@ -5,7 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="com.bean.ClienteBean"%>
+<%@page import="com.bean.PedidoBean"%>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -71,16 +71,6 @@
 	<div class="section">
             <!-- container -->
             <div class="container">
-		<form action="BuscarCliente">
-                    <div class="row">
-                        <div class="col-sm-2">
-                            <label>Nome</label>
-                            <input class="form-control" type="text" id="nome" name="nome" value="">
-                        </div>
-                    </div>
-                    <br>
-                    <input class="btn btn-default" type="submit" name="buscar" value="Buscar" title="Buscar registros"/>
-		</form>
                 <br>
                 <br>
                 <!-- row -->
@@ -98,41 +88,30 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Nome</th>
-                            <th>E-mail</th>
-                            <th>Endereço</th>
-                            <th>Telefone</th>
-                            <th>
-                                <a href="ListaClientesAtivos"><span title="Mostrar clientes ativos" class="glyphicon glyphicon-plus"></span></a>
-                                <a href="ListaClientesInativos"><span title="Mostrar clientes inativos" class="glyphicon glyphicon-minus"></span></a>
-                                <a href="ListaCliente"><span title="Mostrar todos os clientes" class="glyphicon glyphicon-asterisk"></span></a>
-                            </th>
+                            <th>Número do pedido</th>
+                            <th>Valor total</th>
+                            <th>Status</th>
+                            <th></th>
                         </tr>
                     </thead>
                     <tbody>
-                        <% for (int i=0;i<lista.size();i++) {
-                            ClienteBean cli = (ClienteBean)lista.get(i); 
-                            if (cli.getId() != 999) { %>
-                            <tr <%if (cli.getAtivo().equals("i")) {%>class="danger"<% } %>>
-                                <td><%= cli.getId() %></td>
-                                <td><%= cli.getNome() %> <%= cli.getSobrenome() %></td>
-                                <td><%= cli.getEmail() %></td>
-                                <td><%= cli.getEndereco() %></td>
-                                <td><%= cli.getTelefone() %></td>
+                        <% int numeroOld = 0;
+                        for (int i=0;i<lista.size();i++) {
+                            PedidoBean ped = (PedidoBean)lista.get(i); 
+                            if (numeroOld != ped.getNumero()) {
+        if (ped.getStatus().equals("Pedido Feito")) { %>
+                            <tr>
+                                <td><%= ped.getNumero() %></td>
+                                <td>XXXXXXXXX</td>
+                                <td><%= ped.getStatus() %></td>
                                 <td>
-                                    <a href="MostrarCliente?id=<%= cli.getId() %>"><span title="Editar Cliente" class="glyphicon glyphicon-pencil"></span></a>
-                                    <a href="ListaPedido?idCliente=<%= cli.getId() %>"><span title="Ver Pedidos" class="glyphicon glyphicon-list-alt"></span></a>
-                                    <% if (cli.getAtivo().equals("a")) { %>
-                                        <a href="InativarCliente?id=<%= cli.getId() %>">
-                                            <span title="Inativar cliente" class="glyphicon glyphicon-minus" onclick="inativo();"></span></a>
-                                    <% } else { %>
-                                        <a href="AtivarCliente?id=<%= cli.getId() %>">
-                                            <span title="Ativar cliente" class="glyphicon glyphicon-plus" onclick="ativo();"></span></a>
-                                    <% } %>
+                                    <a href="StatusAlterado?numero=<%= ped.getNumero() %>"><span title="Pedido sendo enviado" class="glyphicon glyphicon-send"></span></a>
+                                    <a href=""><span title="Pedido entregue" class="glyphicon glyphicon-ok"></span></a>
                                 </td>
                             </tr>
-                            <% } %>
+                            <% numeroOld = ped.getNumero();
+                                }
+                            }%>
                         <% } %>
                     </tbody>
                 </table>
