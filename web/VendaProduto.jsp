@@ -61,7 +61,7 @@
         <!-- section -->
         <%@page import="com.bean.PedidoBean"%>
         <jsp:useBean id="lista" scope="request" class="java.util.List" />
-        <jsp:useBean id="numero" scope="request" class="java.lang.String" />
+        <jsp:useBean id="numero" scope="request" class="java.lang.Integer" />
         <jsp:useBean id="status" scope="request" class="java.lang.String" />
         <div class="section">
             <!-- container -->

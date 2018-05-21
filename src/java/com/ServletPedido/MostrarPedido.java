@@ -32,7 +32,7 @@ public class MostrarPedido extends HttpServlet {
         PedidoBean Pro = new PedidoBean();
         PedidoModel dao = new PedidoModel();
 
-        String numero = req.getParameter("numero");
+        int numero = Integer.parseInt(req.getParameter("numero"));
         List lista = dao.buscanumero(numero);
         
         for (int i=0; i<lista.size(); i++) {

@@ -24,7 +24,7 @@ public class PedidoBean {
     String status;
     Double preco;
     int quantidade;
-    String numero;
+    int numero;
 
     public int getId() {
         return id;
@@ -82,11 +82,11 @@ public class PedidoBean {
         this.quantidade = quantidade;
     }
 
-    public String getNumero() {
+    public int getNumero() {
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(int numero) {
         this.numero = numero;
     }
 }

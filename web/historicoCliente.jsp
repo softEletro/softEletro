@@ -76,11 +76,11 @@
                     <th></th>
                 </thead>
                 <tbody>
-                    <% String numeroOld = "";
+                    <% int numeroOld = 0;
                     for (int i=0; i<lista.size(); i++) { 
                         PedidoBean ped = (PedidoBean)lista.get(i);
                         //int valortTotal = ped.getQuantidade() * ped.getPreco();
-                        if (!numeroOld.equals(ped.getNumero())) { %>
+                        if (numeroOld != ped.getNumero()) { %>
                         <tr>
                             <td><%= ped.getNumero() %></td>
                             <td></td>

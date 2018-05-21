@@ -10,6 +10,7 @@ import com.bean.ProdutoBean;
 import com.util.HibernateUtil;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
@@ -26,7 +27,15 @@ public class PedidoModel {
         
         return carrinho;
     }
-   
+    
+    /******************* MÉTODO PARA CRIAR O NÚMERO AUMÁTICO ******************/
+    public int numero () {
+        Random gerador = new Random();
+        
+        return gerador.nextInt();
+    }
+    
+    
     /**************************************************************************/
     public void salvarCompra (PedidoBean ped)
     {
@@ -82,7 +91,7 @@ public class PedidoModel {
         return ped.list();
     }
      //*********************************************************
-     public List<PedidoBean> buscanumero(String numero) {        
+     public List<PedidoBean> buscanumero(int numero) {        
         Session session = HibernateUtil.getSessionFactory().openSession();
         
         session.beginTransaction();
