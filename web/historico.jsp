@@ -33,7 +33,7 @@
                         <td><%= nome %> <%= sobrenome %></td>
                         <td></td>
                         <td><%= ped.getStatus() %></td>
-                        <td><a href="MostraPedido?numero=<%= ped.getNumero() %>">Mostrar pedido</a></td>
+                        <td><a href="MostrarPedido?numero=<%= ped.getNumero() %>">Mostrar pedido</a></td>
                     </tr>
                     <% numeroOld = ped.getNumero();
                     } %>

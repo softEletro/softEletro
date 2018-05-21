@@ -81,6 +81,18 @@ public class PedidoModel {
         
         return ped.list();
     }
+     //*********************************************************
+     public List<PedidoBean> buscanumero(String numero) {        
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        
+        session.beginTransaction();
+        
+        Criteria ped  = session.createCriteria(PedidoBean.class)
+                .add(Restrictions.eq("numero",numero));
+        
+        return ped.list();
+       
+    }
     
     
 }

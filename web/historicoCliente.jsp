@@ -45,7 +45,10 @@
 		<![endif]-->
 
 </head>
-
+ <%@page import="com.bean.PedidoBean"%>
+    <jsp:useBean id="lista" scope="request" class="java.util.List" />
+    <jsp:useBean id="nome" scope="request" class="java.lang.String" />
+    <jsp:useBean id="sobrenome" scope="request" class="java.lang.String" />
 <body>
 	<!-- HEADER -->
 	<%@include file="src/header.jsp" %>
@@ -80,20 +83,23 @@
         			<th></th>
         		</thead>
         		<tbody>
-        			<tr>
-        				<td>5564</td>
-        				<td>500,00</td>
-        				<td>Na Transportadora</td>
-        				<td><a href="vendaProdutos.html"><span class="glyphicon glyphicon-list-alt"></span></a></td>
-        			</tr>
-        			<tr>
-        				<td>5565</td>
-        				<td>600,00</td>
-        				<td>Com o Motoboy</td>
-        				<td><a href="vendaProdutos.html"><span class="glyphicon glyphicon-list-alt"></span></a></td>
-        			</tr>
+        			  <% String numeroOld = "";
+                for (int i=0; i<lista.size(); i++) { 
+                    PedidoBean ped = (PedidoBean)lista.get(i);
+                    //int valortTotal = ped.getQuantidade() * ped.getPreco();
+                    if (!numeroOld.equals(ped.getNumero())) { %>
+                    <tr>
+                        <td><%= nome %> <%= sobrenome %></td>
+                        <td></td>
+                        <td><%= ped.getStatus() %></td>
+                       <td><a href="MostrarPedido?numero=<%= ped.getNumero() %>"><span class="glyphicon glyphicon-list-alt"></span></a></td>
+                    </tr>
+                    <% numeroOld = ped.getNumero();
+                    } %>
+                <% } %>
         		</tbody>
         	</table>
+                        
 			<!-- /row -->
 		</div>
 		<!-- /container -->
