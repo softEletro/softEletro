@@ -29,18 +29,21 @@ import javax.servlet.http.HttpServletResponse;
 public class MostrarPedido extends HttpServlet {
  @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
-       PedidoBean Pro = new PedidoBean();
-       PedidoModel dao = new PedidoModel();
-       
-        String numero =req.getParameter("numero");
+        PedidoBean Pro = new PedidoBean();
+        PedidoModel dao = new PedidoModel();
+
+        String numero = req.getParameter("numero");
         List lista = dao.buscanumero(numero);
         
-      
-        req.setAttribute("lista", lista);
-       
-        
-        RequestDispatcher rd = req.getRequestDispatcher("/venda.jsp");
-        rd.forward(req,resp);
-    }	
+        for (int i=0; i<lista.size(); i++) {
+            PedidoBean ped = (PedidoBean)lista.get(i);
+            req.setAttribute("status", ped.getStatus());
+        }
 
+        req.setAttribute("lista", lista);
+        req.setAttribute("numero", numero);
+
+        RequestDispatcher rd = req.getRequestDispatcher("/VendaProduto.jsp");
+        rd.forward(req,resp);
+    }
 }

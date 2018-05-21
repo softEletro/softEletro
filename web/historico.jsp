@@ -27,7 +27,9 @@
                 <% String numeroOld = "";
                 for (int i=0; i<lista.size(); i++) { 
                     PedidoBean ped = (PedidoBean)lista.get(i);
-                    //int valortTotal = ped.getQuantidade() * ped.getPreco();
+                    int qtd = ped.getQuantidade();
+                    Double valor = ped.getPreco();
+                    //int valortTotal = qtd*valor;
                     if (!numeroOld.equals(ped.getNumero())) { %>
                     <tr>
                         <td><%= nome %> <%= sobrenome %></td>

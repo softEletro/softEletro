@@ -41,7 +41,7 @@ public class ListaPedido extends HttpServlet {
         req.setAttribute("nome", cli.getNome());
         req.setAttribute("sobrenome", cli.getSobrenome());
         
-        RequestDispatcher rd = req.getRequestDispatcher("/historico.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/historicoCliente.jsp");
         rd.forward(req,resp);
     }
 }

@@ -31,12 +31,13 @@ public class FinalizarCompra extends HttpServlet {
         HttpSession session = req.getSession();
         
         List carrinho = (List) session.getAttribute("carrinho");
+        int idCliente = (int) session.getAttribute("idUsuario");
         
         PedidoModel dao1 = new PedidoModel();
         PedidoBean ped = new PedidoBean ();
         ProdutoModel dao = new ProdutoModel();
         
-        String numero = "3223";
+        String numero = "23";
         for(int x=0;x<carrinho.size();x++)
         {
             numero = numero.concat("c");
@@ -51,9 +52,9 @@ public class FinalizarCompra extends HttpServlet {
             
             ped.setIdProduto(id);
             ped.setNomeProduto(nomeProduto);
-            ped.setIdCliente(Integer.parseInt(req.getParameter("idCliente")));
+            ped.setIdCliente(idCliente);
             ped.setPreco(preco);
-            ped.setQuantidade(Integer.parseInt(req.getParameter("quantidade")));
+            ped.setQuantidade(52);
             ped.setNumero(numero);
             ped.setStatus("Pedido Feito");
             
@@ -62,7 +63,7 @@ public class FinalizarCompra extends HttpServlet {
         
         session.removeAttribute("carrinho");
         
-        RequestDispatcher rd = req.getRequestDispatcher("/index.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("ListaPedido?idCliente="+idCliente);
         rd.forward(req,resp);
     }
 }

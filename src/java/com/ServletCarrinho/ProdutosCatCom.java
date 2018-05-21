@@ -31,7 +31,7 @@ public class ProdutosCatCom extends HttpServlet {
         
         req.setAttribute("lista", lista);
         
-        RequestDispatcher rd = req.getRequestDispatcher("/CategoriaComputador.jsp");
+        RequestDispatcher rd = req.getRequestDispatcher("/categorias.jsp");
         rd.forward(req,resp);
     }
 }
