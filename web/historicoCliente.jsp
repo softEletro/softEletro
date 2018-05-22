@@ -79,11 +79,11 @@
                     <% int numeroOld = 0;
                     for (int i=0; i<lista.size(); i++) { 
                         PedidoBean ped = (PedidoBean)lista.get(i);
-                        //int valortTotal = ped.getQuantidade() * ped.getPreco();
+                        Double valorTotal = ped.getQuantidade() * ped.getPreco();
                         if (numeroOld != ped.getNumero()) { %>
                         <tr>
                             <td><%= ped.getNumero() %></td>
-                            <td></td>
+                            <td><%= valorTotal %></td>
                             <td><%= ped.getStatus() %></td>
                            <td>
                                <a href="MostrarPedido?numero=<%= ped.getNumero() %>"><span class="glyphicon glyphicon-list-alt"></span></a>

@@ -87,12 +87,12 @@
                     <tbody>
                          <% for (int i=0; i<lista.size(); i++) { 
                                 PedidoBean ped = (PedidoBean)lista.get(i);
-                                //int valortTotal = ped.getQuantidade() * ped.getPreco(); %>
+                                Double valorTotal = ped.getQuantidade() * ped.getPreco(); %>
                                 <tr>
                                     <td><%=ped.getNomeProduto()%></td>
                                     <td><%=ped.getQuantidade()%></td>
                                     <td><%= ped.getPreco() %></td>
-                                    <td>"xxxxxxxxx"</td>
+                                    <td><%= valorTotal %></td>
                                 </tr>
                         <% } %>
                     </tbody>

@@ -13,13 +13,14 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <form action="FinalizarCompra">
-            <input type="text" name="idProduto" value="4">
-            <input type="text" name="idCliente" value="<%= idUsuario %>">
-            <input type="text" name="quantidade" value="10">
-            <input type="text" name="preco" value="10"><br><br>
+        <% float p = 5.0F;
+            for (int qtd=1; qtd<=3; qtd++) {
+            float valor = qtd*p;
             
-            <input type="submit" name="FinalizarCompra">
-        </form>
+            if (qtd == 3) {
+                out.print(valor);
+            }
+        }
+        %>
     </body>
 </html>

@@ -98,11 +98,12 @@
                         <% int numeroOld = 0;
                         for (int i=0;i<lista.size();i++) {
                             PedidoBean ped = (PedidoBean)lista.get(i); 
+                            Double valorTotal = ped.getQuantidade() * ped.getPreco();
                             if (numeroOld != ped.getNumero()) {
                                 if (!ped.getStatus().equals("Entregue")) { %>
                                     <tr>
                                         <td><%= ped.getNumero() %></td>
-                                        <td>XXXXXXXXX</td>
+                                        <td><%= valorTotal %></td>
                                         <td><%= ped.getStatus() %></td>
                                         <td>
                                             <% if (ped.getStatus().equals("Pedido Feito")) { %>
