@@ -71,13 +71,15 @@ public class PedidoModel {
         session.close();        
     }  
       //******************************************************
-        public PedidoBean buscarNumeroAlt(int idCliente) {        
+        public List<PedidoBean> buscarNumeroAlt(int numero) {        
         Session session = HibernateUtil.getSessionFactory().openSession();
+        
         session.beginTransaction();
-        return (PedidoBean)session.createCriteria(PedidoBean.class)
-                .add(Restrictions.eq("idCliente",idCliente))
-                .uniqueResult();
-       
+        
+        Criteria ped = session.createCriteria(PedidoBean.class)
+                .add(Restrictions.eq("numero",numero));
+        
+        return ped.list();
     }
         //************************************************************
      public List<PedidoBean> listarPedido(int idCliente) {

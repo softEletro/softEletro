@@ -4,7 +4,7 @@
     <jsp:useBean id="idProduto" scope="request" class="java.lang.Integer" />
     <jsp:useBean id="preco" scope="request" class="java.lang.Double" />
     <jsp:useBean id="nome" scope="request" class="java.lang.String" />
-    <jsp:useBean id="quantidade" scope="request" class="java.lang.String" />
+    <jsp:useBean id="quantidade" scope="request" class="java.lang.Integer" />
     <jsp:useBean id="marca" scope="request" class="java.lang.String" />
     <jsp:useBean id="descricao" scope="request" class="java.lang.String" />
     <jsp:useBean id="modelo" scope="request" class="java.lang.String" />
@@ -117,21 +117,23 @@
                                     -->
                                 </h3>
                                 <p><strong>Disponibilidade:</strong>
-                                <% if (quantidade.equals("Indisponível")) { %>
-                                <span style="color:red"><%= quantidade %></span>
-                                <% } else { %> <%= quantidade %> <% } %>
+                                <% if (quantidade == 0) { %>
+                                <span style="color:red">Produto indisponível</span>
+                                <% } else { %> <%= quantidade %> em estoque <% } %>
                                 </p>
                                 <p><strong>Marca:</strong>  <%= marca %></p>
                                 <p><%= descricao %></p>
                                 <div class="product-options">
                                 </div>
                                 
+                                <% if (quantidade != 0) { %>
                                 <form action="AdicionarItens">
                                     <div class="product-btns">
                                         <input type="hidden" name="idProduto" id="idProduto" value="<%= idProduto %>">
                                         <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                     </div>
                                 </form>
+                                <% } %>
                             </div>
                         </div>
                         <div class="col-md-12">

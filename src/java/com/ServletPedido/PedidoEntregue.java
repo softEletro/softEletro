@@ -21,8 +21,8 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author leona
  */
-@WebServlet(name = "StatusAlterado", urlPatterns = {"/StatusAlterado"})
-public class StatusAlterado extends HttpServlet {
+@WebServlet(name = "PedidoEntregue", urlPatterns = {"/PedidoEntregue"})
+public class PedidoEntregue extends HttpServlet {
 
    @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
@@ -34,7 +34,7 @@ public class StatusAlterado extends HttpServlet {
 
         for (int i=0; i<lista.size(); i++) {
             PedidoBean ped = (PedidoBean)lista.get(i);
-            ped.setStatus("Transportadora");
+            ped.setStatus("Entregue");
             
             dao.alterarPedido(ped);
         }

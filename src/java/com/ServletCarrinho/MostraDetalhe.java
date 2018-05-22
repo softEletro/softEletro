@@ -41,16 +41,11 @@ public class MostraDetalhe extends HttpServlet {
         int quantidade = pro.getQuantidade();
         Double preco = pro.getPreco();
         
-        if (quantidade == 0) {
-            req.setAttribute("quantidade","Indisponível");
-        } else {
-            req.setAttribute("quantidade",quantidade+" em estoque");
-        }
-        
         req.setAttribute("idProduto", id);
         req.setAttribute("nome", nome);
         req.setAttribute("produto", produto);
         req.setAttribute("marca", marca);
+        req.setAttribute("quantidade", quantidade);
         req.setAttribute("descricao", descricao);
         req.setAttribute("imagem", imagem);
         req.setAttribute("imagem2", imagem2);

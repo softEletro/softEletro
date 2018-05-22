@@ -99,17 +99,20 @@
                         for (int i=0;i<lista.size();i++) {
                             PedidoBean ped = (PedidoBean)lista.get(i); 
                             if (numeroOld != ped.getNumero()) {
-        if (ped.getStatus().equals("Pedido Feito")) { %>
-                            <tr>
-                                <td><%= ped.getNumero() %></td>
-                                <td>XXXXXXXXX</td>
-                                <td><%= ped.getStatus() %></td>
-                                <td>
-                                    <a href="StatusAlterado?numero=<%= ped.getNumero() %>"><span title="Pedido sendo enviado" class="glyphicon glyphicon-send"></span></a>
-                                    <a href=""><span title="Pedido entregue" class="glyphicon glyphicon-ok"></span></a>
-                                </td>
-                            </tr>
-                            <% numeroOld = ped.getNumero();
+                                if (!ped.getStatus().equals("Entregue")) { %>
+                                    <tr>
+                                        <td><%= ped.getNumero() %></td>
+                                        <td>XXXXXXXXX</td>
+                                        <td><%= ped.getStatus() %></td>
+                                        <td>
+                                            <% if (ped.getStatus().equals("Pedido Feito")) { %>
+                                            <a href="StatusAlterado?numero=<%= ped.getNumero() %>"><span title="Pedido sendo enviado" class="glyphicon glyphicon-send"></span></a>
+                                            <% } else { %>
+                                            <a href="PedidoEntregue?numero=<%= ped.getNumero() %>"><span title="Pedido entregue" class="glyphicon glyphicon-ok"></span></a>
+                                            <% } %>
+                                        </td>
+                                    </tr>
+                                    <% numeroOld = ped.getNumero();
                                 }
                             }%>
                         <% } %>

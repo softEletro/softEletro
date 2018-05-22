@@ -133,7 +133,8 @@ public class ProdutoModel {
         session.beginTransaction();
         
         Criteria Pro  = session.createCriteria(ProdutoBean.class)
-                .add(Restrictions.eq("produto", "1"));
+                .add(Restrictions.eq("produto", "1"))
+                .add(Restrictions.eq("ativo", "a"));
         
         return Pro.list();
     }
@@ -144,7 +145,8 @@ public class ProdutoModel {
         session.beginTransaction();
         
         Criteria Pro  = session.createCriteria(ProdutoBean.class)
-                .add(Restrictions.eq("produto", "2"));
+                .add(Restrictions.eq("produto", "2"))
+                .add(Restrictions.eq("ativo", "a"));
         
         return Pro.list();
     }
