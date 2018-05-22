@@ -5,6 +5,7 @@
 --%>
 
 <%@page import="com.bean.ProdutoBean"%>
+<jsp:useBean id="lista" scope="request" class="java.util.List" />
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -64,53 +65,39 @@
 		</div>
 	</div>
 	<!-- /BREADCRUMB -->
-
-	<!-- section -->
-	<div class="section">
-		<!-- container -->
-		<div class="container">
-			<!-- row -->
-			<div class="row">
-				<!-- ASIDE -->
-				<!-- /ASIDE -->
-
-				<!-- MAIN -->
-					<!-- /store top filter -->
-
-					<!-- STORE -->
-        <jsp:useBean id="lista" scope="request" class="java.util.List" />
-	<div id="store">
-            <!-- row -->
-            <div class="row">
+    <!-- section -->
+        <div class="section">
+            <!-- container -->
+            <div class="container">
+                <!-- row -->
+                <div class="row" id="computador">
                     <!-- Product Single -->
                     <% for (int i=0;i<lista.size();i++) {
                         ProdutoBean Pro = (ProdutoBean)lista.get(i); %>
-                    <div class="col-md-4 col-sm-6 col-xs-6">
-                            <div class="product product-single">
-                                 <a class="main-btn quick-view" href="MostraDetalhe?id=<%= Pro.getId() %>"><i class="fa fa-search-plus"></i> Detalhes</a>
-                                            <img src="./<%= Pro.getImagem() %>" alt="">
-                                     <div class="product-body">
-
-                                        <h3 class="product-price">R$ <%= Pro.getPreco() %></h3>
-                                        <h2 class="product-name"><a href="#"><%= Pro.getNome() %></a></h2>
-                                        <div class="product-btns">
-                                        <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
-                                        </div>
-                                        </div>
-
-                                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-6">
+                        <div class="product product-single">
+                            <div class="product-thumb">
+                                <a class="main-btn quick-view" href="MostraDetalhe?id=<%= Pro.getId() %>"><i class="fa fa-search-plus"></i> Detalhes</a>
+                                <img src="imagens/<%= Pro.getImagem() %>" alt="" class="imgLista">
                             </div>
+                            <div class="product-body">
+                                <h3 class="product-price">R$ <%= Pro.getPreco() %></h3>
+                                <h2 class="product-name"><a href="#"><%= Pro.getNome() %></a></h2>
+                                <div class="product-btns text-center">
+                                    <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <% } %>
-
-
-        </div>
-                            </div>
-                    </div>
                     <!-- /Product Single -->
+                </div>
+                <!-- /row -->
             </div>
-            <!-- /row -->
-					
+            <!-- /container -->
+        </div>
+        <!-- /section -->
+    <!-- /row -->					
 	<!-- FOOTER -->
        <%@include file="src/footerCliente.html" %><!-- /FOOTER -->
 

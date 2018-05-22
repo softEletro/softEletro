@@ -37,6 +37,7 @@ public class MostraDetalhe extends HttpServlet {
         String marca = pro.getMarca();
         String descricao = pro.getDescricao();
         String imagem = pro.getImagem();
+        String imagem2 = pro.getImagem2();
         int quantidade = pro.getQuantidade();
         Double preco = pro.getPreco();
         
@@ -52,6 +53,7 @@ public class MostraDetalhe extends HttpServlet {
         req.setAttribute("marca", marca);
         req.setAttribute("descricao", descricao);
         req.setAttribute("imagem", imagem);
+        req.setAttribute("imagem2", imagem2);
         req.setAttribute("preco",new Double(preco));
         req.setAttribute("id", id);
         

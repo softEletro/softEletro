@@ -18,6 +18,7 @@
     <jsp:useBean id="camera" scope="request" class="java.lang.String" />
     <jsp:useBean id="bateria" scope="request" class="java.lang.String" />
     <jsp:useBean id="imagem" scope="request" class="java.lang.String" />
+    <jsp:useBean id="imagem2" scope="request" class="java.lang.String" />
 
     <head>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -86,12 +87,18 @@
                         <div class="col-md-6">
                             <div id="product-main-view">
                                 <div class="product-view">
-                                    <img src="./<%= imagem %>" class="imgPreview" alt="">
+                                    <img src="imagens/<%= imagem %>" class="imgPreview" alt="">
+                                </div>
+                                <div class="product-view">
+                                    <img src="imagens/<%= imagem2 %>" class="imgPreview" alt="">
                                 </div>
                             </div>
                             <div id="product-view">
                                 <div class="product-view">
-                                    <img src="./<%= imagem %>" class="imgMini" alt="">
+                                    <img src="imagens/<%= imagem %>" class="imgMini" alt="">                                    
+                                </div>
+                                <div class="product-view">
+                                    <img src="imagens/<%= imagem2 %>" class="imgMini" alt="">                                    
                                 </div>
                             </div>
                         </div>
@@ -124,7 +131,7 @@
                                         <input type="hidden" name="idProduto" id="idProduto" value="<%= idProduto %>">
                                         <div class="qty-input">
                                             <span class="text-uppercase">Quantidade: </span>
-                                            <input class="input" type="number" name="quantidade" id="quantidade" value="">
+                                            <input class="input" type="number" name="quantidade" id="quantidade" min="1" max="99" value="1"/>
                                         </div>
                                         <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                     </div>

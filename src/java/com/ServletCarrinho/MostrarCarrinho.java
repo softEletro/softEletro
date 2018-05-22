@@ -30,19 +30,20 @@ public class MostrarCarrinho extends HttpServlet {
         HttpSession session = req.getSession();
         List carrinho = (List) session.getAttribute("carrinho");
         
-        //if (carrinho != null) {
+        if (carrinho != null) {
         ProdutoModel dao= new ProdutoModel();
 
-        List imagemx = new ArrayList();
+        List imagemx = new ArrayList();        
         List nomex = new ArrayList();
         List quantidadex = new ArrayList();
         List precox = new ArrayList();
-
+        
         for (int i=0;i<carrinho.size();i++) {
+            
             int id = (int) carrinho.get(i);
             ProdutoBean pro = dao.buscarId(id);
 
-            String imagem =  pro.getImagem();
+            String imagem =  pro.getImagem();            
             String nome =  pro.getNome();
             int quantidade = pro.getQuantidade();
             Double preco = pro.getPreco();
@@ -54,12 +55,15 @@ public class MostrarCarrinho extends HttpServlet {
         }
 
         req.setAttribute("nome", nomex);
-        req.setAttribute("imagem", imagemx);
+        req.setAttribute("imagem", imagemx);        
         req.setAttribute("quantidade", quantidadex);
-        req.setAttribute("preco", precox);
-        //} else { }
+        req.setAttribute("preco", precox);        
 
         RequestDispatcher rd = req.getRequestDispatcher("/compraProduto.jsp");
         rd.forward(req,resp);
+        
+        } else {
+           resp.sendRedirect("index.jsp");           
+        }
     }
 }

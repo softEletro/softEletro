@@ -24,6 +24,7 @@ public class ProdutoBean {
     String marca;
     String descricao;
     String imagem;
+    String imagem2;
     Double preco;
     int quantidade;
     String ativo;
@@ -74,6 +75,14 @@ public class ProdutoBean {
 
     public void setImagem(String imagem) {
         this.imagem = imagem;
+    }
+    
+    public String getImagem2() {
+        return imagem2;
+    }
+
+    public void setImagem2(String imagem2) {
+        this.imagem2 = imagem2;
     }
 
     public Double getPreco() {

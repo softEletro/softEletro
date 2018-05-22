@@ -6,7 +6,9 @@
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <jsp:useBean id="logado" scope="session" class="java.lang.String" />
-<jsp:useBean id="msg" scope="request" class="java.lang.String" />
+<jsp:useBean id="retorno" scope="session" class="java.lang.String" />
+<jsp:useBean id="Usuario" scope="session" class="java.lang.String" />
+
 <header>
     
     <script type="text/javascript">  
@@ -27,17 +29,24 @@
         function removeItem(div){
             document.getElementById(div).remove();
         }
-        
-        function mensagem() {
-            alert("E-mail ou senha incorretos!");
-        }
     </script>
+    <% if(retorno.equals("NotFound")){%>
+        <script type="text/javascript">        
+            alert("E-mail ou Senha Incorretos !");        
+        </script>
+    <%; session.setAttribute("retorno", null);}%>
     
+    <% if(retorno.equals("Preenchimento")){%>
+        <script type="text/javascript">        
+            alert("Preencha Todos os Campos !");        
+        </script>
+    <%; session.setAttribute("retorno", null);}%>
+        
   <!-- top Header -->
   <div id="top-header">
     <div class="container">
       <div class="pull-left">
-        <span>Bem Vindo!</span>
+        <span><%=Usuario%></span>
       </div>
     </div>
   </div>
@@ -53,15 +62,15 @@
           </a>
         </div>
         <!-- /Logo -->
-        <!-- Search -->
+         <!-- Search -->
         <div class="header-search">
-          <form action="BuscarProduto">
+            <form action="BuscarProduto" method="POST">
             <input class="input search-input" type="text" placeholder="Procure o Produto...">
-            <select class="input search-categories">              
+            <select class="input search-categories">
               <option value="0">Computador</option>
               <option value="1">Celular</option>
             </select>
-            <input class="btn btn-default" type="submit" name="buscar" value="Buscar" title="Buscar Registro"/>
+            <input class="search-btn btn btn-default" type="submit" name="buscar" value="Buscar" title="Buscar Produto"/>
           </form>
         </div>
         <!-- /Search -->
@@ -78,14 +87,16 @@
               
             </div>
             
-            <ul class="custom-menu">
-              <li><a href="#"><i class="fa fa-user-o"></i> Minha Conta</a></li>
+            <ul class="custom-menu">              
               <% if (logado.equals("Login")) { %>
                 <jsp:useBean id="idUsuario" scope="session" class="java.lang.Integer" />
-                <li><a href="ListaPedido?idCliente=<%= idUsuario %>"><i class="fa fa-check"></i> Lista de Pedidos</a></li>
-                <li><a href="MostrarCliente?id=<%= idUsuario %>"><i class="fa fa-exchange"></i> Editar Perfil</a></li>
+                <li><a href="ListaPedido?idCliente=<%= idUsuario %>"><i class="glyphicon glyphicon-th-list"></i> Lista de Pedidos</a></li>
+                <li><a href="MostrarCliente?id=<%= idUsuario %>"><i class="glyphicon glyphicon-user"></i> Editar Perfil</a></li>
+                <% if (idUsuario.toString().equals("999")){ %> <!-- Acrescenta uma opção para o Administrador do Sistema voltar ao Sistema -->
+                    <li><a href="indexAdm.jsp"><i class="glyphicon glyphicon-tasks"></i> Sistema</a></li>
+                <% } %>
               <% } %>
-              <li><a href="Logout"><i class="fa fa-exchange"></i> Sair</a></li>
+              <li><a href="Logout"><i class="glyphicon glyphicon-log-out"></i> Sair</a></li>
             </ul>
           </li>
           <!-- /Minha conta -->
@@ -97,7 +108,7 @@
             
             
             <ul class="custom-menu">                
-                <form action="Login">
+                <form action="Login" method="POST">
                 <li>E-mail: <input type="text" class="form-control" name="email"></li>
                 <li>Senha: <input type="password" class="form-control" name="senha"></li>
                 <li><input class="btn btn-default" type="submit" name="entrar" value="Entrar"></li>
@@ -108,15 +119,13 @@
           </li>
           
           <!-- /Entrar -->
-          <!-- Cart -->
+          <!-- Cart -->          
           <li class="header-cart dropdown default-dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="true">
               <div class="header-btns-icon">
-                <i class="fa fa-shopping-cart"></i>
-                <span class="qty">3</span> <!-- Qtd de Itens no Carrinho -->
-              </div>
-                <a href="MostrarCarrinho"><strong class="text-uppercase">Carrinho:</strong></a>          
-          </li>
+                <a href="MostrarCarrinho"><i class="fa fa-shopping-cart"></i></a>
+              </div>                
+          </li>          
           <!-- /Cart -->
           <!-- Mobile nav toggle-->
           <li class="nav-toggle">
