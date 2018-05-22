@@ -70,7 +70,7 @@
                   <option value="2">Computador</option>
                   <option value="1">Celular</option>
                 </select>
-                <input class="search-btn btn btn-default" type="submit" name="buscar" value="Buscar" title="Buscar Produto"/>
+                <button class="search-btn"><i class="fa fa-search"></i></button>
             </form>
         </div>
         <!-- /Search -->
