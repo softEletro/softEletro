@@ -55,6 +55,10 @@ public class FinalizarCompra extends HttpServlet {
             ped.setNumero(numero);
             ped.setStatus("Pedido Feito");
             
+            int qtd = pro.getQuantidade() - 1;
+            pro.setQuantidade(qtd);
+            dao.alterarProduto(pro);
+            
             dao1.salvarCompra(ped);            
         }
         

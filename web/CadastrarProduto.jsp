@@ -100,7 +100,11 @@
                             </div>
                             <div class="col-sm-4">
                                 <label>Imagem</label>
-                                <input type="text" class="form-control" id="imagem50" name="imagem" value="">
+                                <input type="text" class="form-control" id="imagem" name="imagem" value="">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Imagem</label>
+                                <input type="text" class="form-control" id="imagem2" name="imagem2" value="">
                             </div>
                         </div>
 

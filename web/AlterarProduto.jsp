@@ -54,85 +54,89 @@
 
             <!-- section -->
             <div class="section">
-            <jsp:useBean id="nome" scope="request" class="java.lang.String" />
-            <jsp:useBean id="produto" scope="request" class="java.lang.String" />
-            <jsp:useBean id="marca" scope="request" class="java.lang.String" />
-            <jsp:useBean id="descricao" scope="request" class="java.lang.String" />
-            <jsp:useBean id="imagem" scope="request" class="java.lang.String" />
-            <jsp:useBean id="quantidade" scope="request" class="java.lang.Integer" />
-            <jsp:useBean id="preco" scope="request" class="java.lang.Double" />
-            <jsp:useBean id="id" scope="request" class="java.lang.Integer" />
-            
-            <script>
-                function mensagem() {
-                    alert("Produto alterado com sucesso!");
-                }
-            </script>
+                <jsp:useBean id="nome" scope="request" class="java.lang.String" />
+                <jsp:useBean id="produto" scope="request" class="java.lang.String" />
+                <jsp:useBean id="marca" scope="request" class="java.lang.String" />
+                <jsp:useBean id="descricao" scope="request" class="java.lang.String" />
+                <jsp:useBean id="imagem" scope="request" class="java.lang.String" />
+                <jsp:useBean id="imagem2" scope="request" class="java.lang.String" />
+                <jsp:useBean id="quantidade" scope="request" class="java.lang.Integer" />
+                <jsp:useBean id="preco" scope="request" class="java.lang.Double" />
+                <jsp:useBean id="id" scope="request" class="java.lang.Integer" />
 
-            <form action="AlterarProduto" onsubmit="mensagem();">
-                <input type="hidden" id="id" name="id" value="<%= id %>" />
+                <script>
+                    function mensagem() {
+                        alert("Produto alterado com sucesso!");
+                    }
+                </script>
+
+                <form action="AlterarProduto" onsubmit="mensagem();">
+                    <input type="hidden" id="id" name="id" value="<%= id %>" />
                     <!-- container -->
                     <div class="container">
-                            <!-- row -->
-                            <div class="row">
-                                    <div class="col-sm-2">
-                                                    <label>Produto</label>
-                                                    <select name="produto" id="produto" class="form-control">
-                                                            <option value="0"  
-                                                                    <option value="0"
-                                                                        <% if ("".equals(produto)) { %>
-                                                                                selected="selected"<% } %>>
+                        <!-- row -->
+                        <div class="row">
+                            <div class="col-sm-2">
+                                <label>Produto</label>
+                                <select name="produto" id="produto" class="form-control">
+                                    <option value="0"
+                                        <% if ("".equals(produto)) { %>
+                                                selected="selected"<% } %>>
 
-                                                                    </option>
-                                                                    <option value="1"
-                                                                            <% if ("1".equals(produto)) { %>
-                                                                                  selected="selected"<% } %>>
-                                                                                  Celular
-                                                                    </option>
-                                                                    <option value="2"
-                                                                            <% if ("2".equals(produto)) { %>
-                                                                                   selected="selected"<% } %>>
-                                                                                  Computador
-                                                                    </option>
-                                    </select>
-                                </div>
+                                    </option>
+                                    <option value="1"
+                                        <% if ("1".equals(produto)) { %>
+                                                selected="selected"<% } %>>
+                                                Celular
+                                    </option>
+                                    <option value="2"
+                                        <% if ("2".equals(produto)) { %>
+                                            selected="selected"<% } %>>
+                                            Computador
+                                    </option>
+                                </select>
                             </div>
-                            <br>
-                            <div class="row">
-                                    <div class="col-sm-3">
-                                        <label>Nome</label>
-                                        <input type="text" class="form-control" id="nome" name="nome" value="<%=nome%>">
-                                </div>
-                                <div class="col-sm-3">
-                                        <label>Marca</label>
-                                        <input type="text" class="form-control" id="marca" name="marca" value="<%=marca%>">
-                                </div>
-                                <div class="col-sm-2">
-                                        <label>Preço</label>
-                                        <input type="text" class="form-control" id="preco" name="preco" value="<%=preco%>">
-                                </div>
-                                <div class="col-sm-2">
-                                        <label>Quantidade</label>
-                                        <input type="text" class="form-control" id="quantidade" name="quantidade" value="<%=quantidade%>">
-                                </div>
-                            </div><br>
-                            <div class="row">
-                                    <div class="col-sm-6">
-                                        <label>Descrição</label>
-                                        <textarea rows="10" type="text" class="form-control" id="descricao" name="descricao" value=""><%=descricao%></textarea>
-                                </div>
-                                <div class="col-sm-4">
-                                        <label>Imagem</label>
-                                        <input type="text" class="form-control" id="imagem50" name="imagem" value="<%=imagem%>">
-                                </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <label>Nome</label>
+                                <input type="text" class="form-control" id="nome" name="nome" value="<%=nome%>">
                             </div>
+                            <div class="col-sm-3">
+                                <label>Marca</label>
+                                <input type="text" class="form-control" id="marca" name="marca" value="<%=marca%>">
+                            </div>
+                            <div class="col-sm-2">
+                                <label>Preço</label>
+                                <input type="text" class="form-control" id="preco" name="preco" value="<%=preco%>">
+                            </div>
+                            <div class="col-sm-2">
+                                <label>Quantidade</label>
+                                <input type="text" class="form-control" id="quantidade" name="quantidade" value="<%=quantidade%>">
+                            </div>
+                        </div><br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <label>Descrição</label>
+                                <textarea rows="10" type="text" class="form-control" id="descricao" name="descricao" value=""><%=descricao%></textarea>
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Imagem</label>
+                                <input type="text" class="form-control" id="imagem" name="imagem" value="<%= imagem %>">
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Imagem 2</label>
+                                <input type="text" class="form-control" id="imagem2" name="imagem2" value="<%= imagem2 %>">
+                            </div>
+                        </div>
 
-                            <br>
-                            <input class="btn btn-default" type="submit" name="btnSalvar" value="Salvar">
-                            <!-- /row -->
+                        <br>
+                        <input class="btn btn-default" type="submit" name="btnSalvar" value="Salvar">
+                        <!-- /row -->
                     </div>
                     <!-- /container -->
-                    </form>
+                </form>
             </div>
             <!-- /section -->
 
