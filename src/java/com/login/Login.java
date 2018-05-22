@@ -8,8 +8,6 @@ package com.login;
 import com.bean.ClienteBean;
 import com.model.ClienteModel;
 import java.io.IOException;
-import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,10 +23,12 @@ import javax.servlet.http.HttpSession;
 public class Login extends HttpServlet {
     @Override
     protected void service (HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException{
+        HttpSession session = req.getSession();
+        
         ClienteModel dao = new ClienteModel();
         
-        String email = req.getParameter("email");
-        String senha = req.getParameter("senha");
+        String email   = req.getParameter("email");
+        String senha   = req.getParameter("senha");
         
         // Verifica se os campos estão vazios
         if (!"".equals(email) && !"".equals(senha)) {
@@ -36,17 +36,19 @@ public class Login extends HttpServlet {
             ClienteBean cli = dao.efetuarLogin(email,senha);
             
             // Verifica se o objeto retornou nulo.
-            if (cli == null) {
-                req.setAttribute("msg","true");
+            if (cli == null) {              
                 
-                RequestDispatcher rd = req.getRequestDispatcher("/index.jsp");
-                rd.forward(req,resp);
+                session.setAttribute("retorno", "NotFound");
+                
+                resp.sendRedirect("index.jsp");
+                
             } else {
                 int id = cli.getId();
+                String nome = cli.getNome();
                 
-                HttpSession session = req.getSession();
                 session.setAttribute("idUsuario", new Integer(id));
                 session.setAttribute("logado", "Login");
+                session.setAttribute("Usuario", "Bem Vindo " + nome);
                 
                 if (id == 999) {
                     resp.sendRedirect("indexAdm.jsp");
@@ -55,8 +57,8 @@ public class Login extends HttpServlet {
                 }
             }
         } else {
-            PrintWriter out = resp.getWriter();
-            out.print("<script>alert(\"Preencha todos os campos!\");</script>");
+            session.setAttribute("retorno", "Preenchimento");
+            resp.sendRedirect("index.jsp");
         }
     }
 }
