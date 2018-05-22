@@ -142,7 +142,7 @@
                                             <span class="sale">-20%</span>
                                         </div>                                      
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/dell_inspiron.png" class="imgLista" alt="">
+                                        <img src="./img/dell_inspiron.jpg" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$3.200,00 <del class="product-old-price">R$4.000,00</del></h3>
@@ -279,8 +279,8 @@
                                         <img src="./img/moto_zplay.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">R$1.720,00</h3>
-                                        <h2 class="product-name"><a href="#">Moto Z Play</a></h2>
+                                        <h3 class="product-price">R$1.320,00</h3>
+                                        <h2 class="product-name"><a href="#">Moto Z2 Play</a></h2>
                                         <div class="product-btns">
 
                                             <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
@@ -297,11 +297,11 @@
                                             <span class="sale">-10%</span>
                                         </div>
                                         <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
-                                        <img src="./img/moto_z2.png" class="imgLista" alt="">
+                                        <img src="./img/motog6.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
-                                        <h3 class="product-price">R$1.215,00 <del class="product-old-price">R$1.350,00</del></h3>
-                                        <h2 class="product-name"><a href="#">Moto Z2</a></h2>
+                                        <h3 class="product-price">R$1.395,00 <del class="product-old-price">R$1.550,00</del></h3>
+                                        <h2 class="product-name"><a href="#">Moto G6 Plus</a></h2>
                                         <div class="product-btns">
                                             <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                         </div>
