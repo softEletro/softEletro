@@ -129,10 +129,6 @@
                                 <form action="AdicionarItens">
                                     <div class="product-btns">
                                         <input type="hidden" name="idProduto" id="idProduto" value="<%= idProduto %>">
-                                        <div class="qty-input">
-                                            <span class="text-uppercase">Quantidade: </span>
-                                            <input class="input" type="number" name="quantidade" id="quantidade" min="1" max="99" value="1"/>
-                                        </div>
                                         <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
                                     </div>
                                 </form>

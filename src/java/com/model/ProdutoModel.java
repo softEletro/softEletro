@@ -70,6 +70,30 @@ public class ProdutoModel {
         return crit.list();
     }
     
+    // Método para buscar lista de celulares pelo nome.
+    public List<ProdutoBean> buscarCelular(String nome, String produto) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        
+          Criteria crit = session.createCriteria(ProdutoBean.class)
+                .add(Restrictions.like("nome",nome+"%"))
+                  .add(Restrictions.eq("produto", produto));
+        
+        return crit.list();
+    }
+    
+    // Método para buscar lista de computadores pelo nome.
+    public List<ProdutoBean> buscarComputador(String nome, String produto) {
+        Session session = HibernateUtil.getSessionFactory().openSession();
+        session.beginTransaction();
+        
+          Criteria crit = session.createCriteria(ProdutoBean.class)
+                .add(Restrictions.like("nome",nome+"%"))
+                  .add(Restrictions.eq("produto", produto));
+        
+        return crit.list();
+    }
+    
     // Método para buscar lista de produtos pelo id.
     public List<ProdutoBean> buscarIdLista(int id) {
         Session session = HibernateUtil.getSessionFactory().openSession();

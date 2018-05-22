@@ -64,14 +64,14 @@
         <!-- /Logo -->
          <!-- Search -->
         <div class="header-search">
-            <form action="BuscarProduto" method="POST">
-            <input class="input search-input" type="text" placeholder="Procure o Produto...">
-            <select class="input search-categories">
-              <option value="0">Computador</option>
-              <option value="1">Celular</option>
-            </select>
-            <input class="search-btn btn btn-default" type="submit" name="buscar" value="Buscar" title="Buscar Produto"/>
-          </form>
+            <form action="BuscarProdutoCli">
+                <input class="input search-input" type="text" name="nome" placeholder="Procure o Produto...">
+                <select class="input search-categories" name="categoria" id="categoria">
+                  <option value="2">Computador</option>
+                  <option value="1">Celular</option>
+                </select>
+                <input class="search-btn btn btn-default" type="submit" name="buscar" value="Buscar" title="Buscar Produto"/>
+            </form>
         </div>
         <!-- /Search -->
       </div>

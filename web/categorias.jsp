@@ -84,7 +84,7 @@
                                 <h3 class="product-price">R$ <%= Pro.getPreco() %></h3>
                                 <h2 class="product-name"><a href="#"><%= Pro.getNome() %></a></h2>
                                 <div class="product-btns text-center">
-                                    <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                                    <a href="AdicionarItens?idProduto=<%= Pro.getId() %>"<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button></a>
                                 </div>
                             </div>
                         </div>
