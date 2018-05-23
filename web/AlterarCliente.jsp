@@ -80,6 +80,15 @@
                 function mensagem() {
                     alert("Alterado com sucesso!");
                 }
+            
+                function mascara(t, mask){
+                    var i = t.value.length;
+                    var saida = mask.substring(1,0);
+                    var texto = mask.substring(i)
+                    if (texto.substring(0,1) != saida){
+                        t.value += texto.substring(0,1);
+                    }
+                }
             </script>
 
             <form action="AlterarCliente" onsubmit="mensagem();">
@@ -98,7 +107,7 @@
                         </div>
                         <div class="col-sm-2">
                             <label>CPF</label>
-                            <input type="text" class="form-control" id="cpf" name="cpf" value="<%= cpf %>">
+                            <input type="text" class="form-control" id="cpf" name="cpf" value="<%= cpf %>" onkeypress="mascara(this, '###.###.###-##')" maxlength="14">
                         </div>
                         <div class="col-sm-2">
                             <label>Sexo</label><br>
@@ -122,7 +131,7 @@
                     <div class="row">
                         <div class="col-sm-2">
                             <label>Telefone</label>
-                            <input type="text" class="form-control" id="telefone" name="telefone" value="<%= telefone %>" >				
+                            <input type="text" class="form-control" id="telefone" name="telefone" value="<%= telefone %>"  onkeypress="mascara(this, '## #####-####')" maxlength="15">				
                         </div>
                         <div class="col-sm-3">
                             <label>Endereço</label>
@@ -135,7 +144,7 @@
                         </div>
                         <div class="col-sm-2">
                             <label>CEP</label>				
-                            <input type="text" class="form-control" id="cep" name="cep" value="<%= cep %>">
+                            <input type="text" class="form-control" id="cep" name="cep" value="<%= cep %>" onkeypress="mascara(this, '#####-###')" maxlength="9">
                         </div>
                         <div class="col-sm-2">
                             <label>Comp.</label>
