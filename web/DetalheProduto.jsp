@@ -1,3 +1,4 @@
+<%@page import="java.text.DecimalFormat"%>
 <%@ page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="en">
@@ -111,7 +112,9 @@
                                     --> 
                                 </div>
                                 <h2 class="product-name"><%= nome %></h2>
-                                <h3 class="product-price">R$ <%= preco %>
+                                <% DecimalFormat formato = new DecimalFormat("#,###.00"); 
+                                String vlr = formato.format(preco);%>
+                                <h3 class="product-price">R$ <%= vlr %>
                                     <!-- Quantidade de Deconto	
                                     <del class="product-old-price">$45.00</del> 
                                     -->

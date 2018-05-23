@@ -4,6 +4,7 @@
     Author     : bcustodio
 --%>
 
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="com.bean.ProdutoBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -104,13 +105,15 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <% for (int i=0;i<lista.size();i++) {
-                                ProdutoBean Pro = (ProdutoBean)lista.get(i); %>
+                            <% DecimalFormat formato = new DecimalFormat("#,###.00");
+                                for (int i=0;i<lista.size();i++) {
+                                ProdutoBean Pro = (ProdutoBean)lista.get(i); 
+                                String vlr = formato.format(Pro.getPreco());%>
                                 <tr <%if (Pro.getAtivo().equals("i")) {%>class="danger"<% } %>>
                                     <td><%= Pro.getId() %></td>
                                     <td><%= Pro.getNome() %></td>
                                     <td <% if (Pro.getQuantidade() == 0) { %>style="color:red;"<% } %>><%= Pro.getQuantidade() %></td>
-                                    <td><%= Pro.getPreco() %></td>
+                                    <td>R$ <%= vlr %></td>
                                     <td>
                                         <a href="MostrarProduto?id=<%= Pro.getId() %>"><span title="Editar Produto" class="glyphicon glyphicon-pencil"></span></a>
                                         <a href="MostraDetalhe?id=<%= Pro.getId() %>"><span title="Ver Produto" class="glyphicon glyphicon-phone"></span></a>

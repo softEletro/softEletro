@@ -4,6 +4,7 @@
     Author     : leona
 --%>
 
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="com.bean.PedidoBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -85,14 +86,17 @@
                         <th>Valor Total</th>
                     </thead>
                     <tbody>
-                         <% for (int i=0; i<lista.size(); i++) { 
+                         <% DecimalFormat formato = new DecimalFormat("#,###.00");
+                             for (int i=0; i<lista.size(); i++) { 
                                 PedidoBean ped = (PedidoBean)lista.get(i);
-                                Double valorTotal = ped.getQuantidade() * ped.getPreco(); %>
+                                Double valorTotal = ped.getQuantidade() * ped.getPreco();
+                                String vlr = formato.format(valorTotal);
+                                String preco = formato.format(ped.getPreco());%>
                                 <tr>
                                     <td><%=ped.getNomeProduto()%></td>
                                     <td><%=ped.getQuantidade()%></td>
-                                    <td><%= ped.getPreco() %></td>
-                                    <td><%= valorTotal %></td>
+                                    <td>R$ <%= preco %></td>
+                                    <td>R$ <%= vlr %></td>
                                 </tr>
                         <% } %>
                     </tbody>

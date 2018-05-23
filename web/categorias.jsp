@@ -4,6 +4,7 @@
     Author     : 8244528
 --%>
 
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="com.bean.ProdutoBean"%>
 <jsp:useBean id="lista" scope="request" class="java.util.List" />
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -72,8 +73,10 @@
                 <!-- row -->
                 <div class="row" id="computador">
                     <!-- Product Single -->
-                    <% for (int i=0;i<lista.size();i++) {
-                        ProdutoBean Pro = (ProdutoBean)lista.get(i); %>
+                    <% DecimalFormat formato = new DecimalFormat("#,###.00");
+                        for (int i=0;i<lista.size();i++) {
+                        ProdutoBean Pro = (ProdutoBean)lista.get(i); 
+                        String preco = formato.format(Pro.getPreco());%>
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="product product-single">
                             <div class="product-thumb">
@@ -81,7 +84,7 @@
                                 <img src="imagens/<%= Pro.getImagem() %>" alt="" class="imgLista">
                             </div>
                             <div class="product-body">
-                                <h3 class="product-price">R$ <%= Pro.getPreco() %></h3>
+                                <h3 class="product-price">R$ <%= preco %></h3>
                                 <h2 class="product-name"><a href="#"><%= Pro.getNome() %></a></h2>
                                 <div class="product-btns text-center">
                                     <a href="AdicionarItens?idProduto=<%= Pro.getId() %>"<button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button></a>

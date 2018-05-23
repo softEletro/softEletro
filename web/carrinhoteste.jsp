@@ -4,8 +4,9 @@
     Author     : Arthur
 --%>
 
+<%@page import="java.text.NumberFormat"%>
+<%@page import="java.text.DecimalFormat"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<jsp:useBean id="idUsuario" scope="session" class="java.lang.Integer" />
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,14 +14,20 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <% float p = 5.0F;
+        <% DecimalFormat formato = new DecimalFormat("#,###.00");
+            Double p = 1055.0;
             for (int qtd=1; qtd<=3; qtd++) {
-            float valor = qtd*p;
+            Double valor = qtd*p;
             
             if (qtd == 3) {
-                out.print(valor);
+                //String vlr = Double.toString(valor);
+                //vlr = NumberFormat.getCurrencyInstance().format(vlr);
+                String vlr = formato.format(valor);
+                out.print(vlr);
             }
         }
+            
         %>
+        
     </body>
 </html>

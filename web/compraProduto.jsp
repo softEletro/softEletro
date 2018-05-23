@@ -1,3 +1,4 @@
+<%@page import="java.text.DecimalFormat"%>
 <%@page import="java.util.List"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -74,14 +75,16 @@
                                 <th>Preço</th>
                             </thead>
                             <tbody>
-                                <% for (int i=0;i<nome.size();i++) { %>
+                                <% DecimalFormat formato = new DecimalFormat("#,###.00");
+                                    for (int i=0;i<nome.size();i++) {
+                                        String vlr = formato.format(preco.get(i));%>
                                 <tr>
                                     <td><input type="hidden" name="idProduto" value="<%= carrinho.get(i) %>"><%= carrinho.get(i) %></td>
                                     <td><img src="imagens/<%= imagem.get(i) %>" class="imgCarrinho"><%= nome.get(i) %></td>
                                     <td>
                                         <input class="input" type="number" name="quantidade<%= i %>" id="quantidade" min="1" max="99" value="1" />
                                     </td>
-                                    <td><%= preco.get(i) %></td>
+                                    <td>R$ <%= vlr %></td>
                                     <td><a href="RemoverItens?idProduto=<%= carrinho.get(i) %>"><i class="glyphicon glyphicon-remove btn btn-default" /></a></td>
                                 </tr>
                                 <% } %>
@@ -99,7 +102,7 @@
                                 </tr>
                                 <tr rowspan="2">
                                     <td colspan="2"></td>
-                                    <td colspan="2"><h3>Valor total</h3></td>
+                                    <td><h3>Valor total</h3></td>
                                     <td>R$ 2.098,00</td>
                                     <td></td>
                                 </tr>
