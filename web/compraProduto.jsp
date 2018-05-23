@@ -79,12 +79,12 @@
                                     for (int i=0;i<nome.size();i++) {
                                         String vlr = formato.format(preco.get(i));%>
                                 <tr>
-                                    <td><input type="hidden" name="idProduto" value="<%= carrinho.get(i) %>"><%= carrinho.get(i) %></td>
+                                    <td><input type="hidden" name="idProduto" id="item<%= i+1 %>" value="<%= carrinho.get(i) %>"><%= carrinho.get(i) %></td>
                                     <td><img src="imagens/<%= imagem.get(i) %>" class="imgCarrinho"><%= nome.get(i) %></td>
                                     <td>
-                                        <input class="input" type="number" name="quantidade<%= i %>" id="quantidade" min="1" max="99" value="1" />
+                                        <input class="input" type="number" name="quantidade<%= i %>" id="quantidade<%= i+1 %>" onchange="Total_compra();" min="1" max="99" value="1" />
                                     </td>
-                                    <td>R$ <%= vlr %></td>
+                                    <td>R$ <b id="valor<%= i+1 %>" name="valor<%= i+1 %>"><%= preco.get(i) %></b></td>
                                     <td><a href="RemoverItens?idProduto=<%= carrinho.get(i) %>"><i class="glyphicon glyphicon-remove btn btn-default" /></a></td>
                                 </tr>
                                 <% } %>
@@ -102,8 +102,8 @@
                                 </tr>
                                 <tr rowspan="2">
                                     <td colspan="2"></td>
-                                    <td><h3>Valor total</h3></td>
-                                    <td>R$ 2.098,00</td>
+                                    <td><h4>Total: </h4></td>
+                                    <td><h4><b id="totalCompra" name="totalCompra"></b></h4></td>
                                     <td></td>
                                 </tr>
                             </tbody>
@@ -138,4 +138,5 @@
     <script src="js/main.js"></script>
 </body>
 
+<script>Total_compra();</script>
 </html>

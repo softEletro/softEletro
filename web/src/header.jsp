@@ -41,6 +41,46 @@
             alert("Preencha Todos os Campos !");        
         </script>
     <%; session.setAttribute("retorno", null);}%>
+    
+    <script type="text/javascript">
+
+function Total_compra() {
+
+    var i = "1";
+    var tot = null;
+    var totalCompra = 0;
+    
+    while (document.getElementById('item' + i).value.length > 0) {
+
+        //alert("Posicao " + i);
+        //alert(document.getElementById('item' + i).value);
+        var qtd = [document.getElementById('quantidade' + i).value];
+        //alert("Quantidade " + qtd);        
+        var val = [document.getElementById('valor' + i).innerHTML];        
+        //alert("Valor " + val);
+
+        if (i == 1) {
+          //alert("OPCAO 1: " + qtd[0] * val[0]);
+          tot = [qtd[i-1] * val[i-1]];
+        } else {
+          //alert("OPCAO 2: " + qtd[0] * val[0]);
+          tot.push(qtd[0] * val[0]);
+        }
+
+          //alert("OPCAO 3: " + tot[i-1]);
+          totalCompra = totalCompra + tot[i-1];
+          //alert(totalCompra);
+          
+          if (totalCompra == ""){
+              document.getElementById('totalCompra').innerHTML = "0,00";
+          } else {
+              document.getElementById('totalCompra').innerHTML = totalCompra;
+          }
+
+        i++;
+    }
+}
+  </script>  
         
   <!-- top Header -->
   <div id="top-header">
