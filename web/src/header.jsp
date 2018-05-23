@@ -75,12 +75,24 @@ function Total_compra() {
               document.getElementById('totalCompra').innerHTML = "0,00";
           } else {
               document.getElementById('totalCompra').innerHTML = totalCompra;
+              //document.getElementById('totalCompra').value = totalCompra;
           }
 
         i++;
     }
 }
   </script>  
+  
+  <script>
+            function mascara(t, mask){
+                var i = t.value.length;
+                var saida = mask.substring(1,0);
+                var texto = mask.substring(i)
+                if (texto.substring(0,1) != saida){
+                    t.value += texto.substring(0,1);
+                }
+            }
+        </script>
         
   <!-- top Header -->
   <div id="top-header">
