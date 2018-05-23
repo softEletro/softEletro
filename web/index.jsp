@@ -122,14 +122,14 @@
                                             <span>Novo</span>
                                             <span class="sale">-20%</span>
                                         </div>                                       
-                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                        <a href="MostraDetalhe?idProduto=5"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/note_razer_blade_270x360.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$8.800,00 <del class="product-old-price">R$11.000,00</del></h3>
                                         <h2 class="product-name"><a href="#">Razer Blade</a></h2>
                                         <div class="product-btns">
-                                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                                            <a href="AdicionarItens?idProduto=5"><button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -141,14 +141,14 @@
                                         <div class="product-label">
                                             <span class="sale">-20%</span>
                                         </div>                                      
-                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                        <a href="MostraDetalhe?idProduto=6"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/dell_inspiron.jpg" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$3.200,00 <del class="product-old-price">R$4.000,00</del></h3>
                                         <h2 class="product-name"><a href="#">Dell Inspiron</a></h2>
                                         <div class="product-btns">                   
-                                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</button>
+                                            <a href="AdicionarItens?idProduto=6"><button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -182,14 +182,14 @@
                                             <span>Novo</span>
                                             <span class="sale">-20%</span>
                                         </div>        
-                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                        <a href="MostraDetalhe?idProduto=2"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/iphone8.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$2.800,00 <del class="product-old-price">R$3.500,00</del></h3>                                
                                         <h2 class="product-name"><a href="#">iPhone 8 Red</a></h2>
                                         <div class="product-btns">
-                                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                                            <a href="AdicionarItens?idProduto=2"><button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -219,14 +219,14 @@
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="product product-single product-hot">
                             <div class="product-thumb">                               
-                                <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                <a href="MostraDetalhe?idProduto=4"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                 <img src="./img/galaxy_note8.png" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
                                 <h3 class="product-price">R$3.870,00</h3>
                                 <h2 class="product-name"><a href="#">Galaxy Note 8</a></h2>
                                 <div class="product-btns">
-                                    <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                                    <a href="AdicionarItens?idProduto=4"><button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button></a>
                                 </div>
                             </div>
                         </div>
@@ -259,14 +259,14 @@
                                         <div class="product-label">
                                             <span class="sale">-5%</span>
                                         </div>
-                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                        <a href="MostraDetalhe?idProduto=1"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/iphonex.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$3.990,00 <del class="product-old-price">R$4.200,00</del></h3>                                      
                                         <h2 class="product-name"><a href="#">iPhone X</a></h2>
                                         <div class="product-btns">
-                                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                                            <a href="AdicionarItens?idProduto=1"><button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -296,14 +296,14 @@
                                             <span>Novo</span>
                                             <span class="sale">-10%</span>
                                         </div>
-                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                        <a href="MostraDetalhe?idProduto=3"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/motog6.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
                                         <h3 class="product-price">R$1.395,00 <del class="product-old-price">R$1.550,00</del></h3>
                                         <h2 class="product-name"><a href="#">Moto G6 Plus</a></h2>
                                         <div class="product-btns">
-                                            <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                                            <a href="AdicionarItens?idProduto=3"><button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button></a>
                                         </div>
                                     </div>
                                 </div>
@@ -339,14 +339,14 @@
                         <div class="product product-single">
                             <div class="product-thumb">
 
-                                <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                <a href="MostraDetalhe?idProduto=8"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                 <img src="./img/dell_xps8930.jpg" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
                                 <h3 class="product-price">R$3.800,00</h3>
                                 <h2 class="product-name"><a href="#">Dell XPS 8930</a></h2>
                                 <div class="product-btns">
-                                    <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                                    <a href="AdicionarItens?idProduto=8"><button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button></a>
                                 </div>
                             </div>
                         </div>
@@ -381,14 +381,14 @@
                                 <div class="product-label">
                                     <span class="sale">-20%</span>
                                 </div>                                      
-                                <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                <a href="MostraDetalhe?idProduto=6"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                 <img src="./img/dell_inspiron.png" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
                                 <h3 class="product-price">R$3.200,00 <del class="product-old-price">R$4.000,00</del></h3>
                                 <h2 class="product-name"><a href="#">Dell Inspiron</a></h2>
                                 <div class="product-btns">                   
-                                    <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</button>
+                                    <a href="AdicionarItens?idProduto=6"><button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao carrinho</button></a>
                                 </div>
                             </div>
                         </div>
@@ -403,14 +403,14 @@
                                     <span>Novo</span>
                                     <span class="sale">-20%</span>
                                 </div>                                       
-                                <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                <a href="MostraDetalhe?idProduto=5"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                 <img src="./img/note_razer_blade_270x360.png" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
                                 <h3 class="product-price">R$8.800,00 <del class="product-old-price">R$11.000,00</del></h3>
                                 <h2 class="product-name"><a href="#">Razer Blade</a></h2>
                                 <div class="product-btns">
-                                    <button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button>
+                                    <a href="AdicionarItens?idProduto=5"><button class="primary-btn add-to-cart"><i class="fa fa-shopping-cart"></i> Adicionar ao Carrinho</button></a>
                                 </div>
                             </div>
                         </div>
