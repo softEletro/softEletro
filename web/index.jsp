@@ -122,7 +122,7 @@
                                             <span>Novo</span>
                                             <span class="sale">-20%</span>
                                         </div>                                       
-                                        <a href="MostraDetalhe?idProduto=5"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
+                                        <a href="MostraDetalhe?id=5"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/note_razer_blade_270x360.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
@@ -140,8 +140,8 @@
                                     <div class="product-thumb">
                                         <div class="product-label">
                                             <span class="sale">-20%</span>
-                                        </div>                                      
-                                        <a href="MostraDetalhe?idProduto=6"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
+                                        </div>             
+                                         <a href="MostraDetalhe?id=6"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/dell_inspiron.jpg" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
@@ -161,7 +161,7 @@
                                             <span>Novo</span>
                                             <span class="sale">-20%</span>
                                         </div>                                       
-                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                        <a href="MostraDetalhe?id=9"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/positivo_station.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
@@ -182,7 +182,7 @@
                                             <span>Novo</span>
                                             <span class="sale">-20%</span>
                                         </div>        
-                                        <a href="MostraDetalhe?idProduto=2"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
+                                        <a href="MostraDetalhe?id=2"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/iphone8.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
@@ -219,8 +219,8 @@
                     <div class="col-md-3 col-sm-6 col-xs-6">
                         <div class="product product-single product-hot">
                             <div class="product-thumb">                               
-                                <a href="MostraDetalhe?idProduto=4"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
-                                <img src="./img/galaxy_note8.png" class="imgLista" alt="">
+                                <a href="MostraDetalhe?id=4"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
+                                <img src="./img/note8_1200x1200.jpeg" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
                                 <h3 class="product-price">R$3.870,00</h3>
@@ -240,7 +240,7 @@
                                 <!-- Product Single -->
                                 <div class="product product-single">
                                     <div class="product-thumb">
-                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                        <a href="MostraDetalhe?id=10"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/s9plus.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
@@ -259,7 +259,7 @@
                                         <div class="product-label">
                                             <span class="sale">-5%</span>
                                         </div>
-                                        <a href="MostraDetalhe?idProduto=1"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
+                                        <a href="MostraDetalhe?id=1"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/iphonex.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
@@ -275,7 +275,7 @@
                                 <!-- Product Single -->
                                 <div class="product product-single">
                                     <div class="product-thumb">
-                                        <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                        <a href="MostraDetalhe?id=11"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/moto_zplay.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
@@ -296,7 +296,7 @@
                                             <span>Novo</span>
                                             <span class="sale">-10%</span>
                                         </div>
-                                        <a href="MostraDetalhe?idProduto=3"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
+                                        <a href="MostraDetalhe?id=3"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                         <img src="./img/motog6.png" class="imgLista" alt="">
                                     </div>
                                     <div class="product-body">
@@ -339,7 +339,7 @@
                         <div class="product product-single">
                             <div class="product-thumb">
 
-                                <a href="MostraDetalhe?idProduto=8"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
+                                <a href="MostraDetalhe?id=8"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                 <img src="./img/dell_xps8930.jpg" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
@@ -360,7 +360,7 @@
                                 <div class="product-label">
                                     <span>Novo</span>
                                 </div>
-                                <button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button>
+                                <a href="MostraDetalhe?id=12"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                 <img src="./img/positivo_stilo.jpg" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
@@ -381,8 +381,8 @@
                                 <div class="product-label">
                                     <span class="sale">-20%</span>
                                 </div>                                      
-                                <a href="MostraDetalhe?idProduto=6"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
-                                <img src="./img/dell_inspiron.png" class="imgLista" alt="">
+                                <a href="MostraDetalhe?id=6"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
+                                <img src="./img/dell_inspiron.jpg" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
                                 <h3 class="product-price">R$3.200,00 <del class="product-old-price">R$4.000,00</del></h3>
@@ -403,7 +403,7 @@
                                     <span>Novo</span>
                                     <span class="sale">-20%</span>
                                 </div>                                       
-                                <a href="MostraDetalhe?idProduto=5"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
+                                <a href="MostraDetalhe?id=5"><button class="main-btn quick-view"><i class="fa fa-search-plus"></i> Detalhes</button></a>
                                 <img src="./img/note_razer_blade_270x360.png" class="imgLista" alt="">
                             </div>
                             <div class="product-body">
