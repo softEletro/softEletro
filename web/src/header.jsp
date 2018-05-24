@@ -55,8 +55,8 @@ function Total_compra() {
         //alert("Posicao " + i);
         //alert(document.getElementById('item' + i).value);
         var qtd = [document.getElementById('quantidade' + i).value];
-        //alert("Quantidade " + qtd);        
-        var val = [document.getElementById('valor' + i).innerHTML];        
+        //alert("Quantidade " + qtd);
+        var val = [document.getElementById('valor' + i).innerHTML.replace(/[^0-9]/g,'')];        
         //alert("Valor " + val);
 
         if (i == 1) {
@@ -75,7 +75,7 @@ function Total_compra() {
               document.getElementById('totalCompra').innerHTML = "0,00";
           } else {
               document.getElementById('totalCompra').innerHTML = totalCompra;
-              //document.getElementById('totalCompra').value = totalCompra;
+              
           }
 
         i++;

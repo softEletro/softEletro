@@ -84,7 +84,7 @@
                                     <td>
                                         <input class="input" type="number" name="quantidade<%= i %>" id="quantidade<%= i+1 %>" onchange="Total_compra();" min="1" max="99" value="1" />
                                     </td>
-                                    <td>R$ <b id="valor<%= i+1 %>" name="valor<%= i+1 %>"><%= vlr %></b></td>
+                                    <td>R$ <b id="valor<%= i+1 %>" name="valor<%= i+1 %>" value="<%= preco.get(i) %>" ><%= vlr %></b></td>
                                     <td><a href="RemoverItens?idProduto=<%= carrinho.get(i) %>"><i class="glyphicon glyphicon-remove btn btn-default" /></a></td>
                                 </tr>
                                 <% } %>
@@ -103,7 +103,7 @@
                                 <tr rowspan="2">
                                     <td colspan="2"></td>
                                     <td><h4>Total: </h4></td>
-                                    <td><h4><b id="totalCompra" name="totalCompra" onchange="mascara(this, '#.###,00')"></b></h4></td>
+                                    <td><h4><b id="totalCompra" name="totalCompra"></b></h4></td>
                                     <td></td>
                                 </tr>
                             </tbody>
